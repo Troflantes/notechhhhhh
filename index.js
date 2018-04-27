@@ -10,7 +10,7 @@ bot.on("ready", () => {
     console.log("Bağlandım!")   
 });
 
-bot.login("NDM5NDY3MDEyMDYyODM4Nzg1.DcT8eg.5qSE-ujV82Ka32S4UhFC45tFhmo")
+bot.login(process.env.BOT_TOKEN);
 
 bot.on("message", message => {
 
