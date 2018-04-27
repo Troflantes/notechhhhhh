@@ -6,7 +6,7 @@ let prefix = "n!";
 let owner = "430011871555223553";
 
 bot.on("ready", () => {
-    bot.user.setActivity('prefix + "yardım | " + bot.guilds.size + " Sunucu', { type: 'WATCHING' })
+    bot.user.setActivity(prefix + "yardım | " + bot.guilds.size + " Sunucu", { type: 'WATCHING' })
     console.log("Bağlandım!")   
 });
 
@@ -15,12 +15,11 @@ bot.login(process.env.BOT_TOKEN);
 bot.on("message", message => {
 
     if (message.content.toLowerCase() === "sa") {
-        message.reply("**Aleyküm Selam Hoşgeldin!**")
+        message.reply("Aleyküm Selam Hoşgeldin!")
     }
     
     if (message.content.toLowerCase() === prefix + "ping") {
-        message.reply("Pong!");
-        message.edit("Pong!" + bot.user.ping + "ms");
+        message.reply("Pong!" + bot.user.ping + "ms");
     }
 
     if (message.content.toLowerCase() === prefix + "sunucubilgi") {
@@ -90,7 +89,7 @@ ${prefix}kurabiye - Size kurabiye verir.
 
 bot.on("message", message => {
 
-    const kufur = ["amk", "aq", "orospu", "oruspu", "oç", "sikerim", "yarrak"];
+    const kufur = ["amk", "aq", "orospu", "oruspu", "oç", "sikerim", "yarrak", "piç"];
     if (kufur.some(word => message.content.includes(word)) ) {
         message.reply("Küfür Etme! :rage:")
         message.delete()
