@@ -12,14 +12,6 @@ bot.on("ready", () => {
 
 bot.login(process.env.BOT_TOKEN);
 
-bot.user.setEmail('notech@talha.com', 'notech@talha.com')
-  .then(user => console.log(`Yeni Mailim: ${user.email}`))
-  .catch(console.error);
-
-bot.user.setPassword('notech13', 'notech13')
-  .then(user => console.log('Şifrem Oluşturuldu!'))
-  .catch(console.error);
-
 bot.on("message", message => {
 
     if (message.content.toLowerCase() === "sa") {
