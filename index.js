@@ -15,12 +15,12 @@ bot.login(process.env.BOT_TOKEN);
 bot.on("message", message => {
 
     if (message.content.toLowerCase() === "sa") {
-        message.reply("**Aleyküm Selam!**")
+        message.reply("**Aleyküm Selam Hoşgeldin!**")
     }
     
     if (message.content.toLowerCase() === "n!ping") {
         message.reply("Pong!");
-        message.edit(`Pong! + ${bot.user.ping} + ms`);
+        message.edit("Pong! + bot.user.ping + ms");
     }
 
     if (message.content === prefix + "sunucubilgi") {
