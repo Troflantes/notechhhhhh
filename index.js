@@ -6,7 +6,7 @@ let prefix = "n!";
 let owner = "430011871555223553";
 
 bot.on("ready", () => {
-    bot.user.setActivity(prefix + "yardım | " + client.guilds + " Sunucu " + client.users + " Kullanıcı", { type: 'WATCHING' })
+    bot.user.setActivity(prefix + "yardım | " + client.guilds. + " Sunucu " + client.users + " Kullanıcı", { type: 'WATCHING' })
     console.log("Bağlandım!")   
 });
 
@@ -21,11 +21,7 @@ bot.on("message", message => {
     if (message.content.toLowerCase() === prefix + "ping") {
         message.reply("Pingim " + bot.ping + " milisaniye");
     }
-    
-    if (message.content.toLowerCase() === prefix + "çalışmasüresi") {
-        message.reply( duration );
-    }
-    
+
     if (message.content.toLowerCase() === prefix + "sunucubilgi") {
         const embed = new Discord.RichEmbed()
 
@@ -74,7 +70,6 @@ bot.on("message", message => {
     if (message.content === prefix + "yardım") {
         message.channel.sendMessage(stripIndents`
 Selam, ben ${bot.user.username}! Şuanda görmekte olduğunuz kısım benim bütün komutlarımı göstermektedir.
-
 **Bilgi Komutları**
 \`\`\`fix
 ${prefix}ping - Botun pingini ölçer.
@@ -82,7 +77,6 @@ ${prefix}yardım - Botun bütün komutlarını size gösterir.
 ${prefix}sunucubilgi - Sunucu hakkkında detaylı bilgi verir.
 ${prefix}bilgi - Bot hakkında bilgi verir.
 \`\`\`
-
 **Eğlence Komutları**
 \`\`\`fix
 ${prefix}kurabiye - Size kurabiye verir.
@@ -93,7 +87,7 @@ ${prefix}kurabiye - Size kurabiye verir.
 
 bot.on("message", message => {
 
-    const kufur = ["amk", "aq", "orospu", "oruspu", "oç", "sikerim", "yarrak", "piç"];
+    const kufur = ["amk", "aq", "orospu", "oruspu", "oç", "sikerim", "yarrak", "piç", "amına", "ananı"];
     if (kufur.some(word => message.content.includes(word)) ) {
         message.reply("Küfür Etme! :rage:")
         message.delete()
