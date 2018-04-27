@@ -17,6 +17,10 @@ bot.on("message", message => {
     if (message.content.toLowerCase() === "sa") {
         message.reply("**Aleyküm Selam!**")
     }
+    
+    if (message.content.toLowerCase() === "n!ping") {
+        message.reply("Ping Değerim: **' + client.ping + '** ms")
+    }
 
     if (message.content === prefix + "sunucubilgi") {
         const embed = new Discord.RichEmbed()
