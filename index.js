@@ -6,7 +6,7 @@ let prefix = "n!";
 let owner = "430011871555223553";
 
 bot.on("ready", () => {
-    bot.user.setActivity(prefix + "yardım | " + bot.guilds.size + " Sunucu", { type: 'WATCHING' })
+    bot.user.setActivity(prefix + "yardım | " + client.guilds.size + " Sunucu " + client.users.size + " Kullanıcı", "https://twitch.tv/scarew0");
     console.log("Bağlandım!")   
 });
 
@@ -15,11 +15,11 @@ bot.login(process.env.BOT_TOKEN);
 bot.on("message", message => {
 
     if (message.content.toLowerCase() === "sa") {
-        message.reply("Aleyküm Selam Hoşgeldin!")
+        message.reply("Aleyküm Selam")
     }
     
     if (message.content.toLowerCase() === prefix + "ping") {
-        message.reply("Pong!" + bot.user.ping + "ms");
+        message.reply("Pingim " + bot..ping + " milisaniye");
     }
 
     if (message.content.toLowerCase() === prefix + "sunucubilgi") {
