@@ -20,7 +20,7 @@ bot.on("message", message => {
     
     if (message.content.toLowerCase() === "n!ping") {
         message.reply("Pong!");
-        message.edit(`Pong! + client.ping + ms`);
+        message.edit(`Pong! + bot.user.ping + ms`);
     }
 
     if (message.content === prefix + "sunucubilgi") {
