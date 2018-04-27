@@ -19,7 +19,7 @@ bot.on("message", message => {
     }
     
     if (message.content.toLowerCase() === "n!ping") {
-        message.reply("Ping Değerim: **' + client.ping + '** ms")
+        message.reply("Ping Değerim: **' + bot.ping + '** ms");
     }
 
     if (message.content === prefix + "sunucubilgi") {
