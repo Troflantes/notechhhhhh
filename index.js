@@ -6,7 +6,7 @@ let prefix = "n!";
 let owner = "430011871555223553";
 
 bot.on("ready", () => {
-    bot.user.setGame(prefix + "yardım | " + bot.guilds.size + " Sunucu") 
+    bot.user.setActivity('prefix + "yardım | " + bot.guilds.size + " Sunucu', { type: 'WATCHING' })
     console.log("Bağlandım!")   
 });
 
