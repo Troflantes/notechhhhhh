@@ -3,7 +3,7 @@ const Discord = require("discord.js");
 const bot = new Discord.Client();
 
 let prefix = "n!";
-let owner = "439467012062838785";
+let owner = "430011871555223553";
 
 bot.on("ready", () => {
     bot.user.setGame(prefix + "yardım | " + bot.guilds.size + " Sunucu") 
@@ -18,12 +18,12 @@ bot.on("message", message => {
         message.reply("**Aleyküm Selam Hoşgeldin!**")
     }
     
-    if (message.content.toLowerCase() === "n!ping") {
+    if (message.content.toLowerCase() === prefix + "ping") {
         message.reply("Pong!");
-        message.edit("Pong! + bot.user.ping + ms");
+        message.edit("Pong!" + bot.user.ping + "ms");
     }
 
-    if (message.content === prefix + "sunucubilgi") {
+    if (message.content.toLowerCase() === prefix + "sunucubilgi") {
         const embed = new Discord.RichEmbed()
 
             .addField("Sunucu Adı", message.guild.name, true)
@@ -70,10 +70,11 @@ bot.on("message", message => {
 
     if (message.content === prefix + "yardım") {
         message.channel.sendMessage(stripIndents`
-**Selam, ben ${bot.user.username}!** Şuanda görmekte olduğunuz kısım benim bütün komutlarımı göstermektedir.
+Selam, ben ${bot.user.username}! Şuanda görmekte olduğunuz kısım benim bütün komutlarımı göstermektedir.
 
 **Bilgi Komutları**
 \`\`\`fix
+${prefix}ping - Botun pingini ölçer.
 ${prefix}yardım - Botun bütün komutlarını size gösterir.
 ${prefix}sunucubilgi - Sunucu hakkkında detaylı bilgi verir.
 ${prefix}bilgi - Bot hakkında bilgi verir.
@@ -89,9 +90,9 @@ ${prefix}kurabiye - Size kurabiye verir.
 
 bot.on("message", message => {
 
-    const kufur = ["amk", "aq"];
+    const kufur = ["amk", "aq", "orospu", "oruspu", "oç", "sikerim", "yarrak"];
     if (kufur.some(word => message.content.includes(word)) ) {
-        message.reply("**Küfür Etme!** :rage:")
+        message.reply("Küfür Etme! :rage:")
         message.delete()
     }
 
