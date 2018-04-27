@@ -22,17 +22,10 @@ bot.on("message", message => {
         message.reply("Pingim " + bot.ping + " milisaniye");
     }
     
-    if (message.content.toLowerCase() === prefix + "sil") {
-    const deleteCount = parseInt(args[0], 10);
-    if(!deleteCount || deleteCount < 1 || deleteCount > 100)
-      return message.reply("Lütfen 1 ile 100 arası sayı giriniz.");
+    if (message.content.toLowerCase() === prefix + "çalışmasüresi") {
+        message.reply( duration );
+    }
     
-    const fetched = await message.channel.fetchMessages({count: deleteCount});
-    message.channel.bulkDelete(fetched)
-      .catch(error => message.reply(`Hata! Mesaj silinemedi. Sebep: ${error}`));
-  }
-});
-
     if (message.content.toLowerCase() === prefix + "sunucubilgi") {
         const embed = new Discord.RichEmbed()
 
