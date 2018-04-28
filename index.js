@@ -23,11 +23,15 @@ bot.on('guildMemberAdd', member => {
   if (!channel) return;
   channel.send(`Sunucuya HoşGeldin, ${member}!`);
 });
-
+    
 bot.on("message", message => {
 
     if (message.content.toLowerCase() === "sa") {
         message.reply("Aleyküm Selam")
+    }
+    
+    if(message.content.toLowerCase() === prefix + "bot-süre") {
+       message.reply("Çalışma Sürem **${duration}** ")
     }
     
     if (message.content.toLowerCase() === prefix + "ping") {
@@ -86,6 +90,7 @@ Selam, ben ${bot.user.username}! Şuanda görmekte olduğunuz kısım benim büt
 **Bilgi Komutları**
 \`\`\`fix
 ${prefix}ping - Botun pingini ölçer.
+${prefix}bot-süre - Botun açık kalma zamanını gösterir.
 ${prefix}yardım - Botun bütün komutlarını size gösterir.
 ${prefix}sunucubilgi - Sunucu hakkkında detaylı bilgi verir.
 ${prefix}bilgi - Bot hakkında bilgi verir.
