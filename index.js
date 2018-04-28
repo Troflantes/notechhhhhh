@@ -13,6 +13,8 @@ bot.on("ready", () => {
 
 bot.login(process.env.BOT_TOKEN);
 
+bot.user.setAvatar('https://hizliresim.com/PlLv0b');
+
 bot.on('message', message => {
     if (message.content.toLowerCase() === prefix + "avatarım") {
         message.reply(message.author.avatarURL);
@@ -65,14 +67,6 @@ bot.on("message", message => {
         message.reply("Efendim?")
     }
     
-    if (message.content.indexOf(prefix+'setavatar') === 0) {
-    request.get(message.content.substr(11)).pipe(fs.createWriteStream('./setavatar.png'));
-        
-    client.user.setAvatar(fs.readFileSync('./setavatar.png')).then(user => { message.channel.send('✔ Operation successful'); console.log('New Avatar set!'); })
-        .catch((error) => { message.channel.send('× Operation failed'); console.log('Error on setavatar command:', error); });
-    
-    return;
-
     if (message.content.toLowerCase() === prefix + "ping") {
         message.reply("Pingim " + bot.ping + " milisaniye");
     }
