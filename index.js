@@ -41,6 +41,17 @@ bot.on("message", message => {
     if (message.content.toLowerCase() === prefix + "ping") {
         message.sendMessage("Pingim " + bot.ping + " milisaniye");
     }
+    
+    if (message.content.toLowerCase() === prefix + 'f5') {
+    if (message.author.id !== "430011871555223553") {
+      message.reply('Benim yapımcım değilsin.');
+    } else {
+      message.channel.sendMessage(`Yeniden başlıyorum..`).then(msg => {
+      console.log(`Yeniden başlıyorum..`);
+      process.exit(0);
+    })
+   }
+  }
         
     if (message.content.toLowerCase() === prefix + "sunucubilgi") {
         const embed = new Discord.RichEmbed()
@@ -93,6 +104,7 @@ Selam, ben ${bot.user.username}! Şuanda görmekte olduğunuz kısım benim büt
 **Bilgi Komutları**
 \`\`\`fix
 ${prefix}ping - Botun pingini ölçer.
+${prefix}f5 - Botu yeniden başlatır.
 ${prefix}yardım - Botun bütün komutlarını size gösterir.
 ${prefix}sunucubilgi - Sunucu hakkkında detaylı bilgi verir.
 ${prefix}bilgi - Bot hakkında bilgi verir.
