@@ -48,9 +48,7 @@ bot.on("message", message => {
       message.channel.sendMessage(`Yeniden başlıyorum..`).then(msg => {
       console.log(`Yeniden başlıyorum..`);
       process.exit(0);
-    })
-   }
-  }
+    }
 
     if (message.content.toLowerCase() === prefix + "sunucubilgi") {
         const embed = new Discord.RichEmbed()
