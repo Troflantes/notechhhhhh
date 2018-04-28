@@ -13,11 +13,6 @@ bot.on("ready", () => {
 bot.login(process.env.BOT_TOKEN);
 
 bot.on("message", message => {
-    
-    if (message.content.toLowerCase() === prefix + "at") {
-      let member = message.mentions.members.first();
-          member.kick();
-    }
 
     if (message.content.toLowerCase() === "sa") {
         message.reply("Aleyküm Selam")
@@ -92,7 +87,7 @@ ${prefix}kurabiye - Size kurabiye verir.
 
 bot.on("message", message => {
 
-    const kufur = ["amk", "aq", "orospu", "oruspu", "oç", "sikerim", "yarrak", "piç", "amına", "ananı"];
+    const kufur = ["amk", "aq", "orospu", "oruspu", "oç", "sikerim", "yarrak", "piç"];
     if (kufur.some(word => message.content.includes(word)) ) {
         message.reply("Küfür Etme! :rage:")
         message.delete()
