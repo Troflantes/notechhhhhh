@@ -51,7 +51,7 @@ bot.on('message', message => {
 
   let args = message.content.split(' ').slice(1);
 
-  if (command === 'tavsiye' || command === 'tavsiye') {
+    if (message.content.toLowerCase() === prefix + "tavsiye") {
     let str = '<@430011871555223553>';
     let id = str.replace(/[<@!>]/g, '');
     let mesaj = args.slice(0).join(' ');
