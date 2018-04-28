@@ -18,6 +18,12 @@ bot.on('message', message => {
    }
 });
 
+bot.on('guildMemberAdd', member => {
+  const channel = member.guild.channels.find('name', 'giris-cikis');
+  if (!channel) return;
+  channel.send(`Sunucuya HoşGeldin, ${member}!`);
+});
+
 bot.on("message", message => {
 
     if (message.content.toLowerCase() === "sa") {
