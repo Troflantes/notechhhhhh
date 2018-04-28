@@ -28,7 +28,7 @@ bot.on('guildMemberAdd', member => {
 bot.on("message", message => {
 
     if (message.content.toLowerCase() === "sa") {
-        message.react(" :regional_indicator_a: "," :regional_indicator_s: ")
+        message.reply("Aleyküm Selam HoşGeldin 👋 ")
     }
     
     if (message.content.toLowerCase() === prefix + "bot-davet") {
