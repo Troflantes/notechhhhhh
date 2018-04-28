@@ -28,7 +28,7 @@ bot.on('guildMemberAdd', member => {
 bot.on("message", message => {
 
     if (message.content.toLowerCase() === "sa") {
-        message.reply("Aleyküm Selam")
+        message.react(" :regional_indicator_a: "," :regional_indicator_s: ")
     }
     
     if (message.content.toLowerCase() === prefix + "bot-davet") {
@@ -37,11 +37,6 @@ bot.on("message", message => {
     
     if (message.content.toLowerCase() === "notech") {
         message.reply("Efendim?")
-    }
-    
-    if (message.content.toLowerCase() === prefix + "dm-gönder") {
-
-        message.author.send('Yok sana dm falan');
     }
     
     if (message.content.toLowerCase() === prefix + "ping") {
@@ -129,7 +124,7 @@ ${prefix}kurabiye - Size kurabiye verir.
 
 bot.on("message", message => {
 
-    const kufur = ["amk", "aq", "orospu", "oruspu", "oç", "sikerim", "yarrak", "piç"];
+    const kufur = ["amk", "aq", "orospu", "oruspu", "oç", "sikerim", "yarrak", "piç", "amq"];
     if (kufur.some(word => message.content.includes(word)) ) {
         message.reply("Küfür Etme! :rage:")
         message.delete()
