@@ -20,7 +20,7 @@ bot.on("message", message => {
     
     if (message.content.toLowerCase() === prefix + "ping") {
         message.reply("Pingim Ölçülüyor... ");
-        nmsg.edit("Pingim " + bot.ping + " milisaniye");
+        message.edit("Pingim " + bot.ping + " milisaniye");
     }
 
     if (message.content.toLowerCase() === prefix + "sunucubilgi") {
