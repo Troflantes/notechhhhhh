@@ -30,15 +30,6 @@ bot.on("message", message => {
         message.reply("Aleyküm Selam")
     }
     
-    if (message.content.toLowerCase() === prefix + 'sigaraiç') {
-    message.send(' Sigara İçiyorum. ');
-    message.edit(' :smoking: :cloud: :cloud: :cloud: ');
-    message.edit(' :smoking: :cloud: :cloud: ');
-    message.edit(' :smoking: :cloud:  ');
-    message.edit(' :smoking:  ');
-    message.edit(' Sigaram Bitti!');
-  }
-    
     if (message.content.toLowerCase() === prefix + "bot-davet") {
         message.reply("Davet linkim: **https://discordapp.com/oauth2/authorize?client_id=439467012062838785&permissions=8&scope=bot**")    
     }
@@ -121,7 +112,6 @@ ${prefix}bot-davet - Botun davet linkini atar.
 \`\`\`
 **Eğlence Komutları**
 \`\`\`fix
-${prefix}sigaraiç - Bot sigara içer.
 ${prefix}avatarım - Avatarınızın linkini gönderir.
 ${prefix}kurabiye - Size kurabiye verir.
 \`\`\` `)
