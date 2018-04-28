@@ -6,7 +6,7 @@ let prefix = "n!";
 let owner = "430011871555223553";
 
 bot.on("ready", () => {
-    bot.user.setActivity(prefix + "yardım | " bot.guilds " Sunucu " bot.users " Kullanıcı", { type: 'WATCHING' })
+    bot.user.setActivity(prefix + "yardım | " + bot.guilds.size + " Sunucu " + bot.users.size + " Kullanıcı", { type: 'WATCHING' })
     console.log("Bağlandım!")   
 });
 
