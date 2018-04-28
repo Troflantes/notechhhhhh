@@ -30,13 +30,12 @@ bot.on("message", message => {
         message.reply("Aleyküm Selam")
     }
     
-    if(message.content.toLowerCase() === prefix + "bot-süre") {
-       message.reply("Çalışma Sürem " + ${duration} );
+    if (message.content.toLowerCase() === "Notech", "@Notech", "Notech#0904") {
+        message.reply("Efendim?")
     }
     
     if (message.content.toLowerCase() === prefix + "ping") {
         message.reply("Pingim " + bot.ping + " milisaniye");
-        message.delete()
     }
 
     if (message.content.toLowerCase() === prefix + "sunucubilgi") {
