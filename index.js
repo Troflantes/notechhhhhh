@@ -1,7 +1,6 @@
 const { stripIndents, oneLine } = require('common-tags');
 const Discord = require("discord.js");
 const bot = new Discord.Client();
-const green = "BFFF00";
 
 let prefix = "n!";
 let owner = "430011871555223553";
@@ -131,13 +130,5 @@ bot.on("message", message => {
     if (kufur.some(word => message.content.includes(word)) ) {
         message.reply("Küfür Etme! :rage:")
         message.delete()
-    }
-    
-     default:
-            let defaultembed = new discord.RichEmbed()
-                .setColor(green)
-                .addField("Hata!", "Komut bulunamadı!");
-            message.channel.send(defaultembed);
-            return;
     }
 });
