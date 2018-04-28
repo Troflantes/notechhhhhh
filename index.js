@@ -33,7 +33,7 @@ bot.on("message", message => {
     if (message.content.toLowerCase() === prefix + "bot-davet") {
         message.reply("Davet linkim: **https://discordapp.com/oauth2/authorize?client_id=439467012062838785&permissions=8&scope=bot**")
     
-    if (message.content.toLowerCase() === "Notech", "@Notech", "Notech#0904") {
+    if (message.content.toLowerCase() === "notech") {
         message.reply("Efendim?")
     }
     
