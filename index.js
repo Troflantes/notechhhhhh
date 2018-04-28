@@ -13,6 +13,11 @@ bot.on("ready", () => {
 bot.login(process.env.BOT_TOKEN);
 
 bot.on("message", message => {
+    
+    if (message.content.toLowerCase() === prefix + "at") {
+      let member = message.mentions.members.first();
+          member.kick();
+    }
 
     if (message.content.toLowerCase() === "sa") {
         message.reply("Aleyküm Selam")
