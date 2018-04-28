@@ -39,7 +39,7 @@ bot.on("message", message => {
     }
     
     if (message.content.toLowerCase() === prefix + "ping") {
-        message.sendMessage("Pingim " + bot.ping + " milisaniye");
+        message.reply("Pingim " + bot.ping + " milisaniye");
     }
     
     if (message.content.toLowerCase() === prefix + 'f5') {
