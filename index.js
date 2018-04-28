@@ -31,7 +31,7 @@ bot.on("message", message => {
     }
     
     if(message.content.toLowerCase() === prefix + "bot-süre") {
-       message.reply("Çalışma Sürem **${duration}** ")
+       message.reply("Çalışma Sürem " + ${duration})
     }
     
     if (message.content.toLowerCase() === prefix + "ping") {
