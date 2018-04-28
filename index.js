@@ -13,7 +13,7 @@ bot.on("ready", () => {
 
 bot.login(process.env.BOT_TOKEN);
 
-bot.user.setAvatar('https://hizliresim.com/PlLv0b');
+bot.user.setAvatar('https://hizliresim.com/PlLv0b.png');
 
 bot.on('message', message => {
     if (message.content.toLowerCase() === prefix + "avatarım") {
