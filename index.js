@@ -36,7 +36,7 @@ bot.on("message", message => {
     }
     
     if (message.content.toLowerCase() === prefix + "dm-gönder") {
-        message.send(`** + message.author.username + **` + " sana " + `** ${mesaj} **` + " Yazdı!)
+        message.send(`** + message.author.username + **` + " sana " + `** ${mesaj} **` + " Yazdı!")
     }
     
     if (message.content.toLowerCase() === "notech") {
