@@ -30,6 +30,9 @@ bot.on("message", message => {
         message.reply("Aleyküm Selam")
     }
     
+    if (message.content.toLowerCase() === prefix + "bot-davet") {
+        message.reply("Davet linkim: **https://discordapp.com/oauth2/authorize?client_id=439467012062838785&permissions=8&scope=bot**")
+    
     if (message.content.toLowerCase() === "Notech", "@Notech", "Notech#0904") {
         message.reply("Efendim?")
     }
@@ -89,10 +92,10 @@ Selam, ben ${bot.user.username}! Şuanda görmekte olduğunuz kısım benim büt
 **Bilgi Komutları**
 \`\`\`fix
 ${prefix}ping - Botun pingini ölçer.
-${prefix}bot-süre - Botun açık kalma zamanını gösterir.
 ${prefix}yardım - Botun bütün komutlarını size gösterir.
 ${prefix}sunucubilgi - Sunucu hakkkında detaylı bilgi verir.
 ${prefix}bilgi - Bot hakkında bilgi verir.
+${prefix}bot-davet - Botun davet linkini atar.
 \`\`\`
 **Eğlence Komutları**
 \`\`\`fix
