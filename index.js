@@ -143,6 +143,7 @@ ${prefix}bot-davet - Botun davet linkini atar.
 \`\`\`fix
 ${prefix}avatarım - Avatarınızın linkini gönderir.
 ${prefix}kurabiye - Size kurabiye verir.
+\`\`\`
 **Moderasyon Komutları**
 \`\`\`fix
 ${prefix}kick - Sunucudan atar
