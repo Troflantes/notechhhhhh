@@ -58,7 +58,7 @@ bot.on("message", message => {
     
     
     if (message.content.toLowerCase() === prefix + "bot-davet") {
-        message.author.send("Davet linkim: **https://discordapp.com/oauth2/authorize?client_id=439467012062838785&permissions=8&scope=bot**")    
+        message.author.send("Davet linkim: **https://discordapp.com/oauth2/authorize?client_id=439756873311322112&permissions=8&scope=bot**")    
     }
     
     if (message.content.toLowerCase() === "notech") {
