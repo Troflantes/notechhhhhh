@@ -28,7 +28,6 @@ var Games = [
         var random = Math.floor(Math.random()*(Games.length-0+1)+0);
 
         bot.user.setGame(Games[random], "https://www.twitch.tv/scarew0");
-        }, 2 * 2500);
 };
 
 bot.on('message', message => {
