@@ -127,8 +127,7 @@ bot.on("message", message => {
     }
 
     if (message.content === prefix + "yardım") {
-        message.channel.sendMessage(`Komutlarımı özel mesaj ile gönderdim. :outbox_tray: `)
-        message.author.send(stripIndents`
+        message.channel.sendMessage(stripIndents`
 **YARDIM**
 \`\`\`fix
 ${prefix}yardım 1 - **Bilgi Komutları**
@@ -138,7 +137,6 @@ ${prefix}yardım 3 - **Moderasyon Komutları**
     }
     
      if (message.content === prefix + "yardım 1") {
-        message.channel.sendMessage(`Komutlarımı özel mesaj ile gönderdim. :outbox_tray: `)
         message.author.send(stripIndents`
 **YARDIM**
 \`\`\`fix
@@ -152,7 +150,6 @@ ${prefix}bot-davet - Botun davet linkini atar.
     }
 
      if (message.content === prefix + "yardım 2") {
-        message.channel.sendMessage(`Komutlarımı özel mesaj ile gönderdim. :outbox_tray: `)
         message.author.send(stripIndents`
 **YARDIM**
 \`\`\`fix
@@ -162,7 +159,6 @@ ${prefix}kurabiye - Size kurabiye verir.
     }
     
      if (message.content === prefix + "yardım 3") {
-        message.channel.sendMessage(`Komutlarımı özel mesaj ile gönderdim. :outbox_tray: `)
         message.author.send(stripIndents`
 **YARDIM**
 \`\`\`fix
