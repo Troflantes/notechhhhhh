@@ -106,7 +106,8 @@ bot.on("message", message => {
     }
 
     if (message.content === prefix + "yardım") {
-        message.channel.sendMessage(stripIndents`
+        message.channel.sendMessage(`Komutlarımı özel mesaj ile gönderdim. :outbox_tray: `)
+        message.author.send(stripIndents`
 Selam, ben ${bot.user.username}! Şuanda görmekte olduğunuz kısım benim bütün komutlarımı göstermektedir.
 **Bilgi Komutları**
 \`\`\`fix
