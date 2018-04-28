@@ -129,8 +129,18 @@ bot.on("message", message => {
     if (message.content === prefix + "yardım") {
         message.channel.sendMessage(`Komutlarımı özel mesaj ile gönderdim. :outbox_tray: `)
         message.author.send(stripIndents`
-Selam, ben ${bot.user.username}! Şuanda görmekte olduğunuz kısım benim bütün komutlarımı göstermektedir.
-**Bilgi Komutları**
+**YARDIM**
+\`\`\`fix
+${prefix}yardım 1 - **Bilgi Komutları**
+${prefix}yardım 2 - **Eğlence Komutları**
+${prefix}yardım 3 - **Moderasyon Komutları**
+\`\`\` `)
+    }
+    
+     if (message.content === prefix + "yardım 1") {
+        message.channel.sendMessage(`Komutlarımı özel mesaj ile gönderdim. :outbox_tray: `)
+        message.author.send(stripIndents`
+**YARDIM**
 \`\`\`fix
 ${prefix}ping - Botun pingini ölçer.
 ${prefix}f5 - Botu yeniden başlatır.
@@ -138,17 +148,28 @@ ${prefix}yardım - Botun bütün komutlarını size gösterir.
 ${prefix}sunucubilgi - Sunucu hakkkında detaylı bilgi verir.
 ${prefix}bilgi - Bot hakkında bilgi verir.
 ${prefix}bot-davet - Botun davet linkini atar.
-\`\`\`
-**Eğlence Komutları**
+\`\`\` `)
+    }
+
+     if (message.content === prefix + "yardım 2") {
+        message.channel.sendMessage(`Komutlarımı özel mesaj ile gönderdim. :outbox_tray: `)
+        message.author.send(stripIndents`
+**YARDIM**
 \`\`\`fix
 ${prefix}avatarım - Avatarınızın linkini gönderir.
 ${prefix}kurabiye - Size kurabiye verir.
-\`\`\`
-**Moderasyon Komutları**
+\`\`\` `)
+    }
+    
+     if (message.content === prefix + "yardım 3") {
+        message.channel.sendMessage(`Komutlarımı özel mesaj ile gönderdim. :outbox_tray: `)
+        message.author.send(stripIndents`
+**YARDIM**
 \`\`\`fix
 ${prefix}kick - Sunucudan atar
 \`\`\` `)
     }
+    
 
 });
 
