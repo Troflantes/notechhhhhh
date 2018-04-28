@@ -5,9 +5,6 @@ const bot = new Discord.Client();
 let prefix = "n!";
 let owner = "430011871555223553";
 
-var Games = [
-    
-
 bot.on("ready", () => {
     bot.user.setStatus('online');
     bot.user.setGame(`${prefix}yardım | ${bot.guilds.size} Sunucu ${bot.users.size} Kullanıcı`, "https://www.twitch.tv/scarew0");
@@ -34,6 +31,8 @@ bot.on("message", message => {
         message.reply("Aleyküm Selam HoşGeldin  👋 ")
     }
     
+    
+    
     if (message.content.toLowerCase() === prefix + "bot-davet") {
         message.author.send("Davet linkim: **https://discordapp.com/oauth2/authorize?client_id=439467012062838785&permissions=8&scope=bot**")    
     }
@@ -46,6 +45,36 @@ bot.on("message", message => {
         message.reply("Pingim " + bot.ping + " milisaniye");
     }
 
+bot.on('message', message => {
+  if (message.author.bot) return;
+  if (!message.content.startsWith(prefix)) return;
+
+  let command = message.content.split(' ')[0];
+  command = command.slice(prefix.length);
+
+  let args = message.content.split(' ').slice(1);
+
+  if (command === 'tavsiye' || command === 'tavsiye') {
+    let str = '<@430011871555223553>';
+    let id = str.replace(/[<@!>]/g, '');
+    let mesaj = args.slice(0).join(' ');
+    if (mesaj.length < 1) return message.reply(`Tavsiyeni yazmayı unuttun`);
+    message.channel.sendEmbed(new Discord.RichEmbed()
+    .setColor('RANDOM')
+    .setDescription(''));
+    const embed = new Discord.RichEmbed()
+    .setColor('RANDOM')
+    .setTitle('Tavsiye bilgileri;')
+    .addField('Tavsiye:', mesaj, true)
+    .addField('Kullanıcı adı:', message.author.tag, true)
+    .addField('Kullanıcı kimliği:', message.author.id, true)
+    .addField('Sunucu adı:', message.guild.name, true)
+    .addField('Sunucu kimliği:', message.guild.id, true)
+    client.fetchUser(id)
+    .then(user => {user.send({embed})})
+  }
+});
+    
     if (message.content.toLowerCase() === prefix + 'f5') {
     if (message.author.id !== "430011871555223553") {
       message.reply('Benim yapımcım değilsin.');
