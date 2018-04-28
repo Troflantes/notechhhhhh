@@ -6,6 +6,7 @@ let prefix = "n!";
 let owner = "430011871555223553";
 
 bot.on("ready", () => {
+    bot.user.setStatus('online');
     bot.user.setActivity(prefix + "yardım | " + bot.guilds.size + " Sunucu " + bot.users.size + " Kullanıcı", { type: 'WATCHING' })
     console.log("Bağlandım!")   
 });
@@ -38,6 +39,11 @@ bot.on("message", message => {
         message.reply("Efendim?")
     }
     
+    if (message.content.toLowerCase() === prefix + "dm-gönder") {
+
+        message.author.send('Yok sana dm falan');
+    }
+    
     if (message.content.toLowerCase() === prefix + "ping") {
         message.reply("Pingim " + bot.ping + " milisaniye");
     }
@@ -52,6 +58,7 @@ bot.on("message", message => {
     })
    }
   }
+   
         
     if (message.content.toLowerCase() === prefix + "sunucubilgi") {
         const embed = new Discord.RichEmbed()
