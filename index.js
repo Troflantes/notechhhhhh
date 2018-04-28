@@ -12,6 +12,12 @@ bot.on("ready", () => {
 
 bot.login(process.env.BOT_TOKEN);
 
+bot.on('message', message => {
+    if (message.content.toLowerCase() === prefix + "avatarım") {
+        message.reply(message.author.avatarURL);
+   }
+});
+
 bot.on("message", message => {
 
     if (message.content.toLowerCase() === "sa") {
@@ -19,9 +25,8 @@ bot.on("message", message => {
     }
     
     if (message.content.toLowerCase() === prefix + "ping") {
-        message.reply("Pingim Ölçülüyor... ");
-        message.delete()
         message.reply("Pingim " + bot.ping + " milisaniye");
+        message.delete()
     }
 
     if (message.content.toLowerCase() === prefix + "sunucubilgi") {
@@ -81,6 +86,7 @@ ${prefix}bilgi - Bot hakkında bilgi verir.
 \`\`\`
 **Eğlence Komutları**
 \`\`\`fix
+${prefix}avatarım - Avatarınızın linkini gönderir.
 ${prefix}kurabiye - Size kurabiye verir.
 \`\`\` `)
     }
