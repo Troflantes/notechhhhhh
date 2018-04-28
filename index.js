@@ -41,15 +41,6 @@ bot.on("message", message => {
         message.reply("Pingim " + bot.ping + " milisaniye");
     }
         
-    if (message.content.toLowerCase() === prefix + 'reboot') {
-    if (message.author.id !== 430011871555223553) {
-      message.reply('Benim yapımcım değilsin.');
-    } else {
-      message.channel.sendMessage(`Yeniden başlıyorum..`).then(msg => {
-      console.log(`Yeniden başlıyorum..`);
-      process.exit(0);
-    }
-
     if (message.content.toLowerCase() === prefix + "sunucubilgi") {
         const embed = new Discord.RichEmbed()
 
