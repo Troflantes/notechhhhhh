@@ -7,28 +7,11 @@ let owner = "430011871555223553";
 
 bot.on("ready", () => {
     bot.user.setStatus('online');
+    bot.user.setGame(`${prefix}yardım | ${bot.guilds.size} Sunucu ${bot.users.size} Kullanıcı`, "https://www.twitch.tv/scarew0");
     console.log("Bağlandım!")   
 });
 
 bot.login(process.env.BOT_TOKEN);
-
-var Games = [
-
-        `${prefix}yardım | ${bot.guilds.size} Sunucu ${bot.users.size} Kullanıcı`,
-    
-        "Yeni komutlar şu anda yok",
-		
-        "Notech sunucumuza katılmayı unutmayın. https://discord.io/notech",
-
-
-    ];
-
-    setInterval(function() {
-
-        var random = Math.floor(Math.random()*(Games.length-0+1)+0);
-
-        bot.user.setGame(Games[random], "https://www.twitch.tv/scarew0");
-};
 
 bot.on('message', message => {
     if (message.content.toLowerCase() === prefix + "avatarım") {
