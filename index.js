@@ -36,14 +36,14 @@ bot.on('message', message => {
         member.kick('Sebebini yazmalısın!').then(() => {
           message.reply(`Sunucudan atma başarılı! ${user.tag}`);
         }).catch(err => {
-          message.reply('Atılacak üyeyi bulamadım.');
+          message.reply('Bu kişi atılamıyor.');
           console.error(err);
         });
       } else {
-        message.reply('That user isn\'t in this guild!');
+        message.reply('Kullanıcı sunucuda değil.');
       }
     } else {
-      message.reply('You didn\'t mention the user to kick!');
+      message.reply('Atacağım kişiyi belirtmelisin!');
     }
   }
 });
