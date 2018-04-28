@@ -1,6 +1,7 @@
 const { stripIndents, oneLine } = require('common-tags');
 const Discord = require("discord.js");
 const bot = new Discord.Client();
+const green = "BFFF00";
 
 let prefix = "n!";
 let owner = "430011871555223553";
@@ -44,36 +45,6 @@ bot.on("message", message => {
     if (message.content.toLowerCase() === prefix + "ping") {
         message.reply("Pingim " + bot.ping + " milisaniye");
     }
-
-bot.on('message', message => {
-  if (message.author.bot) return;
-  if (!message.content.startsWith(prefix)) return;
-
-  let command = message.content.split(' ')[0];
-  command = command.slice(prefix.length);
-
-  let args = message.content.split(' ').slice(1);
-
-  if (command === 'tavsiye' || command === 'tavsiye') {
-    let str = '<@430011871555223553>';
-    let id = str.replace(/[<@!>]/g, '');
-    let mesaj = args.slice(0).join(' ');
-    if (mesaj.length < 1) return message.reply(`Tavsiyeni yazmayı unuttun`);
-    message.channel.sendEmbed(new Discord.RichEmbed()
-    .setColor('RANDOM')
-    .setDescription(''));
-    const embed = new Discord.RichEmbed()
-    .setColor('RANDOM')
-    .setTitle('Tavsiye bilgileri;')
-    .addField('Tavsiye:', mesaj, true)
-    .addField('Kullanıcı adı:', message.author.tag, true)
-    .addField('Kullanıcı kimliği:', message.author.id, true)
-    .addField('Sunucu adı:', message.guild.name, true)
-    .addField('Sunucu kimliği:', message.guild.id, true)
-    client.fetchUser(id)
-    .then(user => {user.send({embed})})
-  }
-});
     
     if (message.content.toLowerCase() === prefix + 'f5') {
     if (message.author.id !== "430011871555223553") {
@@ -161,5 +132,12 @@ bot.on("message", message => {
         message.reply("Küfür Etme! :rage:")
         message.delete()
     }
-
+    
+     default:
+            let defaultembed = new discord.RichEmbed()
+                .setColor(green)
+                .addField("Hata!", "Komut bulunamadı!");
+            message.channel.send(defaultembed);
+            return;
+    }
 });
