@@ -40,8 +40,8 @@ bot.on("message", message => {
     
     if (message.content.toLowerCase() === prefix + "ping") {
         message.reply("Pingim ölçülüyor..");
-         .then(sentMessage => {
-            sentMessage.edit(`"Pingim " + bot.ping + " milisaniye"`);
+         .then(sentMsg => {
+            sentMsg.edit(`"Pingim " + bot.ping + " milisaniye"`);
     }
     
     if (message.content.toLowerCase() === prefix + 'f5') {
