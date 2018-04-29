@@ -20,7 +20,22 @@ bot.on('message', message => {
 });
 
 bot.on('message', msg => {
-if (msg.content === 'acıktım') {
+if (msg.content.toLowerCase === 'notech') {
+   	if (Math.floor((Math.random() * 6) + 1) === 1) {
+   		msg.reply('Sanane benden?');
+   	}else if (Math.floor((Math.random() * 6) + 1) === 2) {
+   		msg.reply('İyiyim kanka seni sormalı?');
+   	}else if (Math.floor((Math.random() * 6) + 1) === 3) {
+   		msg.reply('Kötüyüm bee internetim çekmiyo :(');
+   	}else if (Math.floor((Math.random() * 6) + 1) === 4) {
+   		msg.reply('idk');
+   	}else if (Math.floor((Math.random() * 6) + 1) === 5) {
+   		msg.reply('Bende bilmiyorum XD');
+   	}else if (Math.floor((Math.random() * 6) + 1) === 6) {
+   		msg.reply('Ya işte sen gel benden ayrıl sen kimsin benden ayrılıyosun');
+
+bot.on('message', msg => {
+if (msg.content.toLowerCase === 'acıktım') {
    	if (Math.floor((Math.random() * 15) + 1) === 1) {
    		msg.reply('Az sabret iftara az kaldı!');
    	}else if (Math.floor((Math.random() * 15) + 1) === 2) {
@@ -54,7 +69,7 @@ if (msg.content === 'acıktım') {
    	}
   }
     
-if (msg.content === 'susadım') {
+if (msg.content.toLowerCase === 'susadım') {
    	if (Math.floor((Math.random() * 15) + 1) === 1) {
    		msg.reply('Az sabret iftara az kaldı!');
    	}else if (Math.floor((Math.random() * 15) + 1) === 2) {
@@ -104,7 +119,7 @@ if (msg.content === 'susadım') {
    	msg.reply('Git, Barış MANÇO nun -Lambaya Püf De- dinle!');
   }
     
-if (msg.content === 'iftar ne zaman') {
+if (msg.content.toLowerCase === 'iftar ne zaman') {
   	if (Math.floor((Math.random() * 4) + 1) === 1) {
    		msg.reply('Zamanı geldiği zaman!');
    	}else if (Math.floor((Math.random() * 4) + 1) === 2) {
