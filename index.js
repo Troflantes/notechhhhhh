@@ -59,19 +59,13 @@ bot.on("message", message => {
         message.author.send("Davet linkim: **https://discordapp.com/oauth2/authorize?client_id=439756873311322112&permissions=8&scope=bot**")    
     }
     
-    if (message.content.toLowerCase() === prefix + "yaz") {
-        let mesaj = args.slice(0).join(' ');
-    if (mesaj.length < 1) return message.reply('Yazmam için herhangi bir şey yazmalısın.');
-        message.delete();
-        message.channel.sendMessage(mesaj);
-};
-    
     if (message.content.toLowerCase() === "notech") {
         message.reply("Efendim?")
     }
     
     if (message.content.toLowerCase() === prefix + "ping") {
-        message.reply("Pingim :ping_pong: " + bot.ping + " milisaniye");
+        message.reply("Pingim ölçülüyor..");
+        m.edit("Pingim :ping_pong: " + bot.ping + " Milisaniye");
     }
     
     if (message.content.toLowerCase() === prefix + 'yenile') {
@@ -174,7 +168,7 @@ ${prefix}kick - Sunucudan atar
 
 bot.on("message", message => {
 
-    const kufur = ["amk", "aq", "orospu", "oruspu", "oç", "sikerim", "yarrak", "piç", "amq", "sik"];
+    const kufur = ["amk", "aq", "orospu", "oruspu", "oç", "sikerim", "yarrak", "piç", "amq", "sik", "amcık", "çocu"];
     if (kufur.some(word => message.content.includes(word)) ) {
         message.reply("Küfür Etme! :rage:")
         message.delete()
