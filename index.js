@@ -7,9 +7,25 @@ let owner = "430011871555223553";
 
 bot.on("ready", () => {
     bot.user.setStatus('online');
-    bot.user.setGame(`${prefix}yardım | ${bot.guilds.size} Sunucu ${bot.users.size} Kullanıcı`, "https://www.twitch.tv/scarew0");
     console.log("Bağlandım!")   
 });
+
+const Games = [
+
+        `${prefix}yardım | ${bot.guilds.size} Sunucu ${bot.users.size} Kullanıcı`,
+        "Scarew#0001",
+		
+        "Yeni Komutlarım Yakında.."
+
+    ];
+
+const random = Math.floor(Math.random()*(Games.length-0+1)+0);
+
+        client.user.setGame(Games[random], "https://www.twitch.tv/scarew0");
+        }, 2 * 2500);
+
+};
+
 
 bot.login(process.env.BOT_TOKEN);
 
