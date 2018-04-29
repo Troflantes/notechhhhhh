@@ -67,7 +67,7 @@ bot.on("message", message => {
     
     if (message.content.toLowerCase() === prefix + "ping") {
         message.reply("Pingimi Ölçüyorum.");
-        .then(message => message.edit("Pingim :ping_pong: " + bot.ping + " milisaniye"))
+        message.edit("Pingim :ping_pong: " + bot.ping + " milisaniye"))
     }
     
     if (message.content.toLowerCase() === prefix + 'f5') {
