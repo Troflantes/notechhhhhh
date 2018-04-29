@@ -18,11 +18,6 @@ bot.on('message', message => {
         message.reply(message.author.avatarURL);
    }
 });
-    
-  if (msg.content === 'of') {
-   	msg.reply('Oflama geçer bugünler!');
-  }
-});
 
 bot.on('message', msg => {
 if (msg.content.toLowerCase() === prefix + "sigara") {
