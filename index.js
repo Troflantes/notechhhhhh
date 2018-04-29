@@ -178,7 +178,7 @@ ${prefix}kick - Sunucudan atar
 
 bot.on("message", message => {
 
-    const kufur = ["amk", "aq", "orospu", "oruspu", "oç", "sikerim", "yarrak", "piç", "amq", "sik", "amcık", "çocu"];
+    const kufur = ["amk", "aq", "orospu", "oruspu", "oç", "sikerim", "yarrak", "piç", "amq", "sik", "amcık", "çocu", "sex", "seks", "amına"];
     if (kufur.some(word => message.content.includes(word)) ) {
         message.reply("Bu sunucuda küfür filtresi etkindir. Lütfen küfür etmeyiniz!")
         message.delete()
