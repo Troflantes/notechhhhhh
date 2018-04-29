@@ -33,6 +33,9 @@ if (msg.content.toLowerCase === 'notech') {
    		msg.reply('Bende bilmiyorum XD');
    	}else if (Math.floor((Math.random() * 6) + 1) === 6) {
    		msg.reply('Ya işte sen gel benden ayrıl sen kimsin benden ayrılıyosun');
+  	}
+  }
+});
 
 bot.on('message', msg => {
 if (msg.content.toLowerCase === 'acıktım') {
