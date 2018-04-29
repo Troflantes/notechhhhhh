@@ -2,7 +2,7 @@ const { stripIndents, oneLine } = require('common-tags');
 const Discord = require("discord.js");
 const bot = new Discord.Client();
 
-let prefix = "n!";
+let prefix = "!";
 let owner = "430011871555223553";
 
 bot.on("ready", () => {
@@ -50,17 +50,13 @@ bot.on('message', message => {
 
     
 bot.on("message", message => {
-
-    if (message.content.toLowerCase() === "sa") {
-        message.reply("Aleyküm Selam HoşGeldin. ")
-    }
     
     if (message.content.toLowerCase() === prefix + "bot-davet") {
         message.author.send("Davet linkim: **https://discordapp.com/oauth2/authorize?client_id=439756873311322112&permissions=8&scope=bot**")    
     }
     
     if (message.content.toLowerCase() === "notech") {
-        message.reply("Efendim?")
+        message.reply("ne var")
     }
     
     if (message.content.toLowerCase() === prefix + "ping") {
