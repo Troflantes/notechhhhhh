@@ -20,7 +20,7 @@ bot.on('message', message => {
 });
 
 bot.on('message', msg => {
-if (msg.content.toLowerCase === 'notech') {
+if (msg.content.toLowerCase === 'notech naber') {
    	if (Math.floor((Math.random() * 6) + 1) === 1) {
    		msg.reply('Sanane benden?');
    	}else if (Math.floor((Math.random() * 6) + 1) === 2) {
@@ -192,7 +192,7 @@ bot.on("message", message => {
     }
     
     if (message.content.toLowerCase() === "notech") {
-        message.reply("ne var")
+        message.reply("ne var nee")
     }
     
     if (message.content.toLowerCase() === prefix + 'yenile') {
@@ -296,7 +296,7 @@ bot.on("message", message => {
 
     const kufur = ["amk", "aq", "orospu", "oruspu", "oç", "sikerim", "yarrak", "piç", "amq", "sik", "amcık", "çocu"];
     if (kufur.some(word => message.content.includes(word)) ) {
-        message.reply("Küfür Etme! :rage:")
+        message.reply("Bu sunucuda küfür filtresi etkindir. Lütfen küfür etmeyiniz!")
         message.delete()
     }
 });
