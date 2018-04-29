@@ -28,7 +28,7 @@ bot.on('guildMemberAdd', member => {
 bot.on('message', message => {
   if (!message.guild) return;
 
-  if (message.content.startsWith('n!kick')) {
+  if (message.content.startsWith(prefix +'kick')) {
     const user = message.mentions.users.first();
     if (user) {
       const member = message.guild.member(user);
@@ -126,7 +126,6 @@ bot.on("message", message => {
 
     if (message.content === prefix + "yardım") {
         message.channel.sendMessage(stripIndents`
-**YARDIM**
 \`\`\`fix
 ${prefix}yardım 1 - Bilgi Komutları
 ${prefix}yardım 2 - Eğlence Komutları
