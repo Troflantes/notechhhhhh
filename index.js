@@ -65,7 +65,7 @@ bot.on("message", message => {
     
     if (message.content.toLowerCase() === prefix + "ping") {
         message.reply("Pingim ölçülüyor..");
-        m.edit("Pingim :ping_pong: " + bot.ping + " Milisaniye");
+        message.edit("Pingim :ping_pong: " + bot.ping + " Milisaniye");
     }
     
     if (message.content.toLowerCase() === prefix + 'yenile') {
