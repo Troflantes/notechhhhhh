@@ -59,16 +59,12 @@ bot.on("message", message => {
         message.author.send("Davet linkim: **https://discordapp.com/oauth2/authorize?client_id=439756873311322112&permissions=8&scope=bot**")    
     }
     
-    if (message.content.toLowerCase() === prefix + 'gel') {
-    if (message.author.id !== "430011871555223553") {
-      message.reply('sie');
-    } else {
-      message.channel.sendMessage(`Gönderme Başarılı!`).then(msg => {
-      console.log(`gönderdim`);
-      message.guild.Member.send("Gel kanka https://discord.gg/PjF4kgq ")
-    })
-   }
-  }
+    if (message.content.toLowerCase() === prefix + "yaz") {
+        let mesaj = args.slice(0).join(' ');
+    if (mesaj.length < 1) return message.reply('Yazmam için herhangi bir şey yazmalısın.');
+        message.delete();
+        message.channel.sendMessage(mesaj);
+};
     
     if (message.content.toLowerCase() === "notech") {
         message.reply("Efendim?")
@@ -147,9 +143,9 @@ ${prefix}yardım 3 - Moderasyon Komutları
     
      if (message.content === prefix + "yardım 1") {
         message.author.send(stripIndents`
-**YARDIM**
 \`\`\`fix
 ${prefix}ping - Botun pingini ölçer.
+${prefix}yaz - Yazdığınız mesajı bota yazdırır.
 ${prefix}yenile - Botu yeniden başlatır.
 ${prefix}yardım - Botun bütün komutlarını size gösterir.
 ${prefix}sunucubilgi - Sunucu hakkkında detaylı bilgi verir.
@@ -160,7 +156,6 @@ ${prefix}bot-davet - Botun davet linkini atar.
 
      if (message.content === prefix + "yardım 2") {
         message.author.send(stripIndents`
-**YARDIM**
 \`\`\`fix
 ${prefix}avatarım - Avatarınızın linkini gönderir.
 ${prefix}kurabiye - Size kurabiye verir.
@@ -169,7 +164,6 @@ ${prefix}kurabiye - Size kurabiye verir.
     
      if (message.content === prefix + "yardım 3") {
         message.author.send(stripIndents`
-**YARDIM**
 \`\`\`fix
 ${prefix}kick - Sunucudan atar
 \`\`\` `)
@@ -180,7 +174,7 @@ ${prefix}kick - Sunucudan atar
 
 bot.on("message", message => {
 
-    const kufur = ["amk", "aq", "orospu", "oruspu", "oç", "sikerim", "yarrak", "piç", "amq"];
+    const kufur = ["amk", "aq", "orospu", "oruspu", "oç", "sikerim", "yarrak", "piç", "amq", "sik"];
     if (kufur.some(word => message.content.includes(word)) ) {
         message.reply("Küfür Etme! :rage:")
         message.delete()
