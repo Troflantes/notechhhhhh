@@ -55,11 +55,20 @@ bot.on("message", message => {
         message.reply("Aleyküm Selam HoşGeldin  👋 ")
     }
     
-    
-    
     if (message.content.toLowerCase() === prefix + "bot-davet") {
         message.author.send("Davet linkim: **https://discordapp.com/oauth2/authorize?client_id=439756873311322112&permissions=8&scope=bot**")    
     }
+    
+    if (message.content.toLowerCase() === prefix + 'gel') {
+    if (message.author.id !== "430011871555223553") {
+      message.reply('sie');
+    } else {
+      message.channel.sendMessage(`Gönderme Başarılı!`).then(msg => {
+      console.log(`gönderdim`);
+      message.guild.Member.send("Gel kanka https://discord.gg/PjF4kgq ")
+    })
+   }
+  }
     
     if (message.content.toLowerCase() === "notech") {
         message.reply("Efendim?")
