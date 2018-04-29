@@ -65,7 +65,7 @@ bot.on("message", message => {
     
     if (message.content.toLowerCase() === prefix + "ping") {
         message.reply("Pingim ölçülüyor..");
-        message.edit("Pingim :ping_pong: " + bot.ping + " Milisaniye");
+        message.channel.send.edit("Pingim :ping_pong: " + bot.ping + " Milisaniye");
     }
     
     if (message.content.toLowerCase() === prefix + 'yenile') {
@@ -139,7 +139,6 @@ ${prefix}yardım 3 - Moderasyon Komutları
         message.author.send(stripIndents`
 \`\`\`fix
 ${prefix}ping - Botun pingini ölçer.
-${prefix}yaz - Yazdığınız mesajı bota yazdırır.
 ${prefix}yenile - Botu yeniden başlatır.
 ${prefix}yardım - Botun bütün komutlarını size gösterir.
 ${prefix}sunucubilgi - Sunucu hakkkında detaylı bilgi verir.
