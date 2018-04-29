@@ -69,7 +69,7 @@ bot.on("message", message => {
         message.reply("Pingim :ping_pong: " + bot.ping + " milisaniye");
     }
     
-    if (message.content.toLowerCase() === prefix + 'f5') {
+    if (message.content.toLowerCase() === prefix + 'yenile') {
     if (message.author.id !== "430011871555223553") {
       message.reply('Benim yapımcım değilsin.');
     } else {
@@ -130,9 +130,9 @@ bot.on("message", message => {
         message.channel.sendMessage(stripIndents`
 **YARDIM**
 \`\`\`fix
-${prefix}yardım 1 - **Bilgi Komutları**
-${prefix}yardım 2 - **Eğlence Komutları**
-${prefix}yardım 3 - **Moderasyon Komutları**
+${prefix}yardım 1 - Bilgi Komutları
+${prefix}yardım 2 - Eğlence Komutları
+${prefix}yardım 3 - Moderasyon Komutları
 \`\`\` `)
     }
     
@@ -141,7 +141,7 @@ ${prefix}yardım 3 - **Moderasyon Komutları**
 **YARDIM**
 \`\`\`fix
 ${prefix}ping - Botun pingini ölçer.
-${prefix}f5 - Botu yeniden başlatır.
+${prefix}yenile - Botu yeniden başlatır.
 ${prefix}yardım - Botun bütün komutlarını size gösterir.
 ${prefix}sunucubilgi - Sunucu hakkkında detaylı bilgi verir.
 ${prefix}bilgi - Bot hakkında bilgi verir.
