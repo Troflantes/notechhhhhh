@@ -52,7 +52,7 @@ bot.on('message', message => {
 bot.on("message", message => {
 
     if (message.content.toLowerCase() === "sa") {
-        message.reply("Aleyküm Selam HoşGeldin  👋 ")
+        message.reply("Aleyküm Selam HoşGeldin. ")
     }
     
     if (message.content.toLowerCase() === prefix + "bot-davet") {
@@ -63,7 +63,7 @@ bot.on("message", message => {
         let mesaj = args.slice(0).join(' ');
     if (mesaj.length < 1) return message.reply('Yazmam için herhangi bir şey yazmalısın.');
         message.delete();
-        message.channel.sendMessage(mesaj);
+        message.channel.send(mesaj);
 };
     
     if (message.content.toLowerCase() === "notech") {
@@ -76,7 +76,7 @@ bot.on("message", message => {
     
     if (message.content.toLowerCase() === prefix + 'yenile') {
     if (message.author.id !== "430011871555223553") {
-      message.reply('Benim yapımcım değilsin.');
+      message.reply('sie');
     } else {
       message.channel.sendMessage(`Yeniden başlıyorum..`).then(msg => {
       console.log(`Yeniden başlıyorum..`);
