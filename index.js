@@ -23,6 +23,15 @@ message.channel.sendEmbed(new Discord.RichEmbed()
 });
 
 bot.on("message", message => {
+if (message.content.toLowerCase() === prefix + "kaydım") {
+message.channel.sendEmbed(new Discord.RichEmbed()
+.setDescription(`Kaydınız:`)
+.addField("Kayıt Tarihiniz: ", message.author.createdAt , true)
+.setColor(0xf7dc46));
+   }
+});
+
+bot.on("message", message => {
 if (message.content.toLowerCase() === prefix + "avatardeğiş") {
       bot.user.setAvatar(`https://cdn.discordapp.com/attachments/440473817295486988/440514952676245516/pp4.png`);
    }
