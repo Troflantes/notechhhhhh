@@ -136,9 +136,7 @@ bot.on("message", message => {
         message.channel.sendMessage(stripIndents`
 \`\`\`fix
 ${prefix}anakomutlar - Bilgi Komutları
-
 ${prefix}eğlence - Eğlence Komutları
-
 ${prefix}moderasyon - Moderasyon Komutları
 \`\`\` `)
     }
@@ -174,11 +172,12 @@ ${prefix}kick - Sunucudan atar
 
 });
 
-bot.on("message", message => {
+bot.on("message", msg => {
 
     const kufur = ["amk", "aq", "orospu", "oruspu", "oç", "sikerim", "yarrak", "piç", "amq", "sik", "amcık", "çocu", "sex", "seks", "amına"];
-    if (kufur.some(word => message.content.includes(word)) ) {
-        message.reply("Bu sunucuda küfür filtresi etkindir. Lütfen küfür etmeyiniz!")
-        message.delete()
+    if (kufur.some(word => msg.content.includes(word)) ) {
+        msg.reply("Bu sunucuda küfür filtresi etkindir.")
+        .then(nmsg => nmsg.edit("Lütfen küfür etmeyiniz!"));
+        msg.delete()
     }
 });
