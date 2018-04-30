@@ -51,6 +51,7 @@ bot.on('message', msg => {
     msg.delete();
     msg.channel.sendMessage(msg.content);
   }
+});
 
 bot.on ('message', msg => {
   if (msg.content.toLowerCase() === prefix + 'temizle') {
