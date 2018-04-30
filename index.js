@@ -47,7 +47,7 @@ return msg.channel.send({embed})}
   }
 
 bot.on('message', msg => {
-  if (msg.content.startsWith(prefix + "yaz-bot")) {
+  if (msg.content.startsWith(prefix + "yas")) {
     msg.delete();
     msg.channel.sendMessage(msg.content);
   }
