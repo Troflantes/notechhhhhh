@@ -36,6 +36,19 @@ return msg.channel.send({embed})}
     });
 
 bot.on("message", message => {
+    const dmchannel = bot.channels.find("name", "notechdm");
+    if (message.channel.type === "dm") {
+        if (message.author.id === bot.user.id) return;
+        dmchannel.sendMessage("", {embed: {
+                color: 3447003,
+                title: `Yazan: ${message.author.tag}`,
+                description: `${message.content}`
+              }})
+    }
+    if (message.channel.bot) return;
+});
+
+bot.on("message", message => {
 if (message.content.toLowerCase() === prefix + "kaydım") {
 message.channel.sendEmbed(new Discord.RichEmbed()
 .setDescription(`Kaydınız:`)
