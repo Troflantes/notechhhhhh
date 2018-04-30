@@ -20,14 +20,12 @@ message.channel.sendEmbed(new Discord.RichEmbed()
 .setImage(`${message.author.avatarURL} `)
 .setColor(0xf7dc46));
    }
-});
-
-bot.on("message", message => {
+    
 if (message.content.toLowerCase() === prefix + "yaz") {
-  let mesaj = args.slice(0).join(' ');
-if (mesaj.length < 1) return message.reply('Yazmam için herhangi bir şey yazmalısın.');
-  message.delete();
-  message.channel.send(mesaj);
+     let mesaj = args.slice(0).join(' ');
+    if (mesaj.length < 1) return message.reply('Söyleyeceğim şeyi yazmayı unuttun.')
+    .then(message => { message.delete(1000) });
+    message.channel.send(mesaj);
    }
 });
 
