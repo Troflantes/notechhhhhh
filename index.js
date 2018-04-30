@@ -13,14 +13,8 @@ bot.on("ready", () => {
 
 bot.login(process.env.BOT_TOKEN);
 
-bot.on('message', message => {
-    if (message.content.toLowerCase() === prefix + "avatarım") {
-        message.reply(message.author.avatarURL);
-   }
-});
-
 bot.on("message", message => {
-if (message.content.toLowerCase() === prefix + "avatar") {
+if (message.content.toLowerCase() === prefix + "avatarım") {
 message.channel.sendEmbed(new Discord.RichEmbed()
 .setDescription(`Avatarınız:`)
 .setImage(`${message.author.avatarURL} `)
