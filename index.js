@@ -28,6 +28,45 @@ if (message.content.toLowerCase() === prefix + "avatardeğiş") {
    }
 });
 
+bot.on("message", message => {
+    if (message.content.toLowerCase() === prefix + 'drm-kırmızı') {
+    if (message.author.id !== "430011871555223553") {
+      message.reply('sie');
+    } else {
+      message.channel.sendMessage(`**DND** ✔️`).then(msg => {
+      console.log(`**DND** ✔️`);
+      bot.user.setStatus('dnd');
+    })
+   }
+  }
+});
+
+bot.on("message", message => {
+    if (message.content.toLowerCase() === prefix + 'drm-sarı') {
+    if (message.author.id !== "430011871555223553") {
+      message.reply('sie');
+    } else {
+      message.channel.sendMessage(`**IDLE** ✔️`).then(msg => {
+      console.log(`**IDLE** ✔️`);
+      bot.user.setStatus('idle');
+    })
+   }
+  }
+});
+
+bot.on("message", message => {
+    if (message.content.toLowerCase() === prefix + 'drm-yeşil') {
+    if (message.author.id !== "430011871555223553") {
+      message.reply('sie');
+    } else {
+      message.channel.sendMessage(`**AVAILABLE** ✔️`).then(msg => {
+      console.log(`**AVAILABLE** ✔️`);
+      bot.user.setStatus('available');
+    })
+   }
+  }
+});
+
 bot.on('message', msg => {
 if (msg.content.toLowerCase() === prefix + "sigara") {
 msg.channel.send(':smoking: :cloud::cloud::cloud:')
@@ -74,8 +113,8 @@ msg.channel.send('Pingim ölçülüyor..')
 });
 
 bot.on('message', msg => {
-if (msg.content.toLowerCase() === prefix + "destek-sunucusu") {
-msg.channel.send('Bakıyorum..')
+if (msg.content.toLowerCase() === prefix + "desteksncsu") {
+msg.author.send('Bakıyorum..')
     
 .then(nmsg => nmsg.edit("Buyrun: https://discord.gg/PjF4kgq"));
 }
@@ -166,7 +205,7 @@ ${prefix}yardım - Botun bütün komutlarını size gösterir.
 ${prefix}sunucubilgi - Sunucu hakkkında detaylı bilgi verir.
 ${prefix}bilgi - Bot hakkında bilgi verir.
 ${prefix}bot-davet - Botun davet linkini atar.
-${prefix}destek-sunucusu - Destek sunucusunun linkini atar.
+${prefix}desteksncsu - Destek sunucusunun linkini atar.
 \`\`\` `)
     }
 
