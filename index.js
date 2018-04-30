@@ -7,7 +7,7 @@ let owner = "430011871555223553";
 
 bot.on("ready", () => {
     bot.user.setStatus('online');
-    bot.user.setGame(`${prefix}yardım | ${bot.guilds.size} Sunucu ${bot.users.size} Kullanıcı`, "https://www.twitch.tv/scarew0");
+    bot.user.setGame(`${prefix}yardım | ${bot.guilds.size} Sunucu ${bot.users.size} Kullanıcı | Bota Yazılan Mesajlar Okunmaktadır!`, "https://www.twitch.tv/scarew0");
     console.log("Bağlandım!")   
 });
 
