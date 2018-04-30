@@ -22,6 +22,13 @@ message.channel.sendEmbed(new Discord.RichEmbed()
    }
 });
 
+bot.on('message', async msg => {
+  if (msg.content.toLowerCase() === 'sa') {
+    await msg.react('🇦');
+    msg.react('🇸');
+  }
+});
+
 bot.on('message', msg => {
   if (msg.content.startsWith(prefix + "yaz")) {
     if (msg.channel.type !== "dm"){
@@ -37,7 +44,7 @@ return msg.channel.send({embed})}
 
 bot.on ('message', message => {
 if (message.content === prefix + "emojiler") {
-  const emojiList = message.guild.emojis.map(e=>e.toString()).join(" **|** ");
+  const emojiList = message.guild.emojis.map(e=>e.toString()).join(" ** | ** ");
   message.channel.send(emojiList);
 }
 });
@@ -227,6 +234,16 @@ bot.on("message", message => {
 ${prefix}anakomutlar - Bilgi Komutları
 ${prefix}eğlence - Eğlence Komutları
 ${prefix}moderasyon - Moderasyon Komutları
+\`\`\` `)
+    }
+    
+    if (message.content === prefix + "matematik") {
+        message.channel.sendMessage(stripIndents`
+\`\`\`fix
+${prefix}topla - Yazdığınız iki sayıyı toplar.
+${prefix}çıkar - Yazdığınız iki sayıyı çıkarır.
+${prefix}çarp - Yazdığınız iki sayıyı çarpar.
+${prefix}böl - Yazdığınız iki sayıyı böler.
 \`\`\` `)
     }
     
