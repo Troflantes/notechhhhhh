@@ -22,6 +22,15 @@ message.channel.sendEmbed(new Discord.RichEmbed()
    }
 });
 
+bot.on("message", message => {
+if (message.content.toLowerCase() === prefix + "yaz") {
+  let mesaj = args.slice(0).join(' ');
+if (mesaj.length < 1) return message.reply('Yazmam için herhangi bir şey yazmalısın.');
+  message.delete();
+  message.channel.send(mesaj);
+   }
+});
+
 bot.on('message', msg => {
 if (msg.content.toLowerCase() === prefix + "sigara") {
 msg.channel.send(':smoking: :cloud::cloud::cloud:')
