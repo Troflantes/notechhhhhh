@@ -217,6 +217,7 @@ ${prefix}kurabiye - Size kurabiye verir.
      if (message.content === prefix + "moderasyon") {
         message.author.send(stripIndents`
 \`\`\`fix
+${prefix}yaz - Yazdığınız mesajı bota yazdırır.
 ${prefix}kick - Sunucudan atar.
 \`\`\` `)
     }
