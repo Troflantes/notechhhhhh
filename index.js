@@ -22,13 +22,6 @@ message.channel.sendEmbed(new Discord.RichEmbed()
    }
 });
 
-bot.on("message", message => {
-if (message.content.toLowerCase() === prefix + "dürümısmarla") {
-    let mesaj = message.slice(0).join(' ');
-    message.channel.send(`** ${mesaj} ` + message.author.username + ' Sana :burrito: ısmarladı. Afiyet olsun!**')
-   }
-});
-
 bot.on('message', msg => {
 if (msg.content.toLowerCase() === prefix + "sigara") {
 msg.channel.send(':smoking: :cloud::cloud::cloud:')
