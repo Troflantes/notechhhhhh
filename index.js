@@ -19,6 +19,15 @@ bot.on('message', message => {
    }
 });
 
+bot.on("message", async message => {
+if (message.content.toLowerCase() === prefix + "yaz") {
+let mesaj = args.slice(0).join(' ');
+    if (mesaj.length < 1) return message.reply('Söyleyeceğim şeyi yazmayı unutttun.')
+    .then(message => { message.delete(1000) });
+    message.channel.send(mesaj);
+    }
+});
+
 bot.on('message', msg => {
 if (msg.content.toLowerCase() === prefix + "sigara") {
 msg.channel.send(':smoking: :cloud::cloud::cloud:')
