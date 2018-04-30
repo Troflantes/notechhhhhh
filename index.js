@@ -42,6 +42,16 @@ return msg.channel.send({embed})}
     }
     });
 
+  if (!msg.content.startsWith(prefix)) {
+	  return;
+  }
+
+bot.on('message', msg => {
+  if (msg.content.startsWith(prefix + "yaz-bot")) {
+    msg.delete();
+    msg.channel.sendMessage(msg.content);
+  }
+
 bot.on ('message', msg => {
   if (msg.content.toLowerCase() === prefix + 'temizle') {
     msg.channel.bulkDelete(100);
