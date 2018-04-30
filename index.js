@@ -154,7 +154,7 @@ msg.channel.send('Pingim ölçülüyor..')
 });
 
 bot.on('message', msg => {
-if (msg.content.toLowerCase() === prefix + "desteksncsu") {
+if (msg.content.toLowerCase() === prefix + "desteksunucusu") {
 msg.author.send('Bakıyorum..')
     
 .then(nmsg => nmsg.edit("Buyrun: https://discord.gg/PjF4kgq"));
@@ -229,8 +229,6 @@ bot.on("message", message => {
     }
 
     if (message.content === prefix + "yardım") {
-        await msg.react('🇹');
-    msg.react('🇲');
         message.channel.sendMessage(stripIndents`
 \`\`\`fix
 ${prefix}anakomutlar - Bilgi Komutları
@@ -250,8 +248,6 @@ ${prefix}böl - Yazdığınız iki sayıyı böler.
     }
     
      if (message.content === prefix + "anakomutlar") {
-         await message.react('🇹');
-    message.react('🇲');
         message.author.send(stripIndents`
 \`\`\`fix
 ${prefix}emojiler - Sunucudaki emojileri gösterir.
@@ -263,13 +259,14 @@ ${prefix}bilgi - Bot hakkında bilgi verir.
 ${prefix}bot-davet - Botun davet linkini atar.
 ${prefix}desteksncsu - Destek sunucusunun linkini atar.
 \`\`\` `)
+     await message.react('🇹');
+    message.react('🇲');
     }
 
      if (message.content === prefix + "eğlence") {
-         await message.react('🇹');
-    message.react('🇲');
         message.author.send(stripIndents`
 \`\`\`fix
+${prefix}matematik - Matematik işlemi yapar. 
 ${prefix}sigara - Bot sigara içer.
 ${prefix}avatarım - Avatarınızın linkini gönderir.
 ${prefix}kurabiye - Size kurabiye verir.
@@ -277,8 +274,6 @@ ${prefix}kurabiye - Size kurabiye verir.
     }
     
      if (message.content === prefix + "moderasyon") {
-         await message.react('🇹');
-    message.react('🇲');
         message.author.send(stripIndents`
 \`\`\`fix
 ${prefix}yaz - Yazdığınız mesajı bota yazdırır.
