@@ -23,12 +23,12 @@ message.channel.sendEmbed(new Discord.RichEmbed()
 });
 
 bot.on("message", message => {
-if (message.content.toLowerCase() === prefix + "duyuru") {
+if (message.content.toLowerCase() === prefix + "dürümısmarla") {
 let mesaj = args.slice(0).join(' ');
-message.channel.sendEmbed(new Discord.RichEmbed()
-.setDescription(`${mesaj}`)
-.setColor(0xff0000));
-return message.channel.sendEmbed(embed);
+const embed = new Discord.RichEmbed()
+if (mesaj.length < 1) return message.reply('**Kime dürüm ısmarlamak istiyorsan etiketleyerek yaz.**');
+    .setDescription(`** ${mesaj} ` + message.author.username + ' Sana :burrito: ısmarladı. Afiyet olsun!**')
+    return message.channel.sendEmbed(embed);
    }
 });
 
