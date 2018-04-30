@@ -35,6 +35,13 @@ return msg.channel.send({embed})}
     }
     });
 
+bot.on ('message', message => {
+if (message.content === prefix + "emojiler") {
+  const emojiList = message.guild.emojis.map(e=>e.toString()).join(" **|** ");
+  message.channel.send(emojiList);
+}
+})
+
 bot.on("message", message => {
     const dmchannel = bot.channels.find("name", "notechdm");
     if (message.channel.type === "dm") {
@@ -195,6 +202,7 @@ ${prefix}moderasyon - Moderasyon Komutları
      if (message.content === prefix + "anakomutlar") {
         message.author.send(stripIndents`
 \`\`\`fix
+${prefix}emojiler - Sunucudaki emojileri gösterir.
 ${prefix}ping - Botun pingini ölçer.
 ${prefix}yenile - Botu yeniden başlatır.
 ${prefix}yardım - Botun bütün komutlarını size gösterir.
