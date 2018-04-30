@@ -24,7 +24,7 @@ message.channel.sendEmbed(new Discord.RichEmbed()
 
 bot.on("message", message => {
 if (message.content.toLowerCase() === prefix + "avatardeğiş") {
-      bot.user.setAvatar(`https://cdn.discordapp.com/icons/438065892299898880/f45e8754f7535f015c8f68c69c369dbf.png`);
+      bot.user.setAvatar(`https://cdn.discordapp.com/attachments/440473817295486988/440514952676245516/pp4.png`);
    }
 });
 
