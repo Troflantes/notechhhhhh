@@ -20,12 +20,12 @@ bot.on('message', message => {
 });
 
 bot.on("message", message => {
-if (message.content.toLowerCase() === prefix + "yaz") {
-let mesaj = args.slice(0).join(' ');
-    if (mesaj.length < 1) return message.reply('Söyleyeceğim şeyi yazmayı unutttun.')
-    .then(message => { message.delete(1000) });
-    message.channel.send(mesaj);
-    }
+if (message.content.toLowerCase() === prefix + "avatar") {
+message.channel.sendEmbed(new Discord.RichEmbed()
+.setDescription(`Avatarınız:`)
+.setImage(`${message.author.avatarURL} `)
+.setColor(0xf7dc46));
+   }
 });
 
 bot.on('message', msg => {
