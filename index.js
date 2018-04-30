@@ -257,10 +257,8 @@ ${prefix}yardım - Botun bütün komutlarını size gösterir.
 ${prefix}sunucubilgi - Sunucu hakkkında detaylı bilgi verir.
 ${prefix}bilgi - Bot hakkında bilgi verir.
 ${prefix}bot-davet - Botun davet linkini atar.
-${prefix}desteksncsu - Destek sunucusunun linkini atar.
+${prefix}desteksunucusu - Destek sunucusunun linkini atar.
 \`\`\` `)
-     await message.react('🇹');
-    message.react('🇲');
     }
 
      if (message.content === prefix + "eğlence") {
