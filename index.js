@@ -96,8 +96,7 @@ bot.on("message", message => {
 bot.on("message", message => {
 if (message.content.toLowerCase() === prefix + "kayıtım") {
 message.channel.sendEmbed(new Discord.RichEmbed()
-.setDescription(`Kaydınız:`)
-.addField("Kayıt Tarihiniz: ", message.author.createdAt , true)
+.setDescription("Kayıt Tarihiniz: ", message.author.createdAt , true)
 .setColor(0xf7dc46));
    }
 });
