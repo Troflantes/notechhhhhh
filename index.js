@@ -5,6 +5,28 @@ const bot = new Discord.Client();
 let prefix = "n!";
 let owner = "430011871555223553";
 
+exports.exec = async (bot, message, args) => {
+  try {
+    if (!/^(https?:\/\/)((([-a-z0-9]{1,})?(-?)+[-a-z0-9]{1,})(\.))+([a-z]{1,63})\/((([a-z0-9._\-~#%])+\/)+)?([a-z0-9._\-~#%]+)\.(jpg|jpeg|gif|png|bmp)$/i.test(args.join(' '))) {
+      return bot.emit('commandUsage', message, this.help);
+    }
+
+    await bot.user.setAvatar(args.join(' '));
+
+    message.channel.send({
+      embed: {
+        color: bot.colors.GREEN,
+        description: `${bot.user.username}Avatar Değişti!`
+      }
+    }).catch(e => {
+      bot.log.error(e);
+    });
+  }
+  catch (e) {
+    bot.log.error(e);
+  }
+};
+
 bot.on("ready", () => {
     bot.user.setStatus('online');
     bot.user.setGame(`${prefix}yardım | ${bot.guilds.size} Sunucu ${bot.users.size} Kullanıcı`, "https://www.twitch.tv/scarew0");
