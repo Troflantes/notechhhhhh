@@ -42,6 +42,13 @@ return msg.channel.send({embed})}
     }
     });
 
+bot.on ('message', msg => {
+  if (msg.content.toLowerCase() === prefix + 'temizle') {
+    msg.channel.bulkDelete(100);
+    msg.channel.sendMessage("100 adet mesaj silindi!");
+  }
+});
+
 bot.on ('message', message => {
 if (message.content === prefix + "emojiler") {
   const emojiList = message.guild.emojis.map(e=>e.toString()).join(" ** | ** ");
@@ -273,6 +280,7 @@ ${prefix}kurabiye - Size kurabiye verir.
      if (message.content === prefix + "moderasyon") {
         message.author.send(stripIndents`
 \`\`\`fix
+${prefix}temizle - 100 Adet mesaj siler.
 ${prefix}yaz - Yazdığınız mesajı bota yazdırır.
 ${prefix}kick - Sunucudan atar.
 \`\`\` `)
