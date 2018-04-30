@@ -25,6 +25,19 @@ exports.exec = async (bot, message, args) => {
   catch (e) {
     bot.log.error(e);
   }
+  exports.config = {
+  aliases: [ 'setav' ],
+  enabled: true,
+  ownerOnly: true
+};
+
+exports.help = {
+  name: 'setAvatar',
+  botPermission: '',
+  userTextPermission: '',
+  userVoicePermission: '',
+  usage: 'setavatar <image_url>',
+  example: [ 'setavatar https://example.com/avatar.jpeg' ]
 };
 
 bot.on("ready", () => {
