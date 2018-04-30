@@ -20,16 +20,14 @@ message.channel.sendEmbed(new Discord.RichEmbed()
 .setImage(`${message.author.avatarURL} `)
 .setColor(0xf7dc46));
    }
-    
-if (message.content.toLowerCase() === prefix + "temizle") {
-if (!message.guild) {
-    return message.author.send('`temizle` **komutu sadece sunucularda kullanılabilir.**');
-   }
-  let mesajsayisi = parseInt(args.join(' '));
-if (mesajsayisi.length < 1) return message.channel.send('**Kaç mesaj silmem gerektiğini belirtmedin.**')
-if (mesajsayisi > 100) return message.channel.send('**__100__** **adet mesajdan fazla silemem!**');
-  message.channel.bulkDelete(mesajsayisi + 1);
-  message.channel.send('**__' + mesajsayisi + '__** **adet mesaj başarıyla silindi.** ')
+});
+
+bot.on("message", message => {
+if (message.content.toLowerCase() === prefix + "duyuru") {
+let mesaj = args.slice(0).join(' ');
+message.channel.sendEmbed(new Discord.RichEmbed()
+.setDescription(`${mesaj}`)
+.setColor(0xff0000));
    }
 });
 
