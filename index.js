@@ -94,7 +94,7 @@ bot.on("message", message => {
 });
 
 bot.on("message", message => {
-if (message.content.toLowerCase() === prefix + "kaydım") {
+if (message.content.toLowerCase() === prefix + "kayıtım") {
 message.channel.sendEmbed(new Discord.RichEmbed()
 .setDescription(`Kaydınız:`)
 .addField("Kayıt Tarihiniz: ", message.author.createdAt , true)
@@ -229,6 +229,8 @@ bot.on("message", message => {
     }
 
     if (message.content === prefix + "yardım") {
+        await msg.react('🇹');
+    msg.react('🇲');
         message.channel.sendMessage(stripIndents`
 \`\`\`fix
 ${prefix}anakomutlar - Bilgi Komutları
@@ -248,6 +250,8 @@ ${prefix}böl - Yazdığınız iki sayıyı böler.
     }
     
      if (message.content === prefix + "anakomutlar") {
+         await message.react('🇹');
+    message.react('🇲');
         message.author.send(stripIndents`
 \`\`\`fix
 ${prefix}emojiler - Sunucudaki emojileri gösterir.
@@ -262,6 +266,8 @@ ${prefix}desteksncsu - Destek sunucusunun linkini atar.
     }
 
      if (message.content === prefix + "eğlence") {
+         await message.react('🇹');
+    message.react('🇲');
         message.author.send(stripIndents`
 \`\`\`fix
 ${prefix}sigara - Bot sigara içer.
@@ -271,6 +277,8 @@ ${prefix}kurabiye - Size kurabiye verir.
     }
     
      if (message.content === prefix + "moderasyon") {
+         await message.react('🇹');
+    message.react('🇲');
         message.author.send(stripIndents`
 \`\`\`fix
 ${prefix}yaz - Yazdığınız mesajı bota yazdırır.
