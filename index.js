@@ -20,13 +20,6 @@ message.channel.sendEmbed(new Discord.RichEmbed()
 .setImage(`${message.author.avatarURL} `)
 .setColor(0xf7dc46));
    }
-    
-if (message.content.toLowerCase() === prefix + "yaz") {
-     let mesaj = args.slice(0).join(' ');
-    if (mesaj.length < 1) return message.reply('Söyleyeceğim şeyi yazmayı unuttun.')
-    .then(message => { message.delete(1000) });
-    message.channel.send(mesaj);
-   }
 });
 
 bot.on('message', msg => {
@@ -36,12 +29,6 @@ msg.channel.send(':smoking: :cloud::cloud::cloud:')
 .then(nmsg => nmsg.edit(':smoking: :cloud:'))
 .then(nmsg => nmsg.edit('**Sigaram bitti** | **Sigara İçmeyiniz.** :no_smoking: **Sigara Sağlığa Zararlıdır**'));
 }
-});
-
-bot.on('guildMemberAdd', member => {
-  const channel = member.guild.channels.find('name', 'giris-cikis');
-  if (!channel) return;
-  channel.send(`Sunucuya HoşGeldin, ${member}!`);
 });
 
 bot.on('message', message => {
@@ -91,7 +78,7 @@ bot.on("message", message => {
     } else {
       message.channel.sendMessage(`Yeniden başlıyorum..`).then(msg => {
       console.log(`Yeniden başlıyorum..`);
-      process.exit(0);
+      process.exit(1);
     })
    }
   }
@@ -180,12 +167,4 @@ ${prefix}kick - Sunucudan atar
     }
     
 
-});
-
-bot.on("message", msg => {
-
-    const kufur = ["amk", "aq", "orospu", "oruspu", "oç", "sikerim", "yarrak", "piç", "amq", "sik", "amcık", "çocu", "sex", "seks", "amına"];
-    if (kufur.some(word => msg.content.includes(word)) ) {
-        msg.delete()
-    }
 });
