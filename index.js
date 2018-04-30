@@ -139,13 +139,14 @@ bot.on("message", message => {
     if (message.content === prefix + "yardım") {
         message.channel.sendMessage(stripIndents`
 \`\`\`fix
-${prefix}yardım 1 - Bilgi Komutları
-${prefix}yardım 2 - Eğlence Komutları
-${prefix}yardım 3 - Moderasyon Komutları
+${prefix}anakomutlar - Bilgi Komutları
+${prefix}eğlence - Eğlence Komutları
+${prefix}moderasyon - Moderasyon Komutları
+Web Sitemix Yakın Zamanda Açılacaktır!
 \`\`\` `)
     }
     
-     if (message.content === prefix + "yardım 1") {
+     if (message.content === prefix + "anakomutlar") {
         message.author.send(stripIndents`
 \`\`\`fix
 ${prefix}ping - Botun pingini ölçer.
@@ -157,7 +158,7 @@ ${prefix}bot-davet - Botun davet linkini atar.
 \`\`\` `)
     }
 
-     if (message.content === prefix + "yardım 2") {
+     if (message.content === prefix + "eğlence") {
         message.author.send(stripIndents`
 \`\`\`fix
 ${prefix}sigara - Bot sigara içer.
@@ -166,7 +167,7 @@ ${prefix}kurabiye - Size kurabiye verir.
 \`\`\` `)
     }
     
-     if (message.content === prefix + "yardım 3") {
+     if (message.content === prefix + "moderasyon") {
         message.author.send(stripIndents`
 \`\`\`fix
 ${prefix}kick - Sunucudan atar
