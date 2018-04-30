@@ -28,45 +28,6 @@ if (message.content.toLowerCase() === prefix + "avatardeğiş") {
    }
 });
 
-bot.on("message", message => {
-    if (message.content.toLowerCase() === prefix + 'drm-kırmızı') {
-    if (message.author.id !== "430011871555223553") {
-      message.reply('sie');
-    } else {
-      message.channel.sendMessage(`**DND** ✔️`).then(msg => {
-      console.log(`**DND** ✔️`);
-      bot.user.setStatus('dnd');
-    })
-   }
-  }
-});
-
-bot.on("message", message => {
-    if (message.content.toLowerCase() === prefix + 'drm-sarı') {
-    if (message.author.id !== "430011871555223553") {
-      message.reply('sie');
-    } else {
-      message.channel.sendMessage(`**IDLE** ✔️`).then(msg => {
-      console.log(`**IDLE** ✔️`);
-      bot.user.setStatus('idle');
-    })
-   }
-  }
-});
-
-bot.on("message", message => {
-    if (message.content.toLowerCase() === prefix + 'drm-yeşil') {
-    if (message.author.id !== "430011871555223553") {
-      message.reply('sie');
-    } else {
-      message.channel.sendMessage(`**AVAILABLE** ✔️`).then(msg => {
-      console.log(`**AVAILABLE** ✔️`);
-      bot.user.setStatus('available');
-    })
-   }
-  }
-});
-
 bot.on('message', msg => {
 if (msg.content.toLowerCase() === prefix + "sigara") {
 msg.channel.send(':smoking: :cloud::cloud::cloud:')
