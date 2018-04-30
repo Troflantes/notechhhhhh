@@ -42,13 +42,6 @@ return msg.channel.send({embed})}
     }
     });
 
-bot.on('message', msg => {
-  if (msg.content.startsWith(prefix + "yas")) {
-    msg.delete();
-    msg.channel.sendMessage(msg.content);
-  }
-});
-
 bot.on ('message', msg => {
   if (msg.content.toLowerCase() === prefix + 'temizle') {
     msg.channel.bulkDelete(100);
