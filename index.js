@@ -66,6 +66,14 @@ msg.channel.send('Pingim ölçülüyor..')
 .then(nmsg => nmsg.edit("Pingim :ping_pong: **" + bot.ping + "** Milisaniye"));
 }
 });
+
+bot.on('message', msg => {
+if (msg.content.toLowerCase() === prefix + "destek-sunucusu") {
+msg.channel.send('Bakıyorum..')
+    
+.then(nmsg => nmsg.edit("Buyrun: https://discord.gg/PjF4kgq"));
+}
+});
     
 bot.on("message", message => {
     
@@ -152,6 +160,7 @@ ${prefix}yardım - Botun bütün komutlarını size gösterir.
 ${prefix}sunucubilgi - Sunucu hakkkında detaylı bilgi verir.
 ${prefix}bilgi - Bot hakkında bilgi verir.
 ${prefix}bot-davet - Botun davet linkini atar.
+${prefix}destek-sunucusu - Destek sunucusunun linkini atar.
 \`\`\` `)
     }
 
@@ -167,7 +176,7 @@ ${prefix}kurabiye - Size kurabiye verir.
      if (message.content === prefix + "moderasyon") {
         message.author.send(stripIndents`
 \`\`\`fix
-${prefix}kick - Sunucudan atar
+${prefix}kick - Sunucudan atar.
 \`\`\` `)
     }
     
