@@ -28,6 +28,7 @@ let mesaj = args.slice(0).join(' ');
 message.channel.sendEmbed(new Discord.RichEmbed()
 .setDescription(`${mesaj}`)
 .setColor(0xff0000));
+return message.channel.sendEmbed(embed);
    }
 });
 
