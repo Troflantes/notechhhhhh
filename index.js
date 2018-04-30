@@ -176,8 +176,7 @@ bot.on("message", msg => {
 
     const kufur = ["amk", "aq", "orospu", "oruspu", "oç", "sikerim", "yarrak", "piç", "amq", "sik", "amcık", "çocu", "sex", "seks", "amına"];
     if (kufur.some(word => msg.content.includes(word)) ) {
-        msg.reply("Bu sunucuda küfür filtresi etkindir.")
-        .then(nmsg => nmsg.edit("${user.tag} Lütfen küfür etmeyiniz!"));
+        msg.reply("Lütfen küfür etmeyiniz.")
         msg.delete()
     }
 });
