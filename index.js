@@ -22,6 +22,19 @@ message.channel.sendEmbed(new Discord.RichEmbed()
    }
 });
 
+bot.on('message', msg => {
+  if (msg.content.startsWith(prefix + "yaz")) {
+    if (msg.channel.type !== "dm"){
+    let mesaj = msg.content.substring(2 + 3);
+    msg.delete (msg.content == 'yaz' + mesaj)
+    let embed = new Discord.RichEmbed()
+    .setColor("0xff0000")
+       .setDescription(mesaj)
+return msg.channel.send({embed})}
+
+    }
+    });
+
 bot.on("message", message => {
 if (message.content.toLowerCase() === prefix + "kaydım") {
 message.channel.sendEmbed(new Discord.RichEmbed()
