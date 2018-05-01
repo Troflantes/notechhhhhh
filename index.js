@@ -42,6 +42,31 @@ return msg.channel.send({embed})}
     }
     });
 
+bot.on('message', message => {
+  if (!message.guild) return;
+
+  if (message.content.startsWith(prefix + 'ban')) {
+    const user = message.mentions.users.first();
+    if (user) {
+      const member = message.guild.member(user);
+      if (member) {
+        member.ban({
+          reason: 'They were bad!',
+        }).then(() => {
+          message.reply(`Banlama başarılı! ${user.tag}`);
+        }).catch(err => {
+          message.reply('Hata!');
+          console.error(err);
+        });
+      } else {
+        message.reply('Kullanıcı sunucuda değil.');
+      }
+    } else {
+      message.reply('Atacağım kişiyi belirtmelisin!');
+    }
+  }
+});
+
 bot.on ('message', msg => {
   if (msg.content.toLowerCase() === prefix + 'temizle') {
     msg.channel.bulkDelete(100);
@@ -280,9 +305,10 @@ ${prefix}kurabiye - Size kurabiye verir.
      if (message.content === prefix + "moderasyon") {
         message.author.send(stripIndents`
 \`\`\`fix
+${prefix}kick - Etiketlenen kişiyi sunucudan atar.
+${prefix}ban - Etiketlenen kişiyi sunucudan banlar.
 ${prefix}temizle - 100 Adet mesaj siler.
 ${prefix}yaz - Yazdığınız mesajı bota yazdırır.
-${prefix}kick - Sunucudan atar.
 \`\`\` `)
     }
     
