@@ -51,7 +51,7 @@ bot.on('message', message => {
       const member = message.guild.member(user);
       if (member) {
         member.ban({
-          reason: 'They were bad!',
+          reason: 'NotechMod',
         }).then(() => {
           message.reply(`Banlama başarılı! ${user.tag}`);
         }).catch(err => {
@@ -72,6 +72,22 @@ bot.on ('message', msg => {
     msg.channel.bulkDelete(100);
     msg.channel.sendMessage("100 adet mesaj silindi!");
   }
+});
+
+bot.on ('message', message => {
+  if (msg.content.toLowerCase() === prefix + 'temizle') {
+    	var sayings = ["Evet",
+										"Hayır",
+										"Belki",
+										"Bilmem",
+										"Sence?",
+										"Ya bi sus artık",
+										"Kesinlikle!",
+										"Yokkk"];
+
+			var result = Math.floor((Math.random() * sayings.length) + 0);
+			bot.reply(message, sayings[result]);
+    }
 });
 
 bot.on ('message', message => {
