@@ -30,10 +30,8 @@ bot.on('message', async msg => {
 });
 
 bot.on('message', async msg => {
-  if (msg.content.toLowerCase() === 'adamsın') {
-    await msg.react('🇦');
-    msg.react('🇩');
-    msg.react('🅰');
+  if (msg.content.toLowerCase() === prefix + 'yardım') {
+    await msg.react('🇹');
     msg.react('🇲');
   }
 });
