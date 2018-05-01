@@ -87,35 +87,18 @@ if (message.content.toLowerCase() === prefix + "espriyap") {
 });
 
 bot.on('message', message => {
-  if (message.author.bot) return;
-  if (!message.content.startsWith(prefix)) return;
-    
-  if (command === 'partner') {
-  let command = message.content.split(' ')[0];
-  command = command.slice(prefix.length);
-	message.channel.send({embed: {
-	    color: 3447003,
-	    author: {
-	      name: client.user.username,
-	      icon_url: client.user.avatarURL
-	    },
-	    title: "Resmi Sunucumuz",
-	    url: "https://discord.gg/PjF4kgq",
-	    description: "Botun partner olduğu server linkleri",
-	    fields: [
-				{
-	        name: "Notech",
-	        value: "[Discord Linki](https://discord.gg/PjF4kgq)"
-	      }
-	    ],
-	    timestamp: new Date(),
-	    footer: {
-	      icon_url: client.user.avatarURL,
-	      text: "© Notech"
-	    }
-	  }
-	});
-});
+if (message.content.toLowerCase() === prefix + "piksel") {
+if (!message.guild) {
+      return message.channel.send(new Discord.RichEmbed().setColor('RANDOM').setTitle('Eval;').setDescription(message.author.username + ', bu komutu direkt mesajda kullanamazsın.').setFooter('Turbo', client.user.avatarURL).setTimestamp()); }
+    let user = message.mentions.users.first();
+    if (message.mentions.users.size < 1) return message.channel.send(new Discord.RichEmbed().setColor('RANDOM').setTitle('Piksel;').setDescription(message.author.tag + ', kullanım: n!piksel <@kullanıcı>.').setFooter('Turbo', client.user.avatarURL).setTimestamp());
+        Jimp.read(user.avatarURL || user.defaultAvatarURL, function (err, image){
+            if (err) return message.channel.send(new Discord.RichEmbed().setColor('RANDOM').setTitle('Piksel;').setDescription(err).setFooter('Turbo', client.user.avatarURL).setTimestamp());
+            image.pixelate(5).write('lenna-pixelate.jpg');
+            setTimeout(() => {
+              message.channel.sendFile('lenna-pixelate.jpg');
+            }, 500);
+        });
 
 bot.on('message', message => {
   if (message.author.bot) return;
