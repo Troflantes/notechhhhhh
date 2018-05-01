@@ -199,36 +199,6 @@ msg.author.send('Bakıyorum..')
 }
 });
 
-bot.on('message', msg => {
-if (msg.content.toLowerCase() === prefix + "help") {
-    
-message.channel.send({embed: {
-    color: 3447003,
-    author: {
-      name: bot.user.username,
-      icon_url: bot.user.avatarURL
-    },
-    title: "Komutlar",
-    url: "https://discord.gg/PjF4kgq",
-    description: "${prefix}anakomutlar - Bilgi Komutları \n${prefix}eğlence - Eğlence Komutları \n${prefix}moderasyon - Moderasyon Komutları \n${prefix}kişisel - Kişisel komutlar",
-    fields: [{
-        name: "Davet et",
-        value: "[Sunucuna Gelmem İçin Tıkla!](https://discordapp.com/oauth2/authorize?client_id=439756873311322112&permissions=8&scope=bot)"
-      },
-      {
-        name: "Destek Sunucusu",
-        value: "[Sunucumuza Katıl!](https://discord.gg/PjF4kgq)"
-      }
-      {
-    ],
-    timestamp: new Date(),
-    footer: {
-      icon_url: bot.user.avatarURL,
-      text: " + bot.guilds.size + ` Sunucu 👀 ` + bot.users.size + `  Kişi 💞 "
-    }
-  }
-});
-
 bot.on("message", message => {
     
     if (message.content.toLowerCase() === prefix + "botdavet") {
@@ -241,7 +211,7 @@ bot.on("message", message => {
     
     if (message.content.toLowerCase() === prefix + 'yenile') {
     if (message.author.id !== "430011871555223553") {
-      message.reply('sie');
+      message.reply('sie bu benim canım kurucumun komutu');
     } else {
       message.channel.sendMessage(`Yeniden başlıyorum..`).then(msg => {
       console.log(`Yeniden başlıyorum..`);
@@ -303,8 +273,8 @@ ${prefix}anakomutlar - Bilgi Komutları
 ${prefix}eğlence - Eğlence Komutları
 ${prefix}moderasyon - Moderasyon Komutları
 ${prefix}kişisel - Kişisel komutlar
-` + bot.guilds.size + ` Sunucu 👀
-` + bot.users.size + `  Kişi 💞
+-> ` + bot.guilds.size + ` Sunucu 👀
+-> ` + bot.users.size + `  Kişi 💞
 \`\`\` `)
     }
     
