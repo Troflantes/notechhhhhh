@@ -306,7 +306,7 @@ ${prefix}eğlence - Eğlence Komutları
 ${prefix}moderasyon - Moderasyon Komutları
 ${prefix}kişisel - Kişisel komutlar
 
-Anlık bilgim ->
+          Anlık Bilgim
 -> ` + bot.guilds.size + ` Sunucu 👀
 ->`+ bot.users.size + ` Kişi 💞
 \`\`\` `)
