@@ -57,28 +57,22 @@ bot.on ('message', msg => {
 });
 
 bot.on ('message', message => {
-if (message.content === prefix + "emojiler") {
+if (message.content.toLowerCase() === prefix + 'emojiler') {
   const emojiList = message.guild.emojis.map(e=>e.toString()).join(" ** | ** ");
   message.channel.send(emojiList);
 }
 });
 
 bot.on('message', message => {
-  if (message.author.bot) return;
-  if (!message.content.startsWith(prefix)) return;
-    
-  let command = message.content.split(' ')[0];
-  command = command.slice(prefix.length);
-    
-    if (command === 'zekam') {
-exports.run = (client, message, params) => {
+if (message.content === prefix + "zekam") {
     var sans = ["11", "15", "20", "24", "28", "31", "39", "45", "49", "54", "58", "63", "67", "77", "73", "84", "80", "83", "96", "94", "99", "Albert Einstein Mübarek"];
     var sonuc = sans[Math.floor((Math.random() * sans.length))];
     const embed = new Discord.RichEmbed()
-    .addField(`***___Yaşın___***`, `${sonuc}`)
+    .addField(`***___Zekan___***`, `${sonuc}`)
     return message.channel.sendEmbed(embed);
-    }
+}
 });
+
 bot.on('message', message => {
   if (message.author.bot) return;
   if (!message.content.startsWith(prefix)) return;
