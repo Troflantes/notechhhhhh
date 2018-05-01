@@ -36,6 +36,13 @@ bot.on('message', async msg => {
   }
 });
 
+bot.on('message', message => {
+  if (message.content.toLowerCase() === prefix + 'saat') {
+  message.delete();
+  message.channel.send(`**:flag_tr: Saati:** ***${moment().format('HH:mm:ss')}***`);
+  }
+});
+
 bot.on('message', msg => {
   if (msg.content.startsWith(prefix + "yaz")) {
     if (msg.channel.type !== "dm"){
