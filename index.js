@@ -198,7 +198,7 @@ msg.author.send('Bakıyorum..')
 .then(nmsg => nmsg.edit("Buyrun: https://discord.gg/PjF4kgq"));
 }
 });
-    
+
 bot.on("message", message => {
     
     if (message.content.toLowerCase() === prefix + "bot-davet") {
@@ -236,12 +236,12 @@ bot.on("message", message => {
 
             .setFooter("Oluşturulma Tarihi " + message.guild.createdAt)
 
-            .setColor(0xff0000)
+            .setColor(0x000001)
 
         return message.channel.sendEmbed(embed)
     }
 
-    if (message.content === prefix + "bilgi") {
+    if (message.content.toLowerCase() === prefix + "botbilgi") {
         const embed = new Discord.RichEmbed()
 
             .addField("Bot Sahibi", `<@${owner}>`, true)
@@ -272,6 +272,8 @@ bot.on("message", message => {
 ${prefix}anakomutlar - Bilgi Komutları
 ${prefix}eğlence - Eğlence Komutları
 ${prefix}moderasyon - Moderasyon Komutları
+
+Anlık olarak ` + bot.guilds.size + ` kişiye hizmet veriyorum.
 \`\`\` `)
     }
     
