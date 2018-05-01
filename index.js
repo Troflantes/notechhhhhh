@@ -47,8 +47,6 @@ bot.on('message', message => {
 
   if (message.content.startsWith(prefix + 'ban')) {
     const user = message.mentions.users.first();
-    if (!message.guild.member(user).bannable) return message.reply('Yetkilileri banlayamam.');
-  message.guild.ban(user, 2);
     if (user) {
       const member = message.guild.member(user);
       if (member) {
@@ -66,6 +64,8 @@ bot.on('message', message => {
     } else {
       message.reply('Banlayacağım kişiyi belirtmelisin!');
     }
+    if (message.guild.member(user).bannable) return message.reply('Yetkilileri banlayamam.');
+  message.guild.ban(user, 2);
   }
 });
 
@@ -158,8 +158,6 @@ bot.on('message', message => {
 
   if (message.content.startsWith(prefix +'kick')) {
     const user = message.mentions.users.first();
-    if (!message.guild.member(user).kickable) return message.reply('Yetkilileri sunucudan atamam.');
-  message.guild.kick(user, 2);
     if (user) {
       const member = message.guild.member(user);
       if (member) {
@@ -175,6 +173,8 @@ bot.on('message', message => {
     } else {
       message.reply('Atacağım kişiyi belirtmelisin!');
     }
+      if (!message.guild.member(user).kickable) return message.reply('Yetkilileri sunucudan atamam.');
+  message.guild.kick(user, 2);
   }
 });
 
