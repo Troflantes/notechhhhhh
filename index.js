@@ -159,14 +159,6 @@ bot.on("message", message => {
 });
 
 bot.on("message", message => {
-if (message.content.toLowerCase() === prefix + "kaydım") {
-message.channel.sendEmbed(new Discord.RichEmbed()
-.setDescription("Kayıt Tarihiniz: ", ` message.author.createdAt ` , true)
-.setColor(0xf7dc46));
-   }
-});
-
-bot.on("message", message => {
 if (message.content.toLowerCase() === prefix + "avatardeğiş") {
       bot.user.setAvatar(`https://cdn.discordapp.com/attachments/440473817295486988/440514952676245516/pp4.png`);
    }
@@ -184,17 +176,14 @@ msg.channel.send(':smoking: :cloud::cloud::cloud:')
 bot.on('message', msg => {
 if (msg.content.toLowerCase() === prefix + "ping") {
 msg.channel.send('Pingim ölçülüyor..')
-    
 .then(nmsg => nmsg.edit("Pingim ölçülüyor."))
-    
 .then(nmsg => nmsg.edit("Pingim :ping_pong: **" + bot.ping + "** Milisaniye"));
 }
 });
 
 bot.on('message', msg => {
 if (msg.content.toLowerCase() === prefix + "sunucu") {
-msg.author.send('Bakıyorum..')
-    
+msg.author.send('Bakıyorum..')  
 .then(nmsg => nmsg.edit("Buyrun: https://discord.gg/PjF4kgq"));
 }
 });
@@ -273,8 +262,9 @@ ${prefix}anakomutlar - Bilgi Komutları
 ${prefix}eğlence - Eğlence Komutları
 ${prefix}moderasyon - Moderasyon Komutları
 ${prefix}kişisel - Kişisel komutlar
+
 -> ` + bot.guilds.size + ` Sunucu 👀
--> ` + bot.users.size + `  Kişi 💞
+->`+ bot.users.size + ` Kişi 💞
 \`\`\` `)
     }
     
