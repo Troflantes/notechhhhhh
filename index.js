@@ -159,9 +159,9 @@ bot.on("message", message => {
 });
 
 bot.on("message", message => {
-if (message.content.toLowerCase() === prefix + "kayıtım") {
+if (message.content.toLowerCase() === prefix + "kaydım") {
 message.channel.sendEmbed(new Discord.RichEmbed()
-.setDescription("Kayıt Tarihiniz: ", message.author.createdAt , true)
+.setDescription("Kayıt Tarihiniz: ", ` message.author.createdAt ` , true)
 .setColor(0xf7dc46));
    }
 });
@@ -192,7 +192,7 @@ msg.channel.send('Pingim ölçülüyor..')
 });
 
 bot.on('message', msg => {
-if (msg.content.toLowerCase() === prefix + "desteksunucusu") {
+if (msg.content.toLowerCase() === prefix + "sunucu") {
 msg.author.send('Bakıyorum..')
     
 .then(nmsg => nmsg.edit("Buyrun: https://discord.gg/PjF4kgq"));
@@ -201,7 +201,7 @@ msg.author.send('Bakıyorum..')
 
 bot.on("message", message => {
     
-    if (message.content.toLowerCase() === prefix + "bot-davet") {
+    if (message.content.toLowerCase() === prefix + "botdavet") {
         message.author.send("Davet linkim: **https://discordapp.com/oauth2/authorize?client_id=439756873311322112&permissions=8&scope=bot**")    
     }
     
@@ -266,18 +266,20 @@ bot.on("message", message => {
         message.react("🍪")
     }
 
-    if (message.content === prefix + "yardım") {
+    if (message.content.toLowerCase() === prefix + "yardım") {
         message.channel.sendMessage(stripIndents`
 \`\`\`fix
 ${prefix}anakomutlar - Bilgi Komutları
 ${prefix}eğlence - Eğlence Komutları
 ${prefix}moderasyon - Moderasyon Komutları
+${prefix}kişisel - Kişisel komutlar
 
-Anlık olarak  ` + bot.users.size + `  kişiye hizmet veriyorum.
+` + bot.guilds.size + ` Sunucu 👀
+` + bot.users.size + `  Kişi 💞
 \`\`\` `)
     }
     
-    if (message.content === prefix + "matematik") {
+    if (message.content.toLowerCase() === prefix + "matematik") {
         message.channel.sendMessage(stripIndents`
 \`\`\`fix
 ${prefix}topla - Yazdığınız iki sayıyı toplar.
@@ -287,17 +289,23 @@ ${prefix}böl - Yazdığınız iki sayıyı böler.
 \`\`\` `)
     }
     
-     if (message.content === prefix + "anakomutlar") {
+     if (message.content.toLowerCase() === prefix + "anakomutlar") {
         message.channel.sendMessage(stripIndents`
 \`\`\`fix
 ${prefix}emojiler - Sunucudaki emojileri gösterir.
 ${prefix}ping - Botun pingini ölçer.
-${prefix}yenile - Botu yeniden başlatır.
 ${prefix}yardım - Botun bütün komutlarını size gösterir.
 ${prefix}sunucubilgi - Sunucu hakkkında detaylı bilgi verir.
-${prefix}bilgi - Bot hakkında bilgi verir.
-${prefix}bot-davet - Botun davet linkini atar.
-${prefix}desteksunucusu - Destek sunucusunun linkini atar.
+${prefix}botbilgi - Bot hakkında bilgi verir.
+${prefix}botdavet - Botun davet linkini atar.
+${prefix}sunucu - Destek sunucusunun linkini atar.
+\`\`\` `)
+    }
+    
+     if (message.content.toLowerCase() === prefix + "kişisel") {
+        message.channel.sendMessage(stripIndents`
+\`\`\`fix
+${prefix}yaz - Yazdığınız mesajı bota yazdırır.
 \`\`\` `)
     }
 
@@ -316,10 +324,10 @@ ${prefix}kurabiye - Size kurabiye verir.
      if (message.content === prefix + "moderasyon") {
         message.channel.sendMessage(stripIndents`
 \`\`\`fix
+${prefix}yenile - Botu yeniden başlatır.
 ${prefix}kick - Etiketlenen kişiyi sunucudan atar. [BAKIM]
 ${prefix}ban - Etiketlenen kişiyi sunucudan banlar. [BAKIM]
 ${prefix}temizle - 100 Adet mesaj siler.
-${prefix}yaz - Yazdığınız mesajı bota yazdırır.
 \`\`\` `)
     }
     
