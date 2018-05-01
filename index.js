@@ -11,7 +11,7 @@ bot.on("ready", () => {
 });
 
 var Games = [`${prefix}yardım ✨ 1/3`, `${bot.guilds.size} Sunucu 👀 3/3`, `${bot.users.size} Kullanıcı 💞 2/3`];
-        var random = Math.floor(Math.random()*(Games.length-0+1)+0);
+        var random = Games[Math.floor((Math.random() * Games.length))];
         bot.user.setGame(Games[random], "https://www.twitch.tv/scarew0");
         }, 2 * 2500);
 };
@@ -60,12 +60,6 @@ if (message.content.toLowerCase() === prefix + 'emojiler') {
   message.channel.send(emojiList);
 }
 });
-
-var Games = [`${prefix}yardım ✨ 1/3`, `${bot.guilds.size} Sunucu 👀 3/3`, `${bot.users.size} Kullanıcı 💞 2/3`];
-        var random = Games[Math.floor((Math.random() * Games.length))];
-        bot.user.setGame(Games[random], "https://www.twitch.tv/scarew0");
-        }, 2 * 2500);
-};
 
 bot.on('message', message => {
 if (message.content.toLowerCase() === prefix + "zekam") {
