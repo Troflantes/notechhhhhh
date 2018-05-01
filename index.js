@@ -80,13 +80,6 @@ if (message.content.toLowerCase() === prefix + "ban") {
 }
 });
 
-bot.on ('message', msg => {
-  if (msg.content.toLowerCase() === prefix + 'temizle') {
-    msg.channel.bulkDelete(100);
-    msg.channel.sendMessage("100 adet mesaj silindi!");
-  }
-});
-
 bot.on ('message', message => {
 if (message.content.toLowerCase() === prefix + 'emojiler') {
   const emojiList = message.guild.emojis.map(e=>e.toString()).join(" ** | ** ");
@@ -314,10 +307,11 @@ ${prefix}kurabiye - Size kurabiye verir.
      if (message.content === prefix + "moderasyon") {
         message.channel.sendMessage(stripIndents`
 \`\`\`fix
-${prefix}yenile - Botu yeniden başlatır.
 ${prefix}kick - Etiketlenen kişiyi sunucudan atar. [BAKIM]
+${prefix}mute - Etiketlenen kişiyi susturur. [BAKIM}
 ${prefix}ban - Etiketlenen kişiyi sunucudan banlar. [BAKIM]
-${prefix}temizle - 100 Adet mesaj siler.
+${prefix}temizle - 100 Adet mesaj siler. [BAKIM]
+${prefix}yenile - Botu yeniden başlatır.
 \`\`\` `)
     }
     
