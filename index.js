@@ -64,6 +64,14 @@ if (message.content.toLowerCase() === prefix + 'emojiler') {
 });
 
 bot.on('message', message => {
+if (message.content === prefix + "bot") {
+  let mesaj = args.slice(0).join(' ');
+if (mesaj.length < 1) return message.reply('Yazmam için herhangi bir şey yazmalısın.');
+  message.delete();
+  message.channel.send(mesaj);
+};
+
+bot.on('message', message => {
 if (message.content === prefix + "zekam") {
     var sans = ["11", "15", "20", "24", "28", "31", "39", "45", "49", "54", "58", "63", "67", "77", "73", "84", "80", "83", "96", "94", "99", "Albert Einstein Mübarek"];
     var sonuc = sans[Math.floor((Math.random() * sans.length))];
