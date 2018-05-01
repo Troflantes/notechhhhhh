@@ -57,6 +57,20 @@ if (message.content.toLowerCase() === prefix + 'emojiler') {
 });
 
 bot.on('message', message => {
+if (message.content.toLowerCase() === prefix + "afk") {
+ message.reply('AFK moduna giriş başarılı.')
+ message.member.setNickname(`[AFK] ${message.author.username}`);
+    }
+});
+
+bot.on('message', message => {
+if (message.content.toLowerCase() === prefix + "afkçık") {
+ message.reply('AFK modundan çıkış başarılı.')
+ message.member.setNickname(`${message.author.username}`);
+    }
+});
+
+bot.on('message', message => {
 if (message.content.toLowerCase() === prefix + "zekam") {
     var sans = ["11", "15", "20", "24", "28", "31", "39", "45", "49", "54", "58", "63", "67", "77", "73", "84", "80", "83", "96", "94", "99", "Albert Einstein Mübarek"];
     var sonuc = sans[Math.floor((Math.random() * sans.length))];
