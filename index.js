@@ -62,7 +62,7 @@ bot.on('message', message => {
         message.reply('Kullanıcı sunucuda değil.');
       }
     } else {
-      message.reply('Atacağım kişiyi belirtmelisin!');
+      message.reply('Banlayacağım kişiyi belirtmelisin!');
     }
   }
 });
