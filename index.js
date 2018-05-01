@@ -231,7 +231,7 @@ ${prefix}böl - Yazdığınız iki sayıyı böler.
     }
     
      if (message.content === prefix + "anakomutlar") {
-        message.author.send(stripIndents`
+        message.channel.sendMessage(stripIndents`
 \`\`\`fix
 ${prefix}emojiler - Sunucudaki emojileri gösterir.
 ${prefix}ping - Botun pingini ölçer.
@@ -245,7 +245,7 @@ ${prefix}desteksunucusu - Destek sunucusunun linkini atar.
     }
 
      if (message.content === prefix + "eğlence") {
-        message.author.send(stripIndents`
+        message.channel.sendMessage(stripIndents`
 \`\`\`fix
 ${prefix}matematik - Matematik işlemi yapar. 
 ${prefix}sigara - Bot sigara içer.
@@ -255,7 +255,7 @@ ${prefix}kurabiye - Size kurabiye verir.
     }
     
      if (message.content === prefix + "moderasyon") {
-        message.author.send(stripIndents`
+        message.channel.sendMessage(stripIndents`
 \`\`\`fix
 ${prefix}kick - Etiketlenen kişiyi sunucudan atar. [BAKIM]
 ${prefix}ban - Etiketlenen kişiyi sunucudan banlar. [BAKIM]
