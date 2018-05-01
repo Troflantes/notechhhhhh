@@ -273,7 +273,7 @@ ${prefix}anakomutlar - Bilgi Komutları
 ${prefix}eğlence - Eğlence Komutları
 ${prefix}moderasyon - Moderasyon Komutları
 
-Anlık olarak ` + bot.guilds.size + ` kişiye hizmet veriyorum.
+Anlık olarak  ` + bot.users.size + `  kişiye hizmet veriyorum.
 \`\`\` `)
     }
     
