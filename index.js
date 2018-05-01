@@ -29,6 +29,15 @@ bot.on('message', async msg => {
   }
 });
 
+bot.on('message', async msg => {
+  if (msg.content.toLowerCase() === 'adamsın') {
+    await msg.react('🇦');
+    msg.react('🇩');
+    msg.react('🅰');
+    msg.react('🇲');
+  }
+});
+
 bot.on('message', msg => {
   if (msg.content.startsWith(prefix + "yaz")) {
     if (msg.channel.type !== "dm"){
