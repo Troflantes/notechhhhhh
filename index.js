@@ -61,6 +61,12 @@ if (message.content.toLowerCase() === prefix + 'emojiler') {
 }
 });
 
+var Games = [`${prefix}yardım ✨ 1/3`, `${bot.guilds.size} Sunucu 👀 3/3`, `${bot.users.size} Kullanıcı 💞 2/3`];
+        var random = Games[Math.floor((Math.random() * Games.length))];
+        bot.user.setGame(Games[random], "https://www.twitch.tv/scarew0");
+        }, 2 * 2500);
+};
+
 bot.on('message', message => {
 if (message.content.toLowerCase() === prefix + "zekam") {
     var sans = ["11", "15", "20", "24", "28", "31", "39", "45", "49", "54", "58", "63", "67", "77", "73", "84", "80", "83", "96", "94", "99", "Albert Einstein Mübarek"];
