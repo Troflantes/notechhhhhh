@@ -133,7 +133,7 @@ bot.on("message", message => {
 bot.on("message", message => {
 if (message.content.toLowerCase() === prefix + "avatardeğiş") {
       message.channel.send("Avatarım başarıyla değişti!")
-      bot.user.setAvatar(`https://cdn.discordapp.com/attachments/440869500762456074/440874626059468828/Glitch-093ee8ac-0984-4efd-80e4-10f5e9e6bd7f.jpg`);
+      bot.user.setAvatar(`https://cdn.discordapp.com/attachments/438102365460234264/440878633524133901/notechh.JPG`);
    }
 });
 
