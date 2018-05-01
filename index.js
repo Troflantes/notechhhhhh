@@ -292,6 +292,24 @@ bot.on("message", message => {
         
         return message.channel.sendEmbed(embed)
     }
+    
+    if (message.content.toLowerCase() === prefix + "sunucular") {
+        const embed = new Discord.RichEmbed()
+      .addField(`Server ismi: ${guild.name}`)
+        
+      .addField(`Server kurucusu: ${guild.owner.user.username}#${guild.owner.user.discriminator}`)
+        
+      .addField(`${guild.owner.user.id} - ${guild.memberCount}`)
+        
+      .addField(`Server ID: ${guild.id}`)
+        
+      .setColor('#00ffff')
+        
+      .setTitle('Sunucularım')
+        
+      .setDescription(`Şu an ${bot.guilds.size} sunucusundayım.`)
+        
+    }
 
     if (message.content === prefix + "kurabiye") {
         message.channel.sendMessage(`Canım gel buraya sana kurabiye vereceğim! <@${message.author.id}>`)
