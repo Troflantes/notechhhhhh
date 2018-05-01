@@ -131,10 +131,29 @@ bot.on("message", message => {
 });
 
 bot.on("message", message => {
-if (message.content.toLowerCase() === prefix + "avatardeğiş") {
-      message.channel.send("Avatarım başarıyla değişti!")
-      bot.user.setAvatar(`https://cdn.discordapp.com/attachments/438102365460234264/440878633524133901/notechh.JPG`);
+    if (message.content.toLowerCase() === prefix + 'avatar1') {
+    if (message.author.id !== "430011871555223553") {
+      message.reply('sie');
+    } else {
+      message.channel.sendMessage(`Notech yazısını başarılı bir şekilde profilime koydum.`).then(msg => {
+      console.log(`Yeniden başlıyorum..`);
+      bot.user.setAvatar(`https://cdn.discordapp.com/attachments/438102365460234264/440961261581107210/NUTECH.png`);
+    })
    }
+  }
+});
+
+bot.on("message", message => {
+    if (message.content.toLowerCase() === prefix + 'avatar2') {
+    if (message.author.id !== "430011871555223553") {
+      message.reply('sie');
+    } else {
+      message.channel.sendMessage(`Gliitch efektini başarılı bir şekilde profilime koydum.`).then(msg => {
+      console.log(`Yeniden başlıyorum..`);
+      bot.user.setAvatar(`https://cdn.discordapp.com/attachments/438102365460234264/440878633524133901/notechh.JPG`);
+    })
+   }
+  }
 });
 
 bot.on('message', msg => {
