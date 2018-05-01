@@ -275,6 +275,7 @@ ${prefix}yaz - Yazdığınız mesajı bota yazdırır.
      if (message.content === prefix + "eğlence") {
         message.channel.sendMessage(stripIndents`
 \`\`\`fix
+${prefix}havadurumu - Bot havadurumunu tahmin eder.
 ${prefix}espriyap - Bot espri yapar.
 ${prefix}zekam - Zeka puanınızı gösterir.
 ${prefix}matematik - Matematik işlemi yapar. 
