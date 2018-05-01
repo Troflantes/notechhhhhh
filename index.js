@@ -2,12 +2,12 @@ const { stripIndents, oneLine } = require('common-tags');
 const Discord = require("discord.js");
 const bot = new Discord.Client();
 
-let prefix = "n!";
+let prefix = "\";
 let owner = "430011871555223553";
 
 bot.on("ready", () => {
     bot.user.setStatus('online');
-    bot.user.setGame(`${prefix}yardım | BAKIMDAYIM`, "https://www.twitch.tv/scarew0"); 
+    bot.user.setGame(`${prefix}yardım | ${bot.guilds.size} Sunucu ${bot.users.size} Kullanıcı`, "https://www.twitch.tv/scarew0"); 
     console.log("Bağlandım!")   
 });
 
