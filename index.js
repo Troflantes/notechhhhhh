@@ -7,7 +7,7 @@ let owner = "430011871555223553";
 
 bot.on("ready", () => {
     bot.user.setStatus('online');
-    bot.user.setGame(`BAKIM ✨`, "https://www.twitch.tv/scarew0")
+    bot.user.setGame(`${prefix}yardım ✨`, "https://www.twitch.tv/scarew0")
     console.log("Bağlandım!")   
 });
 
@@ -72,6 +72,16 @@ if (message.content.toLowerCase() === prefix + "havadurumu") {
     var sonuc = sans[Math.floor((Math.random() * sans.length))];
     const embed = new Discord.RichEmbed()
     .addField(`***___Hava Durumu___***`, `${sonuc}`)
+    return message.channel.sendEmbed(embed);
+}
+});
+
+bot.on('message', message => {
+if (message.content.toLowerCase() === prefix + "sor") {
+var sans = ["Evet", "Hayır", "Belki", "Sence?"];
+    var sonuc = sans[Math.floor((Math.random() * sans.length))];
+    const embed = new Discord.RichEmbed()
+    .addField(`***___Cevap___***`, `${sonuc}`)
     return message.channel.sendEmbed(embed);
 }
 });
@@ -338,6 +348,7 @@ ${prefix}sunucu - Destek sunucusunun linkini atar.
      if (message.content.toLowerCase() === prefix + "kişisel") {
         message.channel.sendMessage(stripIndents`
 \`\`\`fix
+${prefix}sor - Sorduğunuz soruya bot cevap verir.
 ${prefix}matematik - Matematik işlemi yapar.
 ${prefix}yaz - Yazdığınız mesajı bota yazdırır.
 \`\`\` `)
