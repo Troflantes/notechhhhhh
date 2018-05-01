@@ -22,10 +22,6 @@ message.channel.sendEmbed(new Discord.RichEmbed()
    }
 });
 
-bot.on('serverNewMember', function(server, user) {
-	bot.sendMessage(server, "" + user.username + ", " + server.name + " Sunucusuna Hoşgeldin.");
-});
-
 bot.on('message', async msg => {
   if (msg.content.toLowerCase() === 'sa') {
     await msg.react('🇦');
