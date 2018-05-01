@@ -243,7 +243,7 @@ bot.on("message", message => {
     
     if (message.content.toLowerCase() === prefix + 'yenile') {
     if (message.author.id !== "430011871555223553") {
-      message.reply('sie bu benim canım kurucumun komutu');
+      message.reply('sie');
     } else {
       message.channel.sendMessage(`Yeniden başlıyorum..`).then(msg => {
       console.log(`Yeniden başlıyorum..`);
@@ -359,12 +359,10 @@ ${prefix}kurabiye - Size kurabiye verir.
         message.channel.sendMessage(stripIndents`
 \`\`\`fix
 ${prefix}kick - Etiketlenen kişiyi sunucudan atar. [BAKIM]
-${prefix}mute - Etiketlenen kişiyi susturur. [BAKIM}
+${prefix}mute - Etiketlenen kişiyi susturur. [BAKIM]
 ${prefix}ban - Etiketlenen kişiyi sunucudan banlar. [BAKIM]
 ${prefix}temizle - 100 Adet mesaj siler. [BAKIM]
 ${prefix}yenile - Botu yeniden başlatır.
 \`\`\` `)
     }
-    
-
 });
