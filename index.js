@@ -75,7 +75,7 @@ bot.on ('message', msg => {
 });
 
 bot.on ('message', message => {
-  if (msg.content.toLowerCase() === prefix + 'temizle') {
+  if (msg.content.toLowerCase() === prefix + 'sor') {
     	var sayings = ["Evet",
 										"Hayır",
 										"Belki",
