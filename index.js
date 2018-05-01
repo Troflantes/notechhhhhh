@@ -205,8 +205,8 @@ if (msg.content.toLowerCase() === prefix + "help") {
 message.channel.send({embed: {
     color: 3447003,
     author: {
-      name: client.user.username,
-      icon_url: client.user.avatarURL
+      name: bot.user.username,
+      icon_url: bot.user.avatarURL
     },
     title: "Komutlar",
     url: "https://discord.gg/PjF4kgq",
@@ -223,7 +223,7 @@ message.channel.send({embed: {
     ],
     timestamp: new Date(),
     footer: {
-      icon_url: client.user.avatarURL,
+      icon_url: bot.user.avatarURL,
       text: " + bot.guilds.size + ` Sunucu 👀 ` + bot.users.size + `  Kişi 💞 "
     }
   }
