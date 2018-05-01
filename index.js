@@ -77,16 +77,6 @@ if (message.content.toLowerCase() === prefix + "havadurumu") {
 });
 
 bot.on('message', message => {
-if (message.content.toLowerCase() === prefix + "sor") {
-var sans = ["Evet", "Hayır", "Belki", "Sence?"];
-    var sonuc = sans[Math.floor((Math.random() * sans.length))];
-    const embed = new Discord.RichEmbed()
-    .addField(`***___Cevap___***`, `${sonuc}`)
-    return message.channel.sendEmbed(embed);
-}
-});
-
-bot.on('message', message => {
 if (message.content.toLowerCase() === prefix + "espriyap") {
     var sans = ["Geçen gün geçmiş günlerimi aradım ama meşguldü.", "Yağmur yağmış kar peynir", "Dünya dönermiş ay da köfte…", "Bu erikson başka erik yok.", "Yıkanan Ton a ne denir Washington", "Hadi oyun oynayalım. Vazgeçtim oymadan oynayalım!", "Geçen gün kamyonu sürdüm Leonardo da Vinci.", "Doğumdan sonra çok kilo aldım. Doğduğumda 2 kiloydum şimdi 62.", "Adam 7 gün boyunca nezle olmuş. Sıkılmış bugün de Petek le olayım demiş.", "Yarasa yararlı bir hayvandır. Yararlı bir hayvan olmasaydı yaramasa derlerdi.", " Benim neden kardeşim yok baba  Seni görünce ikincisine cesaret edemedik.", "Osmanlıda kimseye borç takamıyordun mesela sikke sikke ödüyodun…", "Tatlı yiyip, tatlı konuşuluyorsa bundan sonra mantı yiyip mantıklı konuşacağız.", "Babamı sahura kaldırmayı unuttuk anneme masada ne eksik diyorum tuzluk mu diyor.", "+Okeyde kıza elin nasıl dedim. Ojeli dedi. Ben Şoka girdim. O Migrosa."];
     var sonuc = sans[Math.floor((Math.random() * sans.length))];
@@ -348,7 +338,6 @@ ${prefix}sunucu - Destek sunucusunun linkini atar.
      if (message.content.toLowerCase() === prefix + "kişisel") {
         message.channel.sendMessage(stripIndents`
 \`\`\`fix
-${prefix}sor - Sorduğunuz soruya bot cevap verir.
 ${prefix}matematik - Matematik işlemi yapar.
 ${prefix}yaz - Yazdığınız mesajı bota yazdırır.
 \`\`\` `)
