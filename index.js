@@ -148,7 +148,7 @@ bot.on("message", message => {
     if (message.author.id !== "430011871555223553") {
       message.reply('sie');
     } else {
-      message.channel.sendMessage(`Gliitch efektini başarılı bir şekilde profilime koydum.`).then(msg => {
+      message.channel.sendMessage(`Glitch efektini başarılı bir şekilde profilime koydum.`).then(msg => {
       console.log(`Yeniden başlıyorum..`);
       bot.user.setAvatar(`https://cdn.discordapp.com/attachments/438102365460234264/440878633524133901/notechh.JPG`);
     })
@@ -163,7 +163,7 @@ bot.on("message", message => {
     } else {
       message.channel.sendMessage(`Büyük yeşil yazı stilini başarılı bir şekilde profilime koydum.`).then(msg => {
       console.log(`Yeniden başlıyorum..`);
-      bot.user.setAvatar(`https://cdn.discordapp.com/attachments/438102365460234264/440979568120299521/Adsz.png`);
+      bot.user.setAvatar(`https://cdn.discordapp.com/attachments/438102365460234264/441007116183011330/Adsz.png`);
     })
    }
   }
@@ -340,7 +340,8 @@ ${prefix}kişisel - Kişisel komutlar
 
           Anlık Bilgim
 -> ` + bot.guilds.size + ` Sunucu 👀
-->`+ bot.users.size + ` Kişi 💞
+->`+ bot.channels.size + ` Kanal 📄
+->`+ bot.users.size + ` Kullanıcı 💞
 \`\`\` `)
     }
     
