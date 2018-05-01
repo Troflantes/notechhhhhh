@@ -2,7 +2,7 @@ const { stripIndents, oneLine } = require('common-tags');
 const Discord = require("discord.js");
 const bot = new Discord.Client();
 
-let prefix = "\";
+let prefix = "/";
 let owner = "430011871555223553";
 
 bot.on("ready", () => {
@@ -18,7 +18,7 @@ if (message.content.toLowerCase() === prefix + "avatarım") {
 message.channel.sendEmbed(new Discord.RichEmbed()
 .setDescription(`Avatarınız:`)
 .setImage(`${message.author.avatarURL} `)
-.setColor(0xf7dc46));
+.setColor(0x0));
    }
 });
 
