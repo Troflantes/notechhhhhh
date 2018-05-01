@@ -42,77 +42,6 @@ return msg.channel.send({embed})}
     }
     });
 
-exports.run = (bot, message, args) => {
-  if (!message.guild) {
-  const ozelmesajuyari = new Discord.RichEmbed()
-  .setColor(0xFF0000)
-  .setTimestamp()
-  .setAuthor(message.author.username, message.author.avatarURL)
-  .addField(':warning: Uyarı :warning:', '`ban` adlı komutu özel mesajlarda kullanamazsın.')
-  return message.author.sendEmbed(ozelmesajuyari); }
-  let guild = message.guild
-  let reason = args.slice(1).join(' ');
-  let user = message.mentions.users.first();
-  let modlog = guild.channels.find('name', 'mod-log');
-  if (!modlog) return message.reply('`mod-log` kanalını bulamıyorum.');
-  if (reason.length < 1) return message.reply('Ban sebebini yazmalısın.');
-  if (message.mentions.users.size < 1) return message.reply('Kimi banlayacağını yazmalısın.').catch(console.error);
-
-  if (!message.guild.member(user).bannable) return message.reply('Yetkilileri banlayamam.');
-  message.guild.ban(user, 2);
-
-  const embed = new Discord.RichEmbed()
-    .setColor(0x00AE86)
-    .setTimestamp()
-    .addField('Eylem:', 'Sunucudan Yasaklama :bangbang: ')
-    .addField('Yasaklanan Kullanıcı:', `${user.username}#${user.discriminator} (${user.id})`)
-    .addField('Yasaklayan Yetkili:', `${message.author.username}#${message.author.discriminator}`)
-    .addField('Yasaklama Sebebi:', reason);
-  return guild.channels.get(modlog.id).sendEmbed(embed);
-}
-
-exports.conf = {
-  enabled: true,
-  guildOnly: true,
-  aliases: [],
-  permLevel: 2
-}
-
-exports.help = {
-  name: prefix + 'ban',
-  description: 'İstediğiniz kişiyi sunucudan yasaklar.',
-  usage: prefix + 'ban [kullanıcı] [sebep]'
- }
-});
-
-
-bot.on('message', message => {
-  if (!message.guild) return;
-
-  if (message.content.startsWith(prefix + 'bann')) {
-    const user = message.mentions.users.first();
-    if (user) {
-      const member = message.guild.member(user);
-      if (member) {
-        member.ban({
-          reason: 'NotechMod',
-        }).then(() => {
-          message.reply(`Banlama başarılı! ${user.tag}`);
-        }).catch(err => {
-          message.reply('Hata!');
-          console.error(err);
-        });
-      } else {
-        message.reply('Kullanıcı sunucuda değil.');
-      }
-    } else {
-      message.reply('Banlayacağım kişiyi belirtmelisin!');
-    }
-    if (message.guild.member(user).bannable) return message.reply('Yetkilileri banlayamam.');
-  message.guild.ban(user, 2);
-  }
-});
-
 bot.on ('message', msg => {
   if (msg.content.toLowerCase() === prefix + 'temizle') {
     msg.channel.bulkDelete(100);
@@ -195,31 +124,6 @@ msg.channel.send(':smoking: :cloud::cloud::cloud:')
     
 .then(nmsg => nmsg.edit('**Sigaram bitti** | **Sigara İçmeyiniz.** :no_smoking: **Sigara Sağlığa Zararlıdır**'));
 }
-});
-
-bot.on('message', message => {
-  if (!message.guild) return;
-
-  if (message.content.startsWith(prefix +'kick')) {
-    const user = message.mentions.users.first();
-    if (user) {
-      const member = message.guild.member(user);
-      if (member) {
-        member.kick('Sebebini yazmalısın!').then(() => {
-          message.reply(`Sunucudan atma başarılı! ${user.tag}`);
-        }).catch(err => {
-          message.reply('Bu kişi atılamıyor.');
-          console.error(err);
-        });
-      } else {
-        message.reply('Kullanıcı sunucuda değil.');
-      }
-    } else {
-      message.reply('Atacağım kişiyi belirtmelisin!');
-    }
-      if (!message.guild.member(user).kickable) return message.reply('Yetkilileri sunucudan atamam.');
-  message.guild.kick(user, 2);
-  }
 });
 
 bot.on('message', msg => {
@@ -353,8 +257,8 @@ ${prefix}kurabiye - Size kurabiye verir.
      if (message.content === prefix + "moderasyon") {
         message.author.send(stripIndents`
 \`\`\`fix
-${prefix}kick - Etiketlenen kişiyi sunucudan atar.
-${prefix}ban - Etiketlenen kişiyi sunucudan banlar.
+${prefix}kick - Etiketlenen kişiyi sunucudan atar. [BAKIM]
+${prefix}ban - Etiketlenen kişiyi sunucudan banlar. [BAKIM]
 ${prefix}temizle - 100 Adet mesaj siler.
 ${prefix}yaz - Yazdığınız mesajı bota yazdırır.
 \`\`\` `)
