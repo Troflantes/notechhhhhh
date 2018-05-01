@@ -11,13 +11,6 @@ bot.on("ready", () => {
 });
 
 module.exports = bot => {
-	snekfetch.post(`https://discordbots.org/api/bots/${client.user.id}/stats`)
-  .set('Authorization', api)
-  .send({ server_count: client.guilds.size })
-  .then(() => console.log('Updated discordbots.org stats.'))
-  .catch(err => console.error(`Whoops something went wrong: ${err.body}`));
-console.log('>>Oynuyor kısmı başarıyla güncellendi.');
-console.log('Bot hazır ve giriş yaptı.');
 
     var Games = [
     `${prefix}yardım ✨ 1/3`,
@@ -26,8 +19,8 @@ console.log('Bot hazır ve giriş yaptı.');
     ];
 
     setInterval(function() {
-
-        var random = Math.floor(Math.random()*(Games.length-0+1)+0);
+	    
+        var sonuc = Games[Math.floor((Math.random() * Games.length))];
 
         bot.user.setGame(Games[random], "https://www.twitch.tv/scarew0");
         }, 2 * 2500);
