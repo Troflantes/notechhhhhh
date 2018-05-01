@@ -163,7 +163,7 @@ bot.on("message", message => {
     } else {
       message.channel.sendMessage(`Büyük siyah yazı stilini başarılı bir şekilde profilime koydum.`).then(msg => {
       console.log(`Yeniden başlıyorum..`);
-      bot.user.setAvatar(`https://cdn.discordapp.com/attachments/437939496311586817/440964284487434259/notehsd.png`);
+      bot.user.setAvatar(`https://cdn.discordapp.com/attachments/437939496311586817/440966904677400576/NOTECHHH.png`);
     })
    }
   }
