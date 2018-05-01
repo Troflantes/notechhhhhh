@@ -273,7 +273,6 @@ ${prefix}anakomutlar - Bilgi Komutları
 ${prefix}eğlence - Eğlence Komutları
 ${prefix}moderasyon - Moderasyon Komutları
 ${prefix}kişisel - Kişisel komutlar
-
 ` + bot.guilds.size + ` Sunucu 👀
 ` + bot.users.size + `  Kişi 💞
 \`\`\` `)
@@ -305,6 +304,7 @@ ${prefix}sunucu - Destek sunucusunun linkini atar.
      if (message.content.toLowerCase() === prefix + "kişisel") {
         message.channel.sendMessage(stripIndents`
 \`\`\`fix
+${prefix}matematik - Matematik işlemi yapar.
 ${prefix}yaz - Yazdığınız mesajı bota yazdırır.
 \`\`\` `)
     }
