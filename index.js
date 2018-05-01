@@ -7,7 +7,7 @@ let owner = "430011871555223553";
 
 bot.on("ready", () => {
     bot.user.setStatus('online');
-    bot.user.setGame(`${prefix}yardım ✨`, "https://www.twitch.tv/scarew0")
+    bot.user.setGame(`BAKIM ✨`, "https://www.twitch.tv/scarew0")
     console.log("Bağlandım!")   
 });
 
@@ -291,24 +291,6 @@ bot.on("message", message => {
             .setColor(0x000001)
         
         return message.channel.sendEmbed(embed)
-    }
-    
-    if (message.content.toLowerCase() === prefix + "sunucular") {
-        const embed = new Discord.RichEmbed()
-      .addField(`Server ismi: ${guild.name}`)
-        
-      .addField(`Server kurucusu: ${guild.owner.user.username}#${guild.owner.user.discriminator}`)
-        
-      .addField(`${guild.owner.user.id} - ${guild.memberCount}`)
-        
-      .addField(`Server ID: ${guild.id}`)
-        
-      .setColor('#00ffff')
-        
-      .setTitle('Sunucularım')
-        
-      .setDescription(`Şu an ${bot.guilds.size} sunucusundayım.`)
-        
     }
 
     if (message.content === prefix + "kurabiye") {
