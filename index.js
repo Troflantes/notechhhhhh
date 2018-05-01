@@ -75,22 +75,6 @@ bot.on ('message', msg => {
 });
 
 bot.on ('message', message => {
-  if (msg.content.toLowerCase() === prefix + 'sor') {
-    	var sayings = ["Evet",
-										"Hayır",
-										"Belki",
-										"Bilmem",
-										"Sence?",
-										"Ya bi sus artık",
-										"Kesinlikle!",
-										"Yokkk"];
-
-			var result = Math.floor((Math.random() * sayings.length) + 0);
-			bot.reply(message, sayings[result]);
-    }
-});
-
-bot.on ('message', message => {
 if (message.content === prefix + "emojiler") {
   const emojiList = message.guild.emojis.map(e=>e.toString()).join(" ** | ** ");
   message.channel.send(emojiList);
