@@ -57,20 +57,6 @@ if (message.content.toLowerCase() === prefix + 'emojiler') {
 });
 
 bot.on('message', message => {
-if (message.content.toLowerCase() === prefix + "afk") {
- message.reply('AFK moduna giriş başarılı.')
- message.member.setNickname(`[AFK]${message.author.username}`);
-    }
-});
-
-bot.on('message', message => {
-if (message.content.toLowerCase() === prefix + "afkçık") {
- message.reply('AFK modundan çıkış başarılı.')
- message.member.setNickname(`${message.author.username}`);
-    }
-});
-
-bot.on('message', message => {
 if (message.content.toLowerCase() === prefix + "zekam") {
     var sans = ["11", "15", "20", "24", "28", "31", "39", "45", "49", "54", "58", "63", "67", "77", "73", "84", "80", "83", "96", "94", "99", "Albert Einstein Mübarek"];
     var sonuc = sans[Math.floor((Math.random() * sans.length))];
@@ -98,6 +84,37 @@ if (message.content.toLowerCase() === prefix + "espriyap") {
     .addField(`***___Espri___***`, `${sonuc}`)
     return message.channel.sendEmbed(embed);
 }
+});
+
+bot.on('message', message => {
+  if (message.author.bot) return;
+  if (!message.content.startsWith(prefix)) return;
+    
+  if (command === 'partner') {
+  let command = message.content.split(' ')[0];
+  command = command.slice(prefix.length);
+	message.channel.send({embed: {
+	    color: 3447003,
+	    author: {
+	      name: client.user.username,
+	      icon_url: client.user.avatarURL
+	    },
+	    title: "Resmi Sunucumuz",
+	    url: "https://discord.gg/PjF4kgq",
+	    description: "Botun partner olduğu server linkleri",
+	    fields: [
+				{
+	        name: "Notech",
+	        value: "[Discord Linki](https://discord.gg/PjF4kgq)"
+	      }
+	    ],
+	    timestamp: new Date(),
+	    footer: {
+	      icon_url: client.user.avatarURL,
+	      text: "© Notech"
+	    }
+	  }
+	});
 });
 
 bot.on('message', message => {
