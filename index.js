@@ -161,6 +161,76 @@ msg.author.send('Bakıyorum..')
 }
 });
 
+bot.on('message', msg => {
+  if (msg.content.toLowerCase() === 'acıktım') {
+   	if (Math.floor((Math.random() * 15) + 1) === 1) {
+   		msg.reply('Az sabret iftara az kaldı!');
+   	}else if (Math.floor((Math.random() * 15) + 1) === 2) {
+   		msg.reply('Sabreden deviş muradına ermiş!');
+   	}else if (Math.floor((Math.random() * 15) + 1) === 3) {
+   		msg.reply('Sabret kardeşim!');
+   	}else if (Math.floor((Math.random() * 15) + 1) === 4) {
+   		msg.reply('Film izle. Açlığını unutursun. :)');
+   	}else if (Math.floor((Math.random() * 15) + 1) === 5) {
+   		msg.reply('Dizi izle. Açlığını unutursun. :)');
+   	}else if (Math.floor((Math.random() * 15) + 1) === 6) {
+   		msg.reply('Oyun oyna. Açlığını unutursun. :)');
+   	}else if (Math.floor((Math.random() * 15) + 1) === 7) {
+   		msg.reply('Ders çalış açlığını unutursun! Açlığını unutursun. :D');
+   	}else if (Math.floor((Math.random() * 15) + 1) === 8) {
+   		msg.reply('Git bi gez gel. Açlığını unutursun. Güneşden gitmemeye çalış!');
+   	}else if (Math.floor((Math.random() * 15) + 1) === 9) {
+   		msg.reply('Geçecek bunlar, sen neler atlattın bu ne ki? :)');
+   	}else if (Math.floor((Math.random() * 15) + 1) === 10) {
+   		msg.reply('Büyüyünce geçer. :D');
+   	}else if (Math.floor((Math.random() * 15) + 1) === 11) {
+   		msg.reply('Ağla. :D');
+   	}else if (Math.floor((Math.random() * 15) + 1) === 12) {
+   		msg.reply('Lanet olsun dostum, hemen o elindeki çatalı yere bırak!');
+   	}else if (Math.floor((Math.random() * 15) + 1) === 13) {
+   		msg.reply('Lanet olsun dostum, hemen o elindeki kaşığı yere bırak!');
+   	}else if (Math.floor((Math.random() * 15) + 1) === 14) {
+   		msg.reply('Lanet olsun dostum, hemen o elindeki bıçağı yere bırak!');
+   	}else if (Math.floor((Math.random() * 15) + 1) === 15) {
+   		msg.reply('Başka bir şey düşünmeye çalış!');
+   	}
+  }
+
+  if (msg.content.toLowerCase() === 'susadım') {
+   	if (Math.floor((Math.random() * 15) + 1) === 1) {
+   		msg.reply('Az sabret iftara az kaldı!');
+   	}else if (Math.floor((Math.random() * 15) + 1) === 2) {
+   		msg.reply('Sabreden deviş muradına ermiş!');
+   	}else if (Math.floor((Math.random() * 15) + 1) === 3) {
+   		msg.reply('Sabret kardeşim!');
+   	}else if (Math.floor((Math.random() * 15) + 1) === 4) {
+   		msg.reply('Film izle. Susuzluğunu unutursun. :)');
+   	}else if (Math.floor((Math.random() * 15) + 1) === 5) {
+   		msg.reply('Dizi izle. Susuzluğunu unutursun. :)');
+   	}else if (Math.floor((Math.random() * 15) + 1) === 6) {
+   		msg.reply('Oyun oyna. Susuzluğunu unutursun. :)');
+   	}else if (Math.floor((Math.random() * 15) + 1) === 7) {
+   		msg.reply('Ders çalış açlığını unutursun! Susuzluğunu unutursun. :D');
+   	}else if (Math.floor((Math.random() * 15) + 1) === 8) {
+   		msg.reply('Git bi gez gel. Susuzluğunu unutursun.');
+   	}else if (Math.floor((Math.random() * 15) + 1) === 9) {
+   		msg.reply('Geçecek bunlar, sen neler atlattın bu ne ki? :)');
+   	}else if (Math.floor((Math.random() * 15) + 1) === 10) {
+   		msg.reply('Büyüyünce geçer. :D');
+   	}else if (Math.floor((Math.random() * 15) + 1) === 11) {
+   		msg.reply('Ağla. :D');
+   	}else if (Math.floor((Math.random() * 15) + 1) === 12) {
+   		msg.reply('Lanet olsun dostum, hemen o elindeki şişeyi yere bırak!');
+   	}else if (Math.floor((Math.random() * 15) + 1) === 13) {
+   		msg.reply('Lanet olsun dostum, hemen o elindeki içeceği yere bırak!');
+   	}else if (Math.floor((Math.random() * 15) + 1) === 14) {
+   		msg.reply('Lanet olsun dostum, hemen o elindeki bardağı yere bırak!');
+   	}else if (Math.floor((Math.random() * 15) + 1) === 15) {
+   		msg.reply('Başka bir şey düşünmeye çalış!');
+   	}
+  }
+});
+
 bot.on("message", message => {
     
     if (message.content.toLowerCase() === prefix + "botdavet") {
