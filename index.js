@@ -9,9 +9,7 @@ bot.on("ready", () => {
     var Games = [`${prefix}yardım ✨ 1/3`, `${bot.guilds.size} Sunucu 👀 2/3`, `${bot.users.size} Kişi 💞 3/3`];
     var random = Math.floor(Math.random()*(Games.length-0+1)+0);
     bot.user.setStatus('online');
-        setInterval(function() {
     bot.user.setGame(Games[random], "https://www.twitch.tv/scarew0");
-        }, 2 * 2500);
     console.log("Bağlandım!")
 });
 
