@@ -1,6 +1,7 @@
 const { stripIndents, oneLine } = require('common-tags');
 const Discord = require("discord.js");
 const bot = new Discord.Client();
+const Jimp = require('jimp'); 
 
 let prefix = "n!";
 let owner = "430011871555223553";
@@ -153,6 +154,26 @@ msg.channel.send('Pingim ölçülüyor..')
 .then(nmsg => nmsg.edit("Pingim :ping_pong: **" + bot.ping + "** Milisaniye"));
 }
 });
+
+exports.run = (client, message, args) => {
+  if (message.content.startsWith(prefix + "ascii")) {
+    var figlet = require('figlet');
+    figlet(args.join(' '), function (err, data) {
+      if (err) {
+        console.log('Bir şeyler yanlış gitti..');
+        console.dir(err);
+        return;
+      }
+      message.delete()
+      const embed = new Discord.RichEmbed()
+      .setColor('RANDOM')
+      .setTitle('Ascii;')
+      .setDescription('```fix\n' + data + '\n```')
+      .setFooter('Notech', client.user.avatarURL)
+      .setTimestamp()
+      message.channel.send(embed);
+        });
+    };
 
 bot.on('message', msg => {
 if (msg.content.toLowerCase() === prefix + "sunucu") {
