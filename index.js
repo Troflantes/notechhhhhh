@@ -155,26 +155,6 @@ msg.channel.send('Pingim ölçülüyor..')
 }
 });
 
-exports.run = (client, message, args) => {
-  if (message.content.startsWith(prefix + "ascii")) {
-    var figlet = require('figlet');
-    figlet(args.join(' '), function (err, data) {
-      if (err) {
-        console.log('Bir şeyler yanlış gitti..');
-        console.dir(err);
-        return;
-      }
-      message.delete()
-      const embed = new Discord.RichEmbed()
-      .setColor('RANDOM')
-      .setTitle('Ascii;')
-      .setDescription('```fix\n' + data + '\n```')
-      .setFooter('Notech', client.user.avatarURL)
-      .setTimestamp()
-      message.channel.send(embed);
-        });
-    };
-
 bot.on('message', msg => {
 if (msg.content.toLowerCase() === prefix + "sunucu") {
 msg.author.send('Bakıyorum..')  
