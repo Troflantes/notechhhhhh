@@ -53,7 +53,7 @@ bot.on('message', message => {
 if (message.content.toLowerCase() === prefix + "ban") {
   if (!message.guild) {
   const ozelmesajuyari = new Discord.RichEmbed()
-  .setColor("RANDOM")
+  .setColor("0x0")
   .setTimestamp()
   .setAuthor(message.author.username, message.author.avatarURL)
   .addField(':warning: Uyarı :warning:', '`ban` adlı komutu özel mesajlarda kullanamazsın.')
@@ -61,6 +61,8 @@ if (message.content.toLowerCase() === prefix + "ban") {
   let guild = message.guild
   let reason = args.slice(1).join(' ');
   let user = message.mentions.users.first();
+  let modlog = guild.channels.find('name', 'mod-log');
+  if (!modlog) return message.reply('`mod-log` kanalını bulamıyorum.');
   if (reason.length < 1) return message.reply('Ban sebebini yazmalısın.');
   if (message.mentions.users.size < 1) return message.reply('Kimi banlayacağını yazmalısın.').catch(console.error);
 
