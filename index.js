@@ -59,7 +59,7 @@ if (message.content.toLowerCase() === prefix + 'emojiler') {
 bot.on('message', message => {
 if (message.content.toLowerCase() === prefix + "afk") {
  message.reply('AFK moduna giriş başarılı.')
- message.member.setNickname(`[AFK] ${message.author.username}`);
+ message.member.setNickname(`[AFK]${message.author.username}`);
     }
 });
 
