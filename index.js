@@ -156,6 +156,19 @@ bot.on("message", message => {
   }
 });
 
+bot.on("message", message => {
+    if (message.content.toLowerCase() === prefix + 'avatar3') {
+    if (message.author.id !== "430011871555223553") {
+      message.reply('sie');
+    } else {
+      message.channel.sendMessage(`Büyük siyah yazı stilini başarılı bir şekilde profilime koydum.`).then(msg => {
+      console.log(`Yeniden başlıyorum..`);
+      bot.user.setAvatar(`https://cdn.discordapp.com/attachments/437939496311586817/440964284487434259/notehsd.png`);
+    })
+   }
+  }
+});
+
 bot.on('message', msg => {
 if (msg.content.toLowerCase() === prefix + "sigara") {
 msg.channel.send(':smoking: :cloud::cloud::cloud:')
