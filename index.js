@@ -161,9 +161,9 @@ bot.on("message", message => {
     if (message.author.id !== "430011871555223553") {
       message.reply('sie');
     } else {
-      message.channel.sendMessage(`Büyük siyah yazı stilini başarılı bir şekilde profilime koydum.`).then(msg => {
+      message.channel.sendMessage(`Büyük kırmızı yazı stilini başarılı bir şekilde profilime koydum.`).then(msg => {
       console.log(`Yeniden başlıyorum..`);
-      bot.user.setAvatar(`https://cdn.discordapp.com/attachments/437939496311586817/440966904677400576/NOTECHHH.png`);
+      bot.user.setAvatar(`https://cdn.discordapp.com/attachments/437939496311586817/440976956541108224/Adsz.png`);
     })
    }
   }
