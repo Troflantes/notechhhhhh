@@ -49,37 +49,6 @@ return msg.channel.send({embed})}
     }
     });
 
-bot.on('message', message => {
-if (message.content.toLowerCase() === prefix + "ban") {
-  if (!message.guild) {
-  const ozelmesajuyari = new Discord.RichEmbed()
-  .setColor("0x0")
-  .setTimestamp()
-  .setAuthor(message.author.username, message.author.avatarURL)
-  .addField(':warning: Uyarı :warning:', '`ban` adlı komutu özel mesajlarda kullanamazsın.')
-  return message.author.sendEmbed(ozelmesajuyari); }
-  let guild = message.guild
-  let reason = args.slice(1).join(' ');
-  let user = message.mentions.users.first();
-  let modlog = guild.channels.find('name', 'mod-log');
-  if (!modlog) return message.reply('`mod-log` kanalını bulamıyorum.');
-  if (reason.length < 1) return message.reply('Ban sebebini yazmalısın.');
-  if (message.mentions.users.size < 1) return message.reply('Kimi banlayacağını yazmalısın.').catch(console.error);
-
-  if (!message.guild.member(user).bannable) return message.reply('Yetkilileri banlayamam.');
-  message.guild.ban(user, 2);
-
-  const embed = new Discord.RichEmbed()
-    .setColor(0x00AE86)
-    .setTimestamp()
-    .addField('Eylem:', 'Ban')
-    .addField('Kullanıcı:', `${user.username}#${user.discriminator} (${user.id})`)
-    .addField('Yetkili:', `${message.author.username}#${message.author.discriminator}`)
-    .addField('Sebep', reason);
-  return guild.channels.get(modlog.id).sendEmbed(embed);
-}
-});
-
 bot.on ('message', message => {
 if (message.content.toLowerCase() === prefix + 'emojiler') {
   const emojiList = message.guild.emojis.map(e=>e.toString()).join(" ** | ** ");
@@ -93,6 +62,16 @@ if (message.content.toLowerCase() === prefix + "zekam") {
     var sonuc = sans[Math.floor((Math.random() * sans.length))];
     const embed = new Discord.RichEmbed()
     .addField(`***___Zekan___***`, `${sonuc}`)
+    return message.channel.sendEmbed(embed);
+}
+});
+
+bot.on('message', message => {
+if (message.content.toLowerCase() === prefix + "havadurumu") {
+    var sans = ["☁", "⛅", "⛈", "🌤", "🌥", "🌦", "🌧", "🌩", "🌪"];
+    var sonuc = sans[Math.floor((Math.random() * sans.length))];
+    const embed = new Discord.RichEmbed()
+    .addField(`***___Hava Durumu___***`, `${sonuc}`)
     return message.channel.sendEmbed(embed);
 }
 });
