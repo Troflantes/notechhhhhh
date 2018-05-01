@@ -7,6 +7,7 @@ let owner = "430011871555223553";
 
 bot.on("ready", () => {
     bot.user.setStatus('online');
+    bot.user.setGame(`${prefix}yardım ✨`)
     console.log("Bağlandım!")   
 });
 
@@ -305,6 +306,7 @@ ${prefix}eğlence - Eğlence Komutları
 ${prefix}moderasyon - Moderasyon Komutları
 ${prefix}kişisel - Kişisel komutlar
 
+Anlık bilgim ->
 -> ` + bot.guilds.size + ` Sunucu 👀
 ->`+ bot.users.size + ` Kişi 💞
 \`\`\` `)
