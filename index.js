@@ -64,19 +64,21 @@ if (message.content.toLowerCase() === prefix + 'emojiler') {
 });
 
 bot.on('message', message => {
-if (message.content === prefix + "bot") {
-  let mesaj = args.slice(0).join(' ');
-if (mesaj.length < 1) return message.reply('Yazmam için herhangi bir şey yazmalısın.');
-  message.delete();
-  message.channel.send(mesaj);
-};
-
-bot.on('message', message => {
-if (message.content === prefix + "zekam") {
+if (message.content.toLowerCase() === prefix + "zekam") {
     var sans = ["11", "15", "20", "24", "28", "31", "39", "45", "49", "54", "58", "63", "67", "77", "73", "84", "80", "83", "96", "94", "99", "Albert Einstein Mübarek"];
     var sonuc = sans[Math.floor((Math.random() * sans.length))];
     const embed = new Discord.RichEmbed()
     .addField(`***___Zekan___***`, `${sonuc}`)
+    return message.channel.sendEmbed(embed);
+}
+});
+
+bot.on('message', message => {
+if (message.content.toLowerCase() === prefix + "espriyap") {
+    var sans = ["Geçen gün geçmiş günlerimi aradım ama meşguldü.", "Yağmur yağmış kar peynir", "Dünya dönermiş ay da köfte…", "Bu erikson başka erik yok.", "Yıkanan Ton a ne denir Washington", "Hadi oyun oynayalım. Vazgeçtim oymadan oynayalım!", "Geçen gün kamyonu sürdüm Leonardo da Vinci.", "Doğumdan sonra çok kilo aldım. Doğduğumda 2 kiloydum şimdi 62.", "Adam 7 gün boyunca nezle olmuş. Sıkılmış bugün de Petek le olayım demiş.", "Yarasa yararlı bir hayvandır. Yararlı bir hayvan olmasaydı yaramasa derlerdi.", " Benim neden kardeşim yok baba  Seni görünce ikincisine cesaret edemedik.", "Osmanlıda kimseye borç takamıyordun mesela sikke sikke ödüyodun…", "Tatlı yiyip, tatlı konuşuluyorsa bundan sonra mantı yiyip mantıklı konuşacağız.", "Babamı sahura kaldırmayı unuttuk anneme masada ne eksik diyorum tuzluk mu diyor.", "+Okeyde kıza elin nasıl dedim. Ojeli dedi. Ben Şoka girdim. O Migrosa."];
+    var sonuc = sans[Math.floor((Math.random() * sans.length))];
+    const embed = new Discord.RichEmbed()
+    .addField(`***___Espri___***`, `${sonuc}`)
     return message.channel.sendEmbed(embed);
 }
 });
@@ -142,11 +144,8 @@ if (message.content.toLowerCase() === prefix + "avatardeğiş") {
 bot.on('message', msg => {
 if (msg.content.toLowerCase() === prefix + "sigara") {
 msg.channel.send(':smoking: :cloud::cloud::cloud:')
-    
 .then(nmsg => nmsg.edit(':smoking: :cloud::cloud:'))
-    
 .then(nmsg => nmsg.edit(':smoking: :cloud:'))
-    
 .then(nmsg => nmsg.edit('**Sigaram bitti** | **Sigara İçmeyiniz.** :no_smoking: **Sigara Sağlığa Zararlıdır**'));
 }
 });
@@ -272,6 +271,8 @@ ${prefix}desteksunucusu - Destek sunucusunun linkini atar.
      if (message.content === prefix + "eğlence") {
         message.channel.sendMessage(stripIndents`
 \`\`\`fix
+${prefix}espriyap - Bot espri yapar.
+${prefix}zekam - Zeka puanınızı gösterir.
 ${prefix}matematik - Matematik işlemi yapar. 
 ${prefix}sigara - Bot sigara içer.
 ${prefix}avatarım - Avatarınızın linkini gönderir.
