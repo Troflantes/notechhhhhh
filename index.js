@@ -38,32 +38,17 @@ bot.on('message', async msg => {
   }
 });
 
-bot.on('message', msg => {
-  const args = msg.content.split(" ").slice(1);
-  const message = msg
+const girismesaj = [
+  'Merhaba, **Notech** sunucunuza eklendi!',
+  'n!yardım yazarak tüm komutlara ulaşabilir istek ve şikayetlerinizi bota özel mesaj ile bildirebilirsiniz.',
+  'Destek sunucusu: https://discord.gg/WqunF2c ',
+  'Notechi diğer sunuculara eklemek için https://discordapp.com/oauth2/authorize?client_id=439756873311322112&permissions=8&scope=bot',
+  '**NOT:** Botun logunu görmek için "notech-log" adlı kanal yapmalısınız.'
+]
 
-  if (msg.content.startsWith(prefix + "eval")) {
-    if (msg.author.id !== "430011871555223553") {
-      if (msg.author.id !== "430011871555223553") {
-      const evala = new Discord.RichEmbed()
-    .setColor(0xFF0000)
-    .setTimestamp()
-    .setAuthor(msg.author.username, msg.author.avatarURL)
-    .addField('sie')
-    return msg.channel.sendEmbed(evala);
-    }}
-    try {
-      var code = args.join(" ");
-      var evaled = eval(code);
-
-      if (typeof evaled !== "string")
-        evaled = require("util").inspect(evaled);
-
-      msg.channel.sendCode("xl", clean(evaled));
-    } catch (err) {
-      msg.channel.sendMessage(`\`HATA\` \`\`\`xl\n${clean(err)}\n\`\`\``);
-    }
-  }
+bot.on('guildCreate', guild => {
+    const generalChannel = guild.defaultChannel
+    generalChannel.sendMessage(girismesaj)
 });
 
 bot.on("message", message => {
