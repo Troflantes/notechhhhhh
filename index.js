@@ -249,7 +249,7 @@ bot.on("message", message => {
 });
 
 bot.on("message", message => {
-    if (message.content.toLowerCase() === prefix + 'drm1') {
+    if (message.content.toLowerCase() === prefix + 'durum1') {
     if (message.author.id !== "430011871555223553") {
       message.reply('sie');
     } else {
@@ -262,7 +262,7 @@ bot.on("message", message => {
 });
 
 bot.on("message", message => {
-    if (message.content.toLowerCase() === prefix + 'drm2') {
+    if (message.content.toLowerCase() === prefix + 'durum2') {
     if (message.author.id !== "430011871555223553") {
       message.reply('sie');
     } else {
@@ -275,13 +275,26 @@ bot.on("message", message => {
 });
 
 bot.on("message", message => {
-    if (message.content.toLowerCase() === prefix + 'drm3') {
+    if (message.content.toLowerCase() === prefix + 'durum3') {
     if (message.author.id !== "430011871555223553") {
       message.reply('sie');
     } else {
       message.channel.sendMessage(`Başarıyla rahatsız etmeyin moduna geçtim.`).then(msg => {
       console.log(`Yeniden başlıyorum..`);
       bot.user.setStatus(`dnd`);
+    })
+   }
+  }
+});
+
+bot.on("message", message => {
+    if (message.content.toLowerCase() === prefix + 'durum4') {
+    if (message.author.id !== "430011871555223553") {
+      message.reply('sie');
+    } else {
+      message.channel.sendMessage(`Başarıyla çevrimdışı moduna geçtim.`).then(msg => {
+      console.log(`Yeniden başlıyorum..`);
+      bot.user.setStatus(`offline`);
     })
    }
   }
@@ -306,7 +319,6 @@ msg.channel.send(':smoking: :cloud::cloud::cloud:')
 .then(nmsg => nmsg.edit(':smoking: :cloud::cloud:'))
 .then(nmsg => nmsg.edit(':smoking: :cloud:'))
 .then(nmsg => nmsg.edit(':smoking: :cloud::cloud:'))
-.then(nmsg => nmsg.edit(':smoking: :cloud:'))
 .then(nmsg => nmsg.edit(':smoking: :cloud:'))
 .then(nmsg => nmsg.edit('**Sigaram bitti** | **Sigara İçmeyiniz.** :no_smoking: **Sigara Sağlığa Zararlıdır**'));
 }
@@ -411,7 +423,7 @@ bot.on("message", message => {
     if (message.author.id !== "430011871555223553") {
       message.reply('sie');
     } else {
-      message.channel.sendMessage(`Yeniden başlıyorum..`).then(msg => {
+      message.channel.sendMessage(`tmm`).then(msg => {
       console.log(`Yeniden başlıyorum..`);
       process.exit(0);
     })
@@ -446,8 +458,6 @@ bot.on("message", message => {
 
             .addField("Version", "0.0.2", true)
         
-            .addField("Açık Kalma Süresi", bot.duration, true)
-
             .addField("Toplam Sunucu Sayısı", bot.guilds.size, true)
 
             .addField("Toplam Kullanıcı Sayısı", bot.users.size, true)
