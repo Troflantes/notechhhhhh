@@ -95,7 +95,7 @@ bot.on("message", message => {
     if (message.author.id !== "430011871555223553") {
       message.reply('Kurucumun izni olması lazım. Kurucum: <@430011871555223553> ');
     } else {
-      message.channel.sendMessage(`Gerekli şeyleri başarılı bir şekilde kurdum.`).then(msg => {
+      message.channel.sendMessage(` :white_check_mark: Gerekli şeyleri başarılı bir şekilde kurdum.`).then(msg => {
       console.log(`Yeniden başlıyorum..`);
       message.guild.createChannel('notech-log');
     })
