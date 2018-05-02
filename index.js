@@ -42,7 +42,7 @@ bot.on('message', msg => {
     let mesaj = msg.content.substring(2 + 3);
     msg.delete (msg.content == 'yaz' + mesaj)
     let embed = new Discord.RichEmbed()
-    .setColor("0xff0000")
+    .setColor("0x000001")
        .setDescription(mesaj)
 return msg.channel.send({embed})}
 
