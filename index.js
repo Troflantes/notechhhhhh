@@ -58,7 +58,7 @@ if (message.content.toLowerCase() === prefix + 'emojiler') {
 
 bot.on('message', message => {
 if (message.content.toLowerCase() === prefix + "zekam") {
-    var sans = ["11", "15", "20", "24", "28", "31", "39", "45", "49", "54", "58", "63", "67", "77", "73", "84", "80", "83", "96", "94", "99", "Albert Einstein Mübarek"];
+    var sans = ["11", "15", "20", "24", "28", "31", "39", "45", "49", "54", "58", "63", "67", "77", "73", "84", "80", "83", "96", "94", "99", "Albert Einstein mısın krdşm"];
     var sonuc = sans[Math.floor((Math.random() * sans.length))];
     const embed = new Discord.RichEmbed()
     .addField(`***___Zekan___***`, `${sonuc}`)
@@ -172,6 +172,9 @@ bot.on("message", message => {
 bot.on('message', msg => {
 if (msg.content.toLowerCase() === prefix + "sigara") {
 msg.channel.send(':smoking: :cloud::cloud::cloud:')
+.then(nmsg => nmsg.edit(':smoking: :cloud::cloud::cloud:'))
+.then(nmsg => nmsg.edit(':smoking: :cloud::cloud:'))
+.then(nmsg => nmsg.edit(':smoking: :cloud:'))
 .then(nmsg => nmsg.edit(':smoking: :cloud::cloud:'))
 .then(nmsg => nmsg.edit(':smoking: :cloud:'))
 .then(nmsg => nmsg.edit('**Sigaram bitti** | **Sigara İçmeyiniz.** :no_smoking: **Sigara Sağlığa Zararlıdır**'));
