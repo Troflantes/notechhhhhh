@@ -37,6 +37,12 @@ bot.on('message', async msg => {
 });
 
 bot.on('message', msg => {
+  if (msg.content.toLowerCase() === prefix + 'parti') {
+msg.channel.send(" :lolxdd: ");
+  }
+});
+
+bot.on('message', msg => {
   if (msg.content.startsWith(prefix + "yaz")) {
     if (msg.channel.type !== "dm"){
     let mesaj = msg.content.substring(2 + 3);
@@ -176,6 +182,7 @@ msg.channel.send(':smoking: :cloud::cloud::cloud:')
 .then(nmsg => nmsg.edit(':smoking: :cloud::cloud:'))
 .then(nmsg => nmsg.edit(':smoking: :cloud:'))
 .then(nmsg => nmsg.edit(':smoking: :cloud::cloud:'))
+.then(nmsg => nmsg.edit(':smoking: :cloud:'))
 .then(nmsg => nmsg.edit(':smoking: :cloud:'))
 .then(nmsg => nmsg.edit('**Sigaram bitti** | **Sigara İçmeyiniz.** :no_smoking: **Sigara Sağlığa Zararlıdır**'));
 }
