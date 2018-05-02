@@ -145,7 +145,7 @@ if (message.content.toLowerCase() === prefix + 'emojiler') {
 
 bot.on ('message', message => {
 if (message.content.toLowerCase() === prefix + 'sunucular') {
-  const sunucular = bot.guilds.map(e=>e.toString()).join(" ** | ** ");
+  const sunucular = bot.guilds.map(e=>e.toString()).join("\n");
   message.channel.send(sunucular);
 }
 });
