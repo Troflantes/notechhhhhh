@@ -478,20 +478,25 @@ bot.on("message", message => {
     if (message.content.toLowerCase() === prefix + "yardım") {
         message.channel.sendMessage(stripIndents`
 \`\`\`fix
+MENÜ
 ${prefix}anakomutlar - Bilgi Komutları
-
 ${prefix}eğlence - Eğlence Komutları
-
 ${prefix}moderasyon - Moderasyon Komutları
-
 ${prefix}kişisel - Kişisel komutlar
 
-        Anlık Bilgim
-- ` + bot.guilds.size + ` Sunucu 👀
--`+ bot.channels.size + ` Kanal 📄
--`+ bot.users.size + ` Kullanıcı 💞
-
 Not: Eğer 'notech-log' adında kanal oluşturursanız sunucuya giriş ve çıkışları bot otomatikmen söyler.
+\`\`\` `)
+    }
+    
+    if (message.content.toLowerCase() === prefix + "istatistik") {
+        message.channel.sendMessage(stripIndents`
+\`\`\`fix
+         Anlık İstatistik
+- ` + bot.guilds.size + ` Sunucu 👀
+
+-`+ bot.channels.size + ` Kanal 📄
+
+-`+ bot.users.size + ` Kullanıcı 💞
 \`\`\` `)
     }
     
@@ -508,7 +513,7 @@ ${prefix}böl - Yazdığınız iki sayıyı böler.
      if (message.content.toLowerCase() === prefix + "anakomutlar") {
         message.channel.sendMessage(stripIndents`
 \`\`\`fix
-${prefix}emojiler - Sunucudaki emojileri gösterir.
+${prefix}istatistik - Botun istatistiğini gösterir.
 ${prefix}ping - Botun pingini ölçer.
 ${prefix}yardım - Botun bütün komutlarını size gösterir.
 ${prefix}sunucubilgi - Sunucu hakkkında detaylı bilgi verir.
@@ -521,6 +526,7 @@ ${prefix}sunucu - Destek sunucusunun linkini atar.
      if (message.content.toLowerCase() === prefix + "kişisel") {
         message.channel.sendMessage(stripIndents`
 \`\`\`fix
+${prefix}emojiler - Sunucudaki emojileri gösterir.
 ${prefix}matematik - Matematik işlemi yapar.
 ${prefix}yaz - Yazdığınız mesajı bota yazdırır.
 \`\`\` `)
