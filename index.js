@@ -134,7 +134,10 @@ bot.on('message', msg => {
     if (msg.channel.type !== "dm"){
     let mesaj = msg.content.substring(2 + 3);
     msg.delete (msg.content == 'yaz' + mesaj)
-return msg.channel.send({mesaj})}
+    let embed = new Discord.RichEmbed()
+    .setColor("0x000001")
+       .setDescription(mesaj)
+return msg.channel.send({embed})}
 
     }
     });
