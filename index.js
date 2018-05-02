@@ -31,6 +31,21 @@ message.channel.sendEmbed(new Discord.RichEmbed()
    }
 });
 
+bot.on('message', message => {
+  if (!message.guild) return;
+
+  if (message.content.toLowerCase() === prefix + "gir") {
+    if (message.member.voiceChannel) {
+      message.member.voiceChannel.join()
+          message.reply('Ses kanalına bağlandım.');
+        })
+        .catch(console.log);
+    } else {
+      message.reply('İlk önce sesli kanala girmelisin.');
+    }
+  }
+});
+
 bot.on('message', async msg => {
   if (msg.content.toLowerCase() === 'sa') {
     await msg.react('🇦');
