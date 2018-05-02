@@ -134,7 +134,7 @@ bot.on('message', msg => {
     if (msg.channel.type !== "dm"){
     let mesaj = msg.content.substring(2 + 3);
     msg.delete (msg.content == 'yaz' + mesaj)
-return msg.channel.send({embed})}
+return msg.channel.send({mesaj})}
 
     }
     });
