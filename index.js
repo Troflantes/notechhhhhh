@@ -108,9 +108,22 @@ bot.on("message", message => {
     if (message.author.id !== "430011871555223553") {
       message.reply('sie');
     } else {
-      message.channel.sendMessage(`Başarılı bir şekilde profilime yardım komudunu koydum.`).then(msg => {
+      message.channel.sendMessage(`Başarılı bir şekilde profilime bakım komudunu koydum.`).then(msg => {
       console.log(`Yeniden başlıyorum..`);
       bot.user.setGame(`BAKIMDAYIZ | İletişim: Scarew#0001 `, "https://www.twitch.tv/scarew0");
+    })
+   }
+  }
+});
+
+bot.on("message", message => {
+    if (message.content.toLowerCase() === prefix + 'gameyardım') {
+    if (message.author.id !== "430011871555223553") {
+      message.reply('sie');
+    } else {
+      message.channel.sendMessage(`Başarılı bir şekilde profilime yardım komudunu koydum.`).then(msg => {
+      console.log(`Yeniden başlıyorum..`);
+      bot.user.setGame(`${prefix}yardım  ✨ `, "https://www.twitch.tv/scarew0");
     })
    }
   }
