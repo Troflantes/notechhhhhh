@@ -42,38 +42,31 @@ bot.on("message", message => {
   }
 });
 
-function clean(text) {
-  if (typeof(text) === "string")
-    return text.replace(/`/g, "`" + String.fromCharCode(8203)).replace(/@/g, "@" + String.fromCharCode(8203));
-  else
-      return text;
-}
-
-const clean = text => {
-  if (typeof(text) === "string")
-    return text.replace(/`/g, "`" + String.fromCharCode(8203)).replace(/@/g, "@" + String.fromCharCode(8203));
-  else
-      return text;
-}
-
 bot.on("message", message => {
   const args = message.content.split(" ").slice(1);
+    if (message.content.startsWith(prefix + "eval")) {
+	if (message.author.id === "430011871555223553") {
+		try {
+		  var code = args.join(" ");
+		  var evaled = eval(code);
 
-  if (message.content.startsWith(prefix + "eval")) {
-    if(message.author.id !== "430011871555223553") return;
-    try {
-      const code = args.join(" ");
-      let evaled = eval(code);
+		  if (typeof evaled !== "string")
+			evaled = require("util").inspect(evaled);
 
-      if (typeof evaled !== "string")
-        evaled = require("util").inspect(evaled);
-
-      message.channel.send(clean(evaled), {code:"xl"});
-    } catch (err) {
-      message.channel.send(`\`ERROR\` \`\`\`xl\n${clean(err)}\n\`\`\``);
-    }
-  }
-});
+		  message.channel.send("xl", clean(evaled), {code:true});
+		} catch (err) {
+		  message.channel.send(`\`HATA\` \`\`\`xl\n${clean(err)}\n\`\`\``);
+		}
+		function clean(text) {
+		  if (typeof(text) === "string")
+			return text.replace(/`/g, "`" + String.fromCharCode(8203)).replace(/@/g, "@" + String.fromCharCode(8203));
+		  else
+			  return text;
+		}
+	} else {
+		message.reply('Bu komutu kullanmak için gerekli izine sahip değilsin.')
+	}
+};
 
 bot.on("message", message => {
     if (message.content.toLowerCase() === prefix + 'gametoplam') {
