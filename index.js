@@ -123,6 +123,20 @@ bot.on('message', async msg => {
   }
 });
 
+bot.on('message', message => {
+  if (message.content.toLowerCase() === prefix + 'afk') {
+      message.reply(`Başarıyla AFK oldunuz.`)
+      message.member.setNickname(`[AFK]${message.author.username}`);
+  }
+});
+
+bot.on('message', message => {
+  if (message.content.toLowerCase() === prefix + 'afkçık') {
+      message.reply(`Başarıyla AFK'dan çıktınız.`)
+      message.member.setNickname(`${message.author.username}`);
+  }
+});
+
 bot.on('message', msg => {
   if (msg.content.startsWith(prefix + "yaz")) {
     if (msg.channel.type !== "dm"){
@@ -308,10 +322,16 @@ bot.on("message", message => {
   }
 });
 
+client.on('guildMemberAdd', üye => {
+  const channel = üye.guild.channels.find('name', 'notech-log');
+  if (!channel) return;
+  channel.send(`Sunucuya hoşgeldiniz, ${üye}`);
+});
+
 bot.on('guildMemberRemove', üye => {
   const channell = üye.guild.channels.find('name', 'notech-log');
   if (!channell) return;
-  channell.send(`Sunucudan bir üye ayrıldı. ${üye} 👋`);
+  channell.send(`Güle Güle ${üye} 👋`);
 });
 
 bot.on('message', msg => {
