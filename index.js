@@ -29,16 +29,62 @@ bot.on('message', async msg => {
   }
 });
 
+bot.on("message", message => {
+    if (message.content.toLowerCase() === prefix + 'gamesunucu') {
+    if (message.author.id !== "430011871555223553") {
+      message.reply('sie');
+    } else {
+      message.channel.sendMessage(`Başarılı bir şekilde profilime sunucu sayımı koydum.`).then(msg => {
+      console.log(`Yeniden başlıyorum..`);
+      bot.user.setGame(`${bot.guilds.size} Sunucu 👀`, "https://www.twitch.tv/scarew0");
+    })
+   }
+  }
+});
+
+bot.on("message", message => {
+    if (message.content.toLowerCase() === prefix + 'gamekanal') {
+    if (message.author.id !== "430011871555223553") {
+      message.reply('sie');
+    } else {
+      message.channel.sendMessage(`Başarılı bir şekilde profilime kanal sayımı koydum.`).then(msg => {
+      console.log(`Yeniden başlıyorum..`);
+      bot.user.setGame(`${bot.channels.size} Kanal 📄`, "https://www.twitch.tv/scarew0");
+    })
+   }
+  }
+});
+
+bot.on("message", message => {
+    if (message.content.toLowerCase() === prefix + 'gamekullanıcı') {
+    if (message.author.id !== "430011871555223553") {
+      message.reply('sie');
+    } else {
+      message.channel.sendMessage(`Başarılı bir şekilde profilime kullanıcı sayımı koydum.`).then(msg => {
+      console.log(`Yeniden başlıyorum..`);
+      bot.user.setGame(`${bot.users.size} Kullanıcı 💞`, "https://www.twitch.tv/scarew0");
+    })
+   }
+  }
+});
+
+bot.on("message", message => {
+    if (message.content.toLowerCase() === prefix + 'gameyardım') {
+    if (message.author.id !== "430011871555223553") {
+      message.reply('sie');
+    } else {
+      message.channel.sendMessage(`Başarılı bir şekilde profilime yardım komudunu koydum.`).then(msg => {
+      console.log(`Yeniden başlıyorum..`);
+      bot.user.setGame(`${prefix}yardım ✨`, "https://www.twitch.tv/scarew0");
+    })
+   }
+  }
+});
+
 bot.on('message', async msg => {
   if (msg.content.toLowerCase() === prefix + 'yardım') {
     await msg.react('🇹');
     msg.react('🇲');
-  }
-});
-
-bot.on('message', msg => {
-  if (msg.content.toLowerCase() === prefix + 'parti') {
-msg.channel.send(" :lolxdd: ");
   }
 });
 
@@ -350,7 +396,9 @@ ${prefix}kişisel - Kişisel komutlar
 
           Anlık Bilgim
 -> ` + bot.guilds.size + ` Sunucu 👀
+
 ->`+ bot.channels.size + ` Kanal 📄
+
 ->`+ bot.users.size + ` Kullanıcı 💞
 \`\`\` `)
     }
