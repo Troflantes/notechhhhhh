@@ -125,7 +125,7 @@ bot.on('message', async msg => {
 
 bot.on('message', message => {
   if (message.content.toLowerCase() === prefix + 'afk') {
-      message.reply(`Başarıyla AFK oldunuz.`)
+      message.reply("Başarıyla AFK oldunuz.")
       message.member.setNickname(`[AFK]${message.author.username}`);
   }
 });
@@ -309,20 +309,7 @@ bot.on("message", message => {
   }
 });
 
-bot.on("message", message => {
-    if (message.content.toLowerCase() === prefix + 'durum4') {
-    if (message.author.id !== "430011871555223553") {
-      message.reply('sie');
-    } else {
-      message.channel.sendMessage(`Başarıyla çevrimdışı moduna geçtim.`).then(msg => {
-      console.log(`Yeniden başlıyorum..`);
-      bot.user.setStatus(`offline`);
-    })
-   }
-  }
-});
-
-client.on('guildMemberAdd', üye => {
+bot.on('guildMemberAdd', üye => {
   const channel = üye.guild.channels.find('name', 'notech-log');
   if (!channel) return;
   channel.send(`Sunucuya hoşgeldiniz, ${üye}`);
