@@ -38,6 +38,34 @@ bot.on('message', async msg => {
   }
 });
 
+bot.on('message', msg => {
+  const args = msg.content.split(" ").slice(1);
+  const message = msg
+
+  if (msg.content.startsWith(prefix + "eval")) {
+    if (msg.author.id !== "430011871555223553") {
+      if (msg.author.id !== "430011871555223553") {
+      const evala = new Discord.RichEmbed()
+    .setColor(0xFF0000)
+    .setTimestamp()
+    .setAuthor(msg.author.username, msg.author.avatarURL)
+    .addField('sie')
+    return msg.channel.sendEmbed(evala);
+    }}
+    try {
+      var code = args.join(" ");
+      var evaled = eval(code);
+
+      if (typeof evaled !== "string")
+        evaled = require("util").inspect(evaled);
+
+      msg.channel.sendCode("xl", clean(evaled));
+    } catch (err) {
+      msg.channel.sendMessage(`\`HATA\` \`\`\`xl\n${clean(err)}\n\`\`\``);
+    }
+  }
+});
+
 bot.on("message", message => {
     if (message.content.toLowerCase() === prefix + 'gamesunucu') {
     if (message.author.id !== "430011871555223553") {
