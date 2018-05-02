@@ -96,8 +96,8 @@ bot.on("message", message => {
 
 bot.on('message', (message) => {
     if (message.author.id !== bot.user.id) return;
-    if (!message.content.startsWith(prefix)) return;
-    let command = message.content.slice(prefix.length);
+    if (!message.content.startsWith(auth.prefix)) return;
+    let command = message.content.slice(auth.prefix.length);
     let split = command.split(" ");
     command = split[0];
     split.shift();
