@@ -39,7 +39,6 @@ bot.on('message', message => {
       message.member.voiceChannel.join()
           message.reply('Ses kanalına bağlandım.');
         })
-        .catch(console.log);
     } else {
       message.reply('İlk önce sesli kanala girmelisin.');
     }
