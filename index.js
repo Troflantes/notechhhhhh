@@ -485,8 +485,3 @@ ${prefix}yenile - Botu yeniden başlatır.
 \`\`\` `)
     }
 });
-
-        default:
-            message.channel.sendMessage("Komut Bulunamadı!");
-      }
-  });
