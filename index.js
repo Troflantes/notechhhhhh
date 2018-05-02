@@ -247,6 +247,18 @@ bot.on("message", message => {
   }
 });
 
+bot.on('guildMemberAdd', üye => {
+  const channel = üye.guild.channels.find('name', 'notech-log');
+  if (!channel) return;
+  channel.send(`Sunucuya hoşgeldiniz, ${üye}`);
+});
+
+bot.on('guildMemberRemove', üye => {
+  const channell = üye.guild.channels.find('name', 'notech-log');
+  if (!channell) return;
+  channell.send(`Sunucudan bir üye ayrıldı. ${üye} 👋`);
+});
+
 bot.on('message', msg => {
 if (msg.content.toLowerCase() === prefix + "sigara") {
 msg.channel.send(':smoking: :cloud::cloud::cloud:')
@@ -421,12 +433,11 @@ ${prefix}moderasyon - Moderasyon Komutları
 ${prefix}kişisel - Kişisel komutlar
 
         - Anlık Bilgim -
-
 -> ` + bot.guilds.size + ` Sunucu 👀
-
 ->`+ bot.channels.size + ` Kanal 📄
-
 ->`+ bot.users.size + ` Kullanıcı 💞
+
+Not: Eğer 'notech-log' adında kanal oluşturursanız sunucuya giriş ve çıkışları bot otomatikmen söyler.
 \`\`\` `)
     }
     
