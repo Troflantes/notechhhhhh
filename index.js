@@ -77,14 +77,6 @@ bot.on("message", message => {
   }
 });
 
-bot.on('message', message => {
-  if (message.content.toLowerCase() === prefix + 'kurulum') {
-      message.channel.sendMessage(`Gerekli şeyleri başarılı bir şekilde kurdum.`).then(msg => {
-      console.log(`Kurulum okey`);
-      message.guild.createChannel('notech-log');
-  }
-});
-
 bot.on("message", message => {
     if (message.content.toLowerCase() === prefix + 'gamekullanıcı') {
     if (message.author.id !== "430011871555223553") {
@@ -99,13 +91,13 @@ bot.on("message", message => {
 });
 
 bot.on("message", message => {
-    if (message.content.toLowerCase() === prefix + 'gameyardım') {
+    if (message.content.toLowerCase() === prefix + 'kurulum') {
     if (message.author.id !== "430011871555223553") {
-      message.reply('sie');
+      message.reply('Kurucumun izni olması lazım. Kurucum: <@430011871555223553> ');
     } else {
-      message.channel.sendMessage(`Başarılı bir şekilde profilime yardım komudunu koydum.`).then(msg => {
+      message.channel.sendMessage(`Gerekli şeyleri başarılı bir şekilde kurdum.`).then(msg => {
       console.log(`Yeniden başlıyorum..`);
-      bot.user.setGame(`${prefix}yardım ✨`, "https://www.twitch.tv/scarew0");
+      message.guild.createChannel('notech-log');
     })
    }
   }
@@ -311,19 +303,6 @@ bot.on("message", message => {
       message.channel.sendMessage(`Başarıyla çevrimdışı moduna geçtim.`).then(msg => {
       console.log(`Yeniden başlıyorum..`);
       bot.user.setStatus(`offline`);
-    })
-   }
-  }
-});
-
-bot.on("message", message => {
-    if (message.content.toLowerCase() === prefix + 'kurulum') {
-    if (message.author.id !== "430011871555223553") {
-      message.reply('Kurucumun izni olması lazım. Kurucum: <@430011871555223553> ');
-    } else {
-      message.channel.sendMessage(`Gerekli şeyleri başarılı bir şekilde kurdum.`).then(msg => {
-      console.log(`Yeniden başlıyorum..`);
-      message.guild.createChannel('notech-log');
     })
    }
   }
