@@ -259,6 +259,11 @@ bot.on('guildMemberRemove', üye => {
   channell.send(`Sunucudan bir üye ayrıldı. ${üye} 👋`);
 });
 
+module.exports = member => {
+    let username = member.user.username;
+    member.sendMessage('Sunucuya Hoş geldin **' + username + '**! Bu sunucuda ``Notech`` botu kullanılmaktadır. Beni sunucuna davet etmek için n!botdavet ');
+};
+
 bot.on('message', msg => {
 if (msg.content.toLowerCase() === prefix + "sigara") {
 msg.channel.send(':smoking: :cloud::cloud::cloud:')
