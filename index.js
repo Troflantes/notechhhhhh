@@ -38,19 +38,6 @@ bot.on('message', async msg => {
   }
 });
 
-const girismesaj = [
-  'Merhaba, **Notech** sunucunuza eklendi!',
-  'n!yardım yazarak tüm komutlara ulaşabilir istek ve şikayetlerinizi bota özel mesaj ile bildirebilirsiniz.',
-  'Destek sunucusu: https://discord.gg/WqunF2c ',
-  'Notechi diğer sunuculara eklemek için https://discordapp.com/oauth2/authorize?client_id=439756873311322112&permissions=8&scope=bot',
-  '**NOT:** Botun logunu görmek için "notech-log" adlı kanal yapmalısınız.'
-]
-
-bot.on('guildCreate', guild => {
-    const generalChannel = guild.defaultChannel
-    generalChannel.sendMessage(girismesaj)
-});
-
 bot.on("message", message => {
     if (message.content.toLowerCase() === prefix + 'gamesunucu') {
     if (message.author.id !== "430011871555223553") {
