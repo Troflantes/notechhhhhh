@@ -43,6 +43,19 @@ bot.on("message", message => {
 });
 
 bot.on("message", message => {
+    if (message.content.toLowerCase() === prefix + 'gametoplam') {
+    if (message.author.id !== "430011871555223553") {
+      message.reply('sie');
+    } else {
+      message.channel.sendMessage(`Başarılı bir şekilde profilime bütün sayılarımı koydum.`).then(msg => {
+      console.log(`Yeniden başlıyorum..`);
+      bot.user.setGame(`${prefix}yardım ✨ | ${bot.guilds.size} Sunucu ${bot.users.size} Kullanıcı `, "https://www.twitch.tv/scarew0");
+    })
+   }
+  }
+});
+
+bot.on("message", message => {
     if (message.content.toLowerCase() === prefix + 'gamekanal') {
     if (message.author.id !== "430011871555223553") {
       message.reply('sie');
