@@ -1,7 +1,6 @@
 const { stripIndents, oneLine } = require('common-tags');
 const Discord = require("discord.js");
 const bot = new Discord.Client();
-const duration = moment.duration(client.uptime).format(" D [gün], H [saat], m [dakika], s [saniye]");
 
 let prefix = "n!";
 let owner = "430011871555223553";
