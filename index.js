@@ -31,13 +31,6 @@ message.channel.sendEmbed(new Discord.RichEmbed()
    }
 });
 
-bot.on('message', async msg => {
-  if (msg.content.toLowerCase() === 'sa') {
-    await msg.react('🇦');
-    msg.react('🇸');
-  }
-});
-
 bot.on("message", message => {
     if (message.content.toLowerCase() === prefix + 'gamesunucu') {
     if (message.author.id !== "430011871555223553") {
@@ -58,7 +51,7 @@ bot.on("message", message => {
     } else {
       message.channel.sendMessage(`Başarılı bir şekilde profilime bütün sayılarımı koydum.`).then(msg => {
       console.log(`Yeniden başlıyorum..`);
-      bot.user.setGame(`${prefix}yardım ✨ | ${bot.guilds.size} Sunucu ${bot.users.size} Kullanıcı `, "https://www.twitch.tv/scarew0");
+      bot.user.setGame(`${prefix}yardım ✨ ${bot.guilds.size} Sunucu ${bot.users.size} Kullanıcı `, "https://www.twitch.tv/scarew0");
     })
    }
   }
@@ -141,9 +134,6 @@ bot.on('message', msg => {
     if (msg.channel.type !== "dm"){
     let mesaj = msg.content.substring(2 + 3);
     msg.delete (msg.content == 'yaz' + mesaj)
-    let embed = new Discord.RichEmbed()
-    .setColor("0x000001")
-       .setDescription(mesaj)
 return msg.channel.send({embed})}
 
     }
