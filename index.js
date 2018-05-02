@@ -2,16 +2,8 @@ const { stripIndents, oneLine } = require('common-tags');
 const Discord = require("discord.js");
 const bot = new Discord.Client();
 
-const prefix = "n!";
-
 let prefix = "n!";
 let owner = "430011871555223553";
-
-var fortunes = [
-     "Evet",
-     "Hayır",
-     "Belki"
-];
 
 bot.on("ready", () => {
     bot.user.setStatus('online');
@@ -109,42 +101,11 @@ bot.on("message", message => {
     } else {
       message.channel.sendMessage(`Başarılı bir şekilde profilime yardım komudunu koydum.`).then(msg => {
       console.log(`Yeniden başlıyorum..`);
-      bot.user.setGame(`BAKIMDAYIZ`, "https://www.twitch.tv/scarew0");
+      bot.user.setGame(`BAKIMDAYIZ | İletişim: Scarew#0001 `, "https://www.twitch.tv/scarew0");
     })
    }
   }
 });
-
-bot.on("message", function(message) {
-    if (message.author.equals(bot.user)) return;
-
-    if (!message.content.startsWith(prefix)) return;
-
-    var args = message.content.substring(prefix.length).split(" ")
-
-    switch (args[0].toLocaleLowerCase()) {
-        case "sor":
-           if (args[1]) message.channel.sendMessage(fortunes[Math.floor(Math.random() * fortunes.length)]);
-           else message.channel.sendMessage("İlk önce soru yazmalısın!");
-           break;
-        case "yardım2":
-           var embed = new Discord.RichEmbed()
-               .addField("Komutlar", `\n${prefix} - Ping durumunu gösterir.`)
-               .setColor(0x000007)
-               .setThumbnail(message.author.avatarURL)
-           message.channel.sendEmbed(embed);
-           break;
-  }
-});
-
-client.on("guildMemberRemove", (member) => {
-  const guild = member.guild;
-  if (newUsers[guild.id].has(member.id)) newUsers.delete(member.id);
-});
-        default:
-            message.channel.sendMessage("Komut Bulunamadı!");
-      }
-  });
 
 bot.on('message', async msg => {
   if (msg.content.toLowerCase() === prefix + 'yardım') {
@@ -459,7 +420,8 @@ ${prefix}eğlence - Eğlence Komutları
 ${prefix}moderasyon - Moderasyon Komutları
 ${prefix}kişisel - Kişisel komutlar
 
-          Anlık Bilgim
+        - Anlık Bilgim -
+
 -> ` + bot.guilds.size + ` Sunucu 👀
 
 ->`+ bot.channels.size + ` Kanal 📄
@@ -523,3 +485,8 @@ ${prefix}yenile - Botu yeniden başlatır.
 \`\`\` `)
     }
 });
+
+        default:
+            message.channel.sendMessage("Komut Bulunamadı!");
+      }
+  });
