@@ -1,6 +1,7 @@
 const { stripIndents, oneLine } = require('common-tags');
 const Discord = require("discord.js");
 const bot = new Discord.Client();
+const duration = moment.duration(client.uptime).format(" D [gün], H [saat], m [dakika], s [saniye]");
 
 let prefix = "n!";
 let owner = "430011871555223553";
@@ -438,24 +439,14 @@ bot.on("message", message => {
         return message.channel.sendEmbed(embed)
     }
     
-    if (message.content.toLowerCase() === prefix + "yardım2") {
-        const embed = new Discord.RichEmbed()
-
-            .addField("Menü", `\n${prefix}anakomutlar - Bilgi Komutları \n${prefix}eğlence - Eğlence Komutları \n${prefix}moderasyon - Moderatör Komutları \n${prefix}kişisel - Kişisel Komutlar`)
-
-            .addFooter("Not: Eğer 'notech-log' adında kanal oluşturursanız sunucuya giriş ve çıkışları bot otomatikmen söyler.")
-        
-            .setColor(0x000008)
-
-        return message.channel.sendEmbed(embed)
-    }
-
     if (message.content.toLowerCase() === prefix + "botbilgi") {
         const embed = new Discord.RichEmbed()
 
             .addField("Bot Sahibi", `<@${owner}>`, true)
 
             .addField("Version", "0.0.2", true)
+        
+            .addField("Açık Kalma Süresi", bot.duration, true)
 
             .addField("Toplam Sunucu Sayısı", bot.guilds.size, true)
 
@@ -479,14 +470,21 @@ bot.on("message", message => {
         message.channel.sendMessage(stripIndents`
 \`\`\`fix
 ${prefix}anakomutlar - Bilgi Komutları
+
 ${prefix}eğlence - Eğlence Komutları
+
 ${prefix}moderasyon - Moderasyon Komutları
+
 ${prefix}kişisel - Kişisel komutlar
 
-        - Anlık Bilgim -
--> ` + bot.guilds.size + ` Sunucu 👀
-->`+ bot.channels.size + ` Kanal 📄
-->`+ bot.users.size + ` Kullanıcı 💞
+        Anlık Bilgim
+--------------------------------------
+- ` + bot.guilds.size + ` Sunucu 👀
+--------------------------------------
+-`+ bot.channels.size + ` Kanal 📄
+--------------------------------------
+-`+ bot.users.size + ` Kullanıcı 💞
+--------------------------------------
 
 Not: Eğer 'notech-log' adında kanal oluşturursanız sunucuya giriş ve çıkışları bot otomatikmen söyler.
 \`\`\` `)
