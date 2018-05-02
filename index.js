@@ -437,6 +437,18 @@ bot.on("message", message => {
 
         return message.channel.sendEmbed(embed)
     }
+    
+    if (message.content.toLowerCase() === prefix + "yardım2") {
+        const embed = new Discord.RichEmbed()
+
+            .addField("Menü", `\n${prefix}anakomutlar - Bilgi Komutları \n${prefix}eğlence - Eğlence Komutları \n${prefix}moderasyon - Moderatör Komutları \n${prefix}kişisel - Kişisel Komutlar`)
+
+            .addFooter("Not: Eğer 'notech-log' adında kanal oluşturursanız sunucuya giriş ve çıkışları bot otomatikmen söyler.")
+        
+            .setColor(0x000008)
+
+        return message.channel.sendEmbed(embed)
+    }
 
     if (message.content.toLowerCase() === prefix + "botbilgi") {
         const embed = new Discord.RichEmbed()
@@ -453,7 +465,7 @@ bot.on("message", message => {
 
             .addField("Kitaplık Türü", "discord.js")
 
-            .setColor(0x000001)
+            .setColor(0x000007)
         
         return message.channel.sendEmbed(embed)
     }
