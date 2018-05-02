@@ -488,13 +488,11 @@ ${prefix}moderasyon - Moderasyon Komutları
 ${prefix}kişisel - Kişisel komutlar
 
         Anlık Bilgim
---------------------------------------
 - ` + bot.guilds.size + ` Sunucu 👀
---------------------------------------
+
 -`+ bot.channels.size + ` Kanal 📄
---------------------------------------
+
 -`+ bot.users.size + ` Kullanıcı 💞
---------------------------------------
 
 Not: Eğer 'notech-log' adında kanal oluşturursanız sunucuya giriş ve çıkışları bot otomatikmen söyler.
 \`\`\` `)
