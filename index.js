@@ -123,20 +123,6 @@ bot.on('message', async msg => {
   }
 });
 
-bot.on('message', message => {
-  if (message.content.toLowerCase() === prefix + 'afk') {
-      message.reply("Başarıyla AFK oldunuz.")
-      message.member.setNickname(`[AFK]${message.author.username}`);
-  }
-});
-
-bot.on('message', message => {
-  if (message.content.toLowerCase() === prefix + 'afkçık') {
-      message.reply(`Başarıyla AFK'dan çıktınız.`)
-      message.member.setNickname(`${message.author.username}`);
-  }
-});
-
 bot.on('message', msg => {
   if (msg.content.startsWith(prefix + "yaz")) {
     if (msg.channel.type !== "dm"){
@@ -154,6 +140,13 @@ bot.on ('message', message => {
 if (message.content.toLowerCase() === prefix + 'emojiler') {
   const emojiList = message.guild.emojis.map(e=>e.toString()).join(" ** | ** ");
   message.channel.send(emojiList);
+}
+});
+
+bot.on ('message', message => {
+if (message.content.toLowerCase() === prefix + 'sunucular') {
+  const sunucular = bot.guilds.map(e=>e.toString()).join(" ** | ** ");
+  message.channel.send(sunucular);
 }
 });
 
