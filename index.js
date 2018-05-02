@@ -247,6 +247,45 @@ bot.on("message", message => {
   }
 });
 
+bot.on("message", message => {
+    if (message.content.toLowerCase() === prefix + 'drm1') {
+    if (message.author.id !== "430011871555223553") {
+      message.reply('sie');
+    } else {
+      message.channel.sendMessage(`Başarıyla çevrimiçi moduna geçtim.`).then(msg => {
+      console.log(`Yeniden başlıyorum..`);
+      bot.user.setStatus(`online`);
+    })
+   }
+  }
+});
+
+bot.on("message", message => {
+    if (message.content.toLowerCase() === prefix + 'drm2') {
+    if (message.author.id !== "430011871555223553") {
+      message.reply('sie');
+    } else {
+      message.channel.sendMessage(`Başarıyla afk moduna geçtim.`).then(msg => {
+      console.log(`Yeniden başlıyorum..`);
+      bot.user.setStatus(`idle`);
+    })
+   }
+  }
+});
+
+bot.on("message", message => {
+    if (message.content.toLowerCase() === prefix + 'drm3') {
+    if (message.author.id !== "430011871555223553") {
+      message.reply('sie');
+    } else {
+      message.channel.sendMessage(`Başarıyla rahatsız etmeyin moduna geçtim.`).then(msg => {
+      console.log(`Yeniden başlıyorum..`);
+      bot.user.setStatus(`dnd`);
+    })
+   }
+  }
+});
+
 bot.on('guildMemberAdd', üye => {
   const channel = üye.guild.channels.find('name', 'notech-log');
   if (!channel) return;
@@ -258,11 +297,6 @@ bot.on('guildMemberRemove', üye => {
   if (!channell) return;
   channell.send(`Sunucudan bir üye ayrıldı. ${üye} 👋`);
 });
-
-bot.on('message', msg => {
-    let username = member.user.username;
-    member.sendMessage('Sunucuya Hoş geldin **' + username + '**! Bu sunucuda ``Notech`` botu kullanılmaktadır. Beni sunucuna davet etmek için n!botdavet ');
-};
 
 bot.on('message', msg => {
 if (msg.content.toLowerCase() === prefix + "sigara") {
