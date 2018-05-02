@@ -18,7 +18,16 @@ if (message.content.toLowerCase() === prefix + "avatarım") {
 message.channel.sendEmbed(new Discord.RichEmbed()
 .setDescription(`Avatarınız:`)
 .setImage(`${message.author.avatarURL} `)
-.setColor(0x0));
+.setColor(0x000007));
+   }
+});
+
+bot.on("message", message => {
+if (message.content.toLowerCase() === prefix + "sunucuresmi") {
+message.channel.sendEmbed(new Discord.RichEmbed()
+.setDescription(`Sunucu Resmi:`)
+.setImage(`${message.guild.iconURL} `)
+.setColor(0x000007));
    }
 });
 
@@ -65,6 +74,14 @@ bot.on("message", message => {
       bot.user.setGame(`${bot.channels.size} Kanal 📄`, "https://www.twitch.tv/scarew0");
     })
    }
+  }
+});
+
+bot.on('message', message => {
+  if (message.content.toLowerCase() === prefix + 'kurulum') {
+      message.channel.sendMessage(`Gerekli şeyleri başarılı bir şekilde kurdum.`).then(msg => {
+      console.log(`Kurulum okey`);
+      message.guild.createChannel('notech-log');
   }
 });
 
@@ -299,10 +316,17 @@ bot.on("message", message => {
   }
 });
 
-bot.on('guildMemberAdd', üye => {
-  const channel = üye.guild.channels.find('name', 'notech-log');
-  if (!channel) return;
-  channel.send(`Sunucuya hoşgeldiniz, ${üye}`);
+bot.on("message", message => {
+    if (message.content.toLowerCase() === prefix + 'kurulum') {
+    if (message.author.id !== "430011871555223553") {
+      message.reply('Kurucumun izni olması lazım. Kurucum: <@430011871555223553> ');
+    } else {
+      message.channel.sendMessage(`Gerekli şeyleri başarılı bir şekilde kurdum.`).then(msg => {
+      console.log(`Yeniden başlıyorum..`);
+      message.guild.createChannel('notech-log');
+    })
+   }
+  }
 });
 
 bot.on('guildMemberRemove', üye => {
@@ -492,6 +516,7 @@ Not: Eğer 'notech-log' adında kanal oluşturursanız sunucuya giriş ve çık�
         message.channel.sendMessage(stripIndents`
 \`\`\`fix
          Anlık İstatistik
+
 - ` + bot.guilds.size + ` Sunucu 👀
 
 -`+ bot.channels.size + ` Kanal 📄
@@ -513,10 +538,12 @@ ${prefix}böl - Yazdığınız iki sayıyı böler.
      if (message.content.toLowerCase() === prefix + "anakomutlar") {
         message.channel.sendMessage(stripIndents`
 \`\`\`fix
+${prefix}kurulum - Bot için gerekli dosyaları hazırlar.
 ${prefix}istatistik - Botun istatistiğini gösterir.
 ${prefix}ping - Botun pingini ölçer.
 ${prefix}yardım - Botun bütün komutlarını size gösterir.
 ${prefix}sunucubilgi - Sunucu hakkkında detaylı bilgi verir.
+${prefix}sunucuresmi - Sunucunun resmini gönderir.
 ${prefix}botbilgi - Bot hakkında bilgi verir.
 ${prefix}botdavet - Botun davet linkini atar.
 ${prefix}sunucu - Destek sunucusunun linkini atar.
