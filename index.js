@@ -526,10 +526,65 @@ bot.on("message", message => {
         const embed = new Discord.RichEmbed()
   .setTitle("")
   .setDescription('')
-  .setColor(0xd147a3)
+  .setColor(0xac39ac)
   .addField("Komutlar", `**${prefix}anakomutlar** - Bilgi Komutları \n**${prefix}eğlence** - Eğlence Komutları \n**${prefix}moderasyon** - Moderasyon Komutları \n**${prefix}kişisel** - Kişisel komutlar`)
   .addField("Linkler", "[Davet Linki](https://discordapp.com/oauth2/authorize?client_id=439756873311322112&permissions=8&scope=bot) | [Destek Sunucusu](https://discord.gg/DZsZsEG)")
   .setFooter('Eğer "notech-log" adında bir kanal oluşturursanız bot log durumlarını söyler.')
+        
+        return message.channel.sendEmbed(embed)
+    }
+    
+    if (message.content.toLowerCase() === prefix + "anakomutlar") {
+        const embed = new Discord.RichEmbed()
+  .setTitle("")
+  .setDescription('')
+  .setColor(0xac39ac)
+  .addField("Notech Ana Komutları", `**${prefix}kurulum** - Bot için gerekli dosyaları hazırlar. \n**${prefix}istatistik** - Botun istatistiğini gösterir. \n**${prefix}ping** - Botun pingini ölçer. \n**${prefix}sunucubilgi** - Sunucu hakkkında detaylı bilgi verir. \n**${prefix}sunucuresmi** - Sunucunun resmini gönderir. \n**${prefix}yardım** - Botun bütün komutlarını size gösterir. \n**${prefix}botbilgi** - Bot hakkında bilgi verir. \n**${prefix}davet** - Botun davet linkini atar.`)
+  .setFooter('')
+        
+        return message.channel.sendEmbed(embed)
+    }
+    
+    if (message.content.toLowerCase() === prefix + "kişisel") {
+        const embed = new Discord.RichEmbed()
+  .setTitle("")
+  .setDescription('')
+  .setColor(0xac39ac)
+  .addField("Notech Kişisel Komutları", `**${prefix}syt** - Yazdığınız şikayeti sunucunun kurucusuna iletir. \n**${prefix}emojiler** - Sunucudaki emojileri gösterir. \n**${prefix}matematik** - Matematik işlemi yapar. \n**${prefix}yaz** - Yazdığınız mesajı bota yazdırır.`)
+  .setFooter('')
+        
+        return message.channel.sendEmbed(embed)
+    }
+    
+    if (message.content.toLowerCase() === prefix + "eğlence") {
+        const embed = new Discord.RichEmbed()
+  .setTitle("")
+  .setDescription('')
+  .setColor(0xac39ac)
+  .addField("Notech Eğlence Komutları", `**${prefix}havadurumu** - Bot havadurumunu tahmin eder. \n**${prefix}espriyap** - Bot espri yapar. \n**${prefix}zekam** - Zeka puanınızı gösterir. \n**${prefix}matematik** - Matematik işlemi yapar. \n**${prefix}sigara** - Bot sigara içer. \n**${prefix}avatarım** - Avatarınızı gönderir. \n**${prefix}kurabiye** - Size kurabiye verir.`)
+  .setFooter('')
+        
+        return message.channel.sendEmbed(embed)
+    }
+    
+    if (message.content.toLowerCase() === prefix + "moderasyon") {
+        const embed = new Discord.RichEmbed()
+  .setTitle("")
+  .setDescription('')
+  .setColor(0xac39ac)
+  .addField("Notech Moderasyon Komutları", `**${prefix}kick** - Etiketlenen kişiyi sunucudan atar. [BAKIM] \n**${prefix}mute** - Etiketlenen kişiyi susturur. [BAKIM] \n**${prefix}ban** - Etiketlenen kişiyi sunucudan banlar. [BAKIM] \n**${prefix}temizle** - Bot belirttiğiniz kadar mesaj siler. [BAKIM] \n**${prefix}yenile** - Botu yeniden başlatır.`)
+  .setFooter('')
+        
+        return message.channel.sendEmbed(embed)
+    }
+    
+    if (message.content.toLowerCase() === prefix + "matematik") {
+        const embed = new Discord.RichEmbed()
+  .setTitle("")
+  .setDescription('')
+  .setColor(0xac39ac)
+  .addField("Notech Matematik Komutları", `**${prefix}topla** - Yazdığınız iki sayıyı toplar. \n**${prefix}çıkar** - Yazdığınız iki sayıyı çıkarır. \n**${prefix}çarp** - Yazdığınız iki sayıyı çarpar. \n**${prefix}böl** - Yazdığınız iki sayıyı böler.`)
+  .setFooter(`Kullanım: ${prefix}topla 1 1`)
         
         return message.channel.sendEmbed(embed)
     }
@@ -549,64 +604,6 @@ bot.on("message", message => {
 -`+ bot.channels.size + ` Kanal 📄
 
 -`+ bot.users.size + ` Kullanıcı 💞
-\`\`\` `)
-    }
-    
-    if (message.content.toLowerCase() === prefix + "matematik") {
-        message.channel.sendMessage(stripIndents`
-\`\`\`fix
-${prefix}topla - Yazdığınız iki sayıyı toplar.
-${prefix}çıkar - Yazdığınız iki sayıyı çıkarır.
-${prefix}çarp - Yazdığınız iki sayıyı çarpar.
-${prefix}böl - Yazdığınız iki sayıyı böler.
-\`\`\` `)
-    }
-    
-     if (message.content.toLowerCase() === prefix + "anakomutlar") {
-        message.channel.sendMessage(stripIndents`
-\`\`\`fix
-${prefix}kurulum - Bot için gerekli dosyaları hazırlar.
-${prefix}istatistik - Botun istatistiğini gösterir.
-${prefix}ping - Botun pingini ölçer.
-${prefix}yardım - Botun bütün komutlarını size gösterir.
-${prefix}sunucubilgi - Sunucu hakkkında detaylı bilgi verir.
-${prefix}sunucuresmi - Sunucunun resmini gönderir.
-${prefix}botbilgi - Bot hakkında bilgi verir.
-${prefix}davet - Botun davet linkini atar.
-\`\`\` `)
-    }
-    
-     if (message.content.toLowerCase() === prefix + "kişisel") {
-        message.channel.sendMessage(stripIndents`
-\`\`\`fix
-${prefix}syt - Yazdığınız şikayeti sunucunun kurucusuna iletir.
-${prefix}emojiler - Sunucudaki emojileri gösterir.
-${prefix}matematik - Matematik işlemi yapar.
-${prefix}yaz - Yazdığınız mesajı bota yazdırır.
-\`\`\` `)
-    }
-
-     if (message.content === prefix + "eğlence") {
-        message.channel.sendMessage(stripIndents`
-\`\`\`fix
-${prefix}havadurumu - Bot havadurumunu tahmin eder.
-${prefix}espriyap - Bot espri yapar.
-${prefix}zekam - Zeka puanınızı gösterir.
-${prefix}matematik - Matematik işlemi yapar. 
-${prefix}sigara - Bot sigara içer.
-${prefix}avatarım - Avatarınızı gönderir.
-${prefix}kurabiye - Size kurabiye verir.
-\`\`\` `)
-    }
-    
-     if (message.content === prefix + "moderasyon") {
-        message.channel.sendMessage(stripIndents`
-\`\`\`fix
-${prefix}kick - Etiketlenen kişiyi sunucudan atar. [BAKIM]
-${prefix}mute - Etiketlenen kişiyi susturur. [BAKIM]
-${prefix}ban - Etiketlenen kişiyi sunucudan banlar. [BAKIM]
-${prefix}temizle - Bot belirttiğiniz kadar mesaj siler. [BAKIM]
-${prefix}yenile - Botu yeniden başlatır.
 \`\`\` `)
     }
 });
