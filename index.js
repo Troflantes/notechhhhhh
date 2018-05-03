@@ -528,7 +528,7 @@ bot.on("message", message => {
   .setDescription('')
   .setColor(0xd147a3)
   .addField("Komutlar", `**${prefix}anakomutlar** - Bilgi Komutları \n**${prefix}eğlence** - Eğlence Komutları \n**${prefix}moderasyon** - Moderasyon Komutları \n**${prefix}kişisel** - Kişisel komutlar`)
-  .addField("Linkler", "[Davet Linki](https://discordapp.com/oauth2/authorize?client_id=439756873311322112&permissions=8&scope=bot)", "|", "[Destek Sunucusu](https://discord.gg/DZsZsEG)")
+  .addField("Linkler", "[Davet Linki](https://discordapp.com/oauth2/authorize?client_id=439756873311322112&permissions=8&scope=bot)" + "|", "[Destek Sunucusu](https://discord.gg/DZsZsEG)")
   .setFooter('Eğer "notech-log" adında bir kanal oluşturursanız bot log durumlarını söyler.')
         
         return message.channel.sendEmbed(embed)
@@ -605,7 +605,7 @@ ${prefix}kurabiye - Size kurabiye verir.
 ${prefix}kick - Etiketlenen kişiyi sunucudan atar. [BAKIM]
 ${prefix}mute - Etiketlenen kişiyi susturur. [BAKIM]
 ${prefix}ban - Etiketlenen kişiyi sunucudan banlar. [BAKIM]
-${prefix}temizle - Bot belirttiğiniz kadar mesaj siler.
+${prefix}temizle - Bot belirttiğiniz kadar mesaj siler. [BAKIM]
 ${prefix}yenile - Botu yeniden başlatır.
 \`\`\` `)
     }
