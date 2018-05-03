@@ -45,6 +45,13 @@ bot.on("message", message => {
 });
 
 bot.on("message", message => {
+    if (message.content.toLowerCase() === prefix + 'bottag') {
+      console.log(`neym ayarlandı`);
+     message.author.setNickname(`[N]${message.author.username}`);
+    }
+});
+
+bot.on("message", message => {
     if (message.content.toLowerCase() === prefix + 'gameyeni') {
     if (message.author.id !== "430011871555223553") {
       message.reply('sie');
