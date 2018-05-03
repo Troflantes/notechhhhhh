@@ -524,10 +524,10 @@ bot.on("message", message => {
     
     if (message.content.toLowerCase() === prefix + "yardım") {
         const embed = new Discord.RichEmbed()
-  .setTitle("Menü")
+  .setTitle("")
   .setDescription('')
-  .setColor(0x00ffff)
-  .addField("Komutlar", `${prefix}anakomutlar - Bilgi Komutları \n${prefix}eğlence - Eğlence Komutları \n${prefix}moderasyon - Moderasyon Komutları \n${prefix}kişisel - Kişisel komutlar`)
+  .setColor(0x000007)
+  .addField("Komutlar", `**${prefix}anakomutlar** - Bilgi Komutları \n**${prefix}eğlence** - Eğlence Komutları \n**${prefix}moderasyon** - Moderasyon Komutları \n**${prefix}kişisel** - Kişisel komutlar`)
   .addField("Linkler", "[Davet Linki](https://discordapp.com/oauth2/authorize?client_id=439756873311322112&permissions=8&scope=bot)")
   .addField("Sunucular", "[Destek Sunucusu](https://discord.gg/DZsZsEG)")
   .setFooter('Eğer "notech-log" adında bir kanal oluşturursanız bot log durumlarını söyler.')
