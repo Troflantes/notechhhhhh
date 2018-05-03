@@ -7,7 +7,7 @@ let owner = "430011871555223553";
 
 bot.on("ready", () => {
     bot.user.setStatus('online');
-    bot.user.setGame(`${prefix}yardım ✨`, "https://www.twitch.tv/scarew0");
+    bot.user.setGame(`${prefix}yardım ✨ ${prefix}davet `, "https://www.twitch.tv/scarew0");
     console.log("Bağlandım!")
 });
 
@@ -311,7 +311,7 @@ bot.on("message", message => {
 bot.on('guildMemberAdd', üye => {
   const channel = üye.guild.channels.find('name', 'notech-log');
   if (!channel) return;
-  channel.send(`Sunucuya hoşgeldiniz, ${üye}`);
+  channel.send(`Sunucuya Hoşgeldiniz, ${üye}!`);
 });
 
 bot.on('guildMemberRemove', üye => {
@@ -337,13 +337,6 @@ if (msg.content.toLowerCase() === prefix + "ping") {
 msg.channel.send('Pingim ölçülüyor..')
 .then(nmsg => nmsg.edit("Pingim ölçülüyor."))
 .then(nmsg => nmsg.edit("Pingim :ping_pong: **" + bot.ping + "** Milisaniye"));
-}
-});
-
-bot.on('message', msg => {
-if (msg.content.toLowerCase() === prefix + "sunucu") {
-msg.author.send('Bakıyorum..')  
-.then(nmsg => nmsg.edit("Buyrun: https://discord.gg/WqunF2c"));
 }
 });
 
@@ -533,8 +526,7 @@ ${prefix}yardım - Botun bütün komutlarını size gösterir.
 ${prefix}sunucubilgi - Sunucu hakkkında detaylı bilgi verir.
 ${prefix}sunucuresmi - Sunucunun resmini gönderir.
 ${prefix}botbilgi - Bot hakkında bilgi verir.
-${prefix}botdavet - Botun davet linkini atar.
-${prefix}sunucu - Destek sunucusunun linkini atar.
+${prefix}davet - Botun davet linkini atar.
 \`\`\` `)
     }
     
@@ -555,7 +547,7 @@ ${prefix}espriyap - Bot espri yapar.
 ${prefix}zekam - Zeka puanınızı gösterir.
 ${prefix}matematik - Matematik işlemi yapar. 
 ${prefix}sigara - Bot sigara içer.
-${prefix}avatarım - Avatarınızın linkini gönderir.
+${prefix}avatarım - Avatarınızı gönderir.
 ${prefix}kurabiye - Size kurabiye verir.
 \`\`\` `)
     }
@@ -566,7 +558,7 @@ ${prefix}kurabiye - Size kurabiye verir.
 ${prefix}kick - Etiketlenen kişiyi sunucudan atar. [BAKIM]
 ${prefix}mute - Etiketlenen kişiyi susturur. [BAKIM]
 ${prefix}ban - Etiketlenen kişiyi sunucudan banlar. [BAKIM]
-${prefix}temizle - 100 Adet mesaj siler. [BAKIM]
+${prefix}temizle - Bot belirttiğiniz kadar mesaj siler. [BAKIM]
 ${prefix}yenile - Botu yeniden başlatır.
 \`\`\` `)
     }
