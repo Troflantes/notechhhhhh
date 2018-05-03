@@ -122,6 +122,27 @@ bot.on("message", message => {
   }
 });
 
+bot.on('message', message => {
+  if (message.author.bot) return;
+  if (!message.content.startsWith(prefix)) return;
+
+  let command = message.content.split(' ')[0];
+  command = command.slice(prefix.length);
+
+  let args = message.content.split(' ').slice(1);
+
+  if(command === "temizle") {
+    const deleteCount = parseInt(args[0], 10);
+
+    if(!deleteCount || deleteCount < 1 || deleteCount > 100)
+      return message.reply("1 ile 100 arası sayı girmelisin.");
+    
+    const fetched = await message.channel.fetchMessages({count: deleteCount});
+    message.channel.bulkDelete(fetched)
+      .catch(error => message.reply(`Hata! Sebep: ${error}`));
+  }
+});
+
 bot.on("message", message => {
     if (message.content.toLowerCase() === prefix + 'kurulum') {
     if (message.author.id !== "430011871555223553") {
@@ -609,7 +630,7 @@ ${prefix}kurabiye - Size kurabiye verir.
 ${prefix}kick - Etiketlenen kişiyi sunucudan atar. [BAKIM]
 ${prefix}mute - Etiketlenen kişiyi susturur. [BAKIM]
 ${prefix}ban - Etiketlenen kişiyi sunucudan banlar. [BAKIM]
-${prefix}temizle - Bot belirttiğiniz kadar mesaj siler. [BAKIM]
+${prefix}temizle - Bot belirttiğiniz kadar mesaj siler.
 ${prefix}yenile - Botu yeniden başlatır.
 \`\`\` `)
     }
