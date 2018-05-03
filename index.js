@@ -479,15 +479,15 @@ bot.on("message", message => {
         return message.channel.sendEmbed(embed)
     }
     
-    if (message.content.toLowerCase() === prefix + "yardım2") {
+    if (message.content.toLowerCase() === prefix + "yardım") {
         const embed = new Discord.RichEmbed()
   .setTitle("Menü")
   .setDescription('')
   .setColor(0x00ffff)
-  .addField(`${prefix}anakomutlar - Bilgi Komutları`)
-  .addField(`${prefix}eğlence - Eğlence Komutları`)
-  .addField(`${prefix}moderasyon - Moderasyon Komutları`)
-  .addField(`${prefix}kişisel - Kişisel komutlar`)
+  .addField(`${prefix}anakomutlar - Bilgi Komutları`, "")
+  .addField(`${prefix}eğlence - Eğlence Komutları`, "")
+  .addField(`${prefix}moderasyon - Moderasyon Komutları`, "")
+  .addField(`${prefix}kişisel - Kişisel komutlar`, "")
   .addField("⠀", "[Beni Sunucuna Eklemek İçin Tıkla!](https://discordapp.com/oauth2/authorize?client_id=439756873311322112&permissions=8&scope=bot)")
   .addField("⠀⠀", "[Destek Sunucuma Gelmek İçin Tıkla!](https://discord.gg/WqunF2c)")
   .setFooter('Eğer "notech-log" adında kanal bot log durumlarını söyler.')
@@ -498,19 +498,6 @@ bot.on("message", message => {
     if (message.content === prefix + "kurabiye") {
         message.channel.sendMessage(`Canım gel buraya sana kurabiye vereceğim! <@${message.author.id}>`)
         message.react("🍪")
-    }
-
-    if (message.content.toLowerCase() === prefix + "yardım") {
-        message.channel.sendMessage(stripIndents`
-\`\`\`fix
-MENÜ
-${prefix}anakomutlar - Bilgi Komutları
-${prefix}eğlence - Eğlence Komutları
-${prefix}moderasyon - Moderasyon Komutları
-${prefix}kişisel - Kişisel komutlar
-
-Not: Eğer 'notech-log' adında kanal oluşturursanız sunucuya giriş ve çıkışları bot otomatikmen söyler.
-\`\`\` `)
     }
     
     if (message.content.toLowerCase() === prefix + "istatistik") {
