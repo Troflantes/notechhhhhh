@@ -481,7 +481,7 @@ bot.on("message", message => {
   .addField(`${prefix}eğlence - Eğlence Komutları`, "⠀")
   .addField(`${prefix}moderasyon - Moderasyon Komutları`, "⠀")
   .addField(`${prefix}kişisel - Kişisel komutlar`, "⠀")
-  .addField("[Beni Sunucuna Eklemek İçin Tıkla!](https://discordapp.com/oauth2/authorize?client_id=439756873311322112&permissions=8&scope=bot)")
+  .addField("⠀", "[Beni Sunucuna Eklemek İçin Tıkla!](https://discordapp.com/oauth2/authorize?client_id=439756873311322112&permissions=8&scope=bot)")
   .addField("⠀", "[Destek Sunucuma Gelmek İçin Tıkla!](https://discord.gg/WqunF2c)")
   .setFooter('Eğer "notech-log" adında kanal bot log durumlarını söyler.')
         
