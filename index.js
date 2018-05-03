@@ -49,7 +49,7 @@ bot.on("message", message => {
     if (message.author.id !== "430011871555223553") {
       message.reply('sie');
     } else {
-      message.channel.sendMessage(`Başarılı bir şekilde profilime sunucu sayımı koydum.`).then(msg => {
+      message.channel.sendMessage(`Başarılı bir şekilde profilime yardım ve daveti koydum.`).then(msg => {
       console.log(`Yeniden başlıyorum..`);
       bot.user.setGame(`${prefix}yardım ${prefix}davet ✨ `, "https://www.twitch.tv/scarew0");
     })
@@ -62,7 +62,7 @@ bot.on("message", message => {
     if (message.author.id !== "430011871555223553") {
       message.reply('sie');
     } else {
-      message.channel.sendMessage(`Başarılı bir şekilde profilime sunucu sayımı koydum.`).then(msg => {
+      message.channel.sendMessage(`Başarılı bir şekilde profilime yeniliğimi koydum.`).then(msg => {
       console.log(`Yeniden başlıyorum..`);
       bot.user.setGame(`Yeni komutlar eklendi! görmek içim: ${prefix}yardım ✨ `, "https://www.twitch.tv/scarew0");
     })
@@ -75,9 +75,9 @@ bot.on("message", message => {
     if (message.author.id !== "430011871555223553") {
       message.reply('sie');
     } else {
-      message.channel.sendMessage(`Başarılı bir şekilde profilime sunucu sayımı koydum.`).then(msg => {
+      message.channel.sendMessage(`Başarılı bir şekilde profilime yalvarma mesajını koydum.`).then(msg => {
       console.log(`Yeniden başlıyorum..`);
-      bot.user.setGame(`Arkadaşlar lütfen botu paylaşır mısınız ^^ `, "https://www.twitch.tv/scarew0");
+      bot.user.setGame(`Arkadaşlar gelişmemiz için lütfen botu paylaşır mısınız? `, "https://www.twitch.tv/scarew0");
     })
    }
   }
