@@ -168,14 +168,6 @@ bot.on('message', async msg => {
   }
 });
 
-bot.on('message', async msg => {
-  if (msg.content.toLowerCase() === 'amk botu') {
-    await msg.react('🇸');
-    await msg.react('🇮');
-    msg.react('e');
-  }
-});
-
 bot.on('message', msg => {
   if (msg.content.startsWith(prefix + "yaz")) {
     if (msg.channel.type !== "dm"){
@@ -186,6 +178,15 @@ bot.on('message', msg => {
        .setDescription(mesaj)
 return msg.channel.send({embed})}
 
+    }
+    });
+
+bot.on('message', msg => {
+  if (msg.content.startsWith(prefix + "yaz2")) {
+    if (msg.channel.type !== "dm"){
+    let mesaj = msg.content.substring(2 + 3);
+    msg.delete();
+    msg.channel.send(mesaj);
     }
     });
 
@@ -529,8 +530,8 @@ bot.on("message", message => {
   .addField(`${prefix}moderasyon - Moderasyon Komutları`, "⠀")
   .addField(`${prefix}kişisel - Kişisel komutlar`, "⠀")
   .addField("⠀", "[Beni Sunucuna Eklemek İçin Tıkla!](https://discordapp.com/oauth2/authorize?client_id=439756873311322112&permissions=8&scope=bot)")
-  .addField("⠀", "[Destek Sunucuma Gelmek İçin Tıkla!](https://discord.gg/WqunF2c)")
-  .setFooter('Eğer "notech-log" adında kanal bot log durumlarını söyler.')
+  .addField("⠀", "[Destek Sunucuma Gelmek İçin Tıkla!](https://discord.gg/DZsZsEG)")
+  .setFooter('Eğer "notech-log" adında bir kanal oluşturursanız bot log durumlarını söyler.')
         
         return message.channel.sendEmbed(embed)
     }
