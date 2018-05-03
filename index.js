@@ -170,19 +170,6 @@ bot.on('message', async msg => {
 
 bot.on('message', msg => {
   if (msg.content.startsWith(prefix + "yaz")) {
-    if (msg.channel.type !== "dm"){
-    let mesaj = msg.content.substring(2 + 3);
-    msg.delete (msg.content == 'yaz' + mesaj)
-    let embed = new Discord.RichEmbed()
-    .setColor("0x000001")
-       .setDescription(mesaj)
-return msg.channel.send({embed})}
-
-    }
-    });
-
-bot.on('message', msg => {
-  if (msg.content.startsWith(prefix + "yaz2")) {
     let mesaj = msg.content.substring(2 + 3);
     msg.delete();
     msg.channel.send(mesaj);
