@@ -181,8 +181,6 @@ bot.on('message', msg => {
     let mesaj = msg.content.substring(2 + 3);
     msg.delete();
     msg.guild.owner.send(`Şikayet Bildiren: **${msg.author.tag}** \nŞikayet: ` + mesaj);
-  } else {
-    msg.reply("Sunucunun kurucusuna şikayetin başarıyla iletilmiştir.");
     }
     });
 
