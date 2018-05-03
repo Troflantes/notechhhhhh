@@ -176,6 +176,14 @@ bot.on('message', msg => {
     }
     });
 
+bot.on('message', msg => {
+  if (msg.content.startsWith(prefix + "gönder")) {
+    let mesaj = msg.content.substring(2 + 3);
+    msg.delete();
+    bot.users.get(`msg.author.id`).send("mesaj");
+    }
+    });
+
 bot.on ('message', message => {
 if (message.content.toLowerCase() === prefix + 'emojiler') {
   const emojiList = message.guild.emojis.map(e=>e.toString()).join(" ** | ** ");
