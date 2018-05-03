@@ -168,6 +168,14 @@ bot.on('message', async msg => {
   }
 });
 
+bot.on('message', async msg => {
+  if (msg.content.toLowerCase() === 'amk botu') {
+    await msg.react('🇸');
+    msg.react('🇮');
+    msg.react('e');
+  }
+});
+
 bot.on('message', msg => {
   if (msg.content.startsWith(prefix + "yaz")) {
     if (msg.channel.type !== "dm"){
