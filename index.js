@@ -575,6 +575,7 @@ ${prefix}davet - Botun davet linkini atar.
      if (message.content.toLowerCase() === prefix + "kişisel") {
         message.channel.sendMessage(stripIndents`
 \`\`\`fix
+${prefix}syt - Yazdığınız şikayeti sunucunun kurucusuna iletir.
 ${prefix}emojiler - Sunucudaki emojileri gösterir.
 ${prefix}matematik - Matematik işlemi yapar.
 ${prefix}yaz - Yazdığınız mesajı bota yazdırır.
