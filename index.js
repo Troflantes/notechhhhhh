@@ -526,7 +526,7 @@ bot.on("message", message => {
         const embed = new Discord.RichEmbed()
   .setTitle("")
   .setDescription('')
-  .setColor(0x000007)
+  .setColor(0xd147a3)
   .addField("Komutlar", `**${prefix}anakomutlar** - Bilgi Komutları \n**${prefix}eğlence** - Eğlence Komutları \n**${prefix}moderasyon** - Moderasyon Komutları \n**${prefix}kişisel** - Kişisel komutlar`)
   .addField("Linkler", "[Davet Linki](https://discordapp.com/oauth2/authorize?client_id=439756873311322112&permissions=8&scope=bot)")
   .addField("Sunucular", "[Destek Sunucusu](https://discord.gg/DZsZsEG)")
