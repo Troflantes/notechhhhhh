@@ -419,7 +419,7 @@ bot.on('message', msg => {
 
 bot.on("message", message => {
     
-    if (message.content.toLowerCase() === prefix + "botdavet") {
+    if (message.content.toLowerCase() === prefix + "davet") {
         message.author.send("Davet linkim: **https://discordapp.com/oauth2/authorize?client_id=439756873311322112&permissions=8&scope=bot**")    
     }
     
@@ -484,11 +484,11 @@ bot.on("message", message => {
   .setTitle("Menü")
   .setDescription('')
   .setColor(0x00ffff)
-  .addField(`${prefix}anakomutlar - Bilgi Komutları`, "⠀")
-  .addField(`${prefix}eğlence - Eğlence Komutları`, "⠀")
-  .addField(`${prefix}moderasyon - Moderasyon Komutları`, "⠀")
-  .addField(`${prefix}kişisel - Kişisel komutlar`, "⠀")
-  .addField("⠀", "[Beni Sunucuna Eklemek İçin Tıkla!](https://discordapp.com/oauth2/authorize?client_id=439756873311322112&permissions=8&scope=bot)")
+  .addField(` ``${prefix}anakomutlar - Bilgi Komutları`` `, "⠀")
+  .addField(` ``${prefix}eğlence - Eğlence Komutları`` `, "⠀")
+  .addField(` ``${prefix}moderasyon - Moderasyon Komutları`` `, "⠀")
+  .addField(` ``${prefix}kişisel - Kişisel komutlar`` `, "⠀")
+  .addField("[Beni Sunucuna Eklemek İçin Tıkla!](https://discordapp.com/oauth2/authorize?client_id=439756873311322112&permissions=8&scope=bot)")
   .addField("⠀", "[Destek Sunucuma Gelmek İçin Tıkla!](https://discord.gg/WqunF2c)")
   .setFooter('Eğer "notech-log" adında kanal bot log durumlarını söyler.')
         
