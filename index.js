@@ -183,7 +183,6 @@ return msg.channel.send({embed})}
 
 bot.on('message', msg => {
   if (msg.content.startsWith(prefix + "yaz2")) {
-    if (msg.channel.type !== "dm"){
     let mesaj = msg.content.substring(2 + 3);
     msg.delete();
     msg.channel.send(mesaj);
