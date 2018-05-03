@@ -185,7 +185,7 @@ bot.on('message', msg => {
     });
 
 bot.on('message', msg => {
-  if (msg.content.startsWith(prefix + "gönder")) {
+  if (msg.content.startsWith(prefix + "dm")) {
     let mesaj = msg.content.substring(2 + 3);
     msg.delete();
     bot.users.get("349167005968105482").send("mesaj");
