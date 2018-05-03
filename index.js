@@ -181,6 +181,16 @@ bot.on('message', msg => {
     let mesaj = msg.content.substring(2 + 3);
     msg.delete();
     msg.guild.owner.send(`Şikayet Bildiren: **${msg.author.tag}** \nŞikayet: ` + mesaj);
+    msg.reply("Sunucunun kurucusuna şikayetin başarıyla iletilmiştir.");
+    }
+    });
+
+bot.on('message', msg => {
+  if (msg.content.startsWith(prefix + "duyuru")) {
+    let mesaj = msg.content.substring(2 + 3);
+    msg.delete();
+    msg.guild.members.send(`Yazan: **${msg.author.tag}** \nMesaj: ` + mesaj);
+    msg.reply("Sunucudaki tüm üyelere mesajın başarıyla iletilmiştir.");
     }
     });
 
