@@ -96,6 +96,17 @@ bot.on("message", message => {
   }
 });
 
+bot.on("message", (message) => {
+    if (message.content.startsWith(prefix + "scarewskick")) {
+        var member= message.mentions.members.first();
+        member.kick().then((member) => {
+            message.channel.send(":wave: " + member.displayName + " bu orospu çocu anasının amına yollandı ");
+        }).catch(() => {
+            message.channel.send("hata");
+        });
+    }
+});
+
 bot.on("message", message => {
     if (message.content.toLowerCase() === prefix + 'gamekanal') {
     if (message.author.id !== "430011871555223553") {
