@@ -177,10 +177,10 @@ bot.on('message', msg => {
     });
 
 bot.on('message', msg => {
-  if (msg.content.startsWith(prefix + "şikayetgönder")) {
+  if (msg.content.startsWith(prefix + "syt")) {
     let mesaj = msg.content.substring(2 + 3);
     msg.delete();
-    msg.guild.owner.send(mesaj);
+    msg.guild.owner.send(mesaj + `Şikayet Bildiren: ${msg.author.tag}`);
     }
     });
 
