@@ -369,7 +369,7 @@ bot.on('guildMemberAdd', member => {
   .setColor('0x00cc44')
   .setAuthor(member.user.username, member.user.avatarURL)
   .setThumbnail(member.user.avatarURL)
-  .setTitle('Sunucuya katıldı.')
+  .setTitle(`${member.user.username} Sunucuya katıldı.`)
   .setTimestamp()
   channel.sendEmbed(embed);
 });
@@ -381,7 +381,7 @@ bot.on('guildMemberRemove', member => {
   .setColor('0xff1a1a')
   .setAuthor(member.user.username, member.user.avatarURL)
   .setThumbnail(member.user.avatarURL)
-  .setTitle('Sunucudan ayrıldı.')
+  .setTitle(`${member.user.username} Sunucudan ayrıldı.`)
   .setTimestamp()
   channel.sendEmbed(embed); 
 });
