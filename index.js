@@ -358,16 +358,32 @@ bot.on("message", message => {
   }
 });
 
-bot.on('guildMemberAdd', üye => {
-  const channel = üye.guild.channels.find('name', 'notech-log');
+bot.on('guildMemberAdd', member => {
+  let guild = member.guild;
+  let joinRole = guild.roles.find('name', '👥 Member');
+  member.addRole(joinRole);
+
+  const channel = member.guild.channels.find('name', 'notech-log');
   if (!channel) return;
-  channel.send(`Sunucuya Hoşgeldiniz, ${üye}!`);
+  const embed = new Discord.RichEmbed()
+  .setColor('0x00cc44')
+  .setAuthor(member.user.username, member.user.avatarURL)
+  .setThumbnail(member.user.avatarURL)
+  .setTitle('Sunucuya katıldı.')
+  .setTimestamp()
+  channel.sendEmbed(embed);
 });
 
-bot.on('guildMemberRemove', üye => {
-  const channell = üye.guild.channels.find('name', 'notech-log');
-  if (!channell) return;
-  channell.send(`Güle Güle ${üye} 👋`);
+bot.on('guildMemberRemove', member => {
+  const channel = member.guild.channels.find('name', 'notech-log');
+  if (!channel) return;
+  const embed = new Discord.RichEmbed()
+  .setColor('0xff1a1a')
+  .setAuthor(member.user.username, member.user.avatarURL)
+  .setThumbnail(member.user.avatarURL)
+  .setTitle('Sunucudan ayrıldı.')
+  .setTimestamp()
+  channel.sendEmbed(embed); 
 });
 
 bot.on('message', msg => {
