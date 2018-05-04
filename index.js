@@ -202,7 +202,18 @@ if (message.content.toLowerCase() === prefix + 'emojiler') {
 bot.on ('message', message => {
 if (message.content.toLowerCase() === prefix + 'sunucular') {
   const sunucular = bot.guilds.map(e=>e.toString()).join("\n");
-  message.channel.send(sunucular);
+    const embed = new Discord.RichEmbed()
+    .addField(`***___Sunucular___***`, `${sunucular}`)
+    return message.channel.sendEmbed(embed);
+}
+});
+
+bot.on ('message', message => {
+if (message.content.toLowerCase() === prefix + 'roller') {
+  const roller = message.guild.roles.map(e=>e.toString()).join("\n");
+    const embed = new Discord.RichEmbed()
+    .addField(`***___Roller___***`, `${roller}`)
+    return message.channel.sendEmbed(embed);
 }
 });
 
