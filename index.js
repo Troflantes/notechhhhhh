@@ -367,7 +367,7 @@ bot.on('guildMemberAdd', member => {
   if (!channel) return;
   const embed = new Discord.RichEmbed()
   .setColor('0x00cc44')
-  .setAuthor(member.user.username, member.user.avatarURL)
+  .setAuthor(bot.user.username, bot.user.avatarURL)
   .setThumbnail(member.user.avatarURL)
   .setTitle(`${member.user.username} Sunucuya katıldı.`)
   .setTimestamp()
@@ -379,7 +379,7 @@ bot.on('guildMemberRemove', member => {
   if (!channel) return;
   const embed = new Discord.RichEmbed()
   .setColor('0xff1a1a')
-  .setAuthor(member.user.username, member.user.avatarURL)
+  .setAuthor(bot.user.username, bot.user.avatarURL)
   .setThumbnail(member.user.avatarURL)
   .setTitle(`${member.user.username} Sunucudan ayrıldı.`)
   .setTimestamp()
