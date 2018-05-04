@@ -209,7 +209,9 @@ if (message.content.toLowerCase() === prefix + 'sunucular') {
 bot.on ('message', message => {
 if (message.content.toLowerCase() === prefix + 'roller') {
   const roller = message.guild.roles.map(e=>e.toString()).join(" ** | ** ");
-  message.channel.send(roller);
+  const embed = new Discord.RichEmbed()
+              .addField("Roller: ", `${roller}`)
+   return message.channel.sendEmbed(embed)
 }
 });
 
