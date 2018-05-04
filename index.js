@@ -528,8 +528,9 @@ bot.on("message", message => {
   .setDescription('')
   .setColor(0xac39ac)
   .addField("Komutlar", `**${prefix}anakomutlar** - Bilgi Komutları \n**${prefix}eğlence** - Eğlence Komutları \n**${prefix}moderasyon** - Moderasyon Komutları \n**${prefix}kişisel** - Kişisel komutlar`)
-  .addField("Linkler", "[Davet Linki](https://discordapp.com/oauth2/authorize?client_id=439756873311322112&permissions=8&scope=bot) | [Destek Sunucusu](https://discord.gg/DZsZsEG)")
+  .addField("Bağlantılar", "[Davet Linki](https://discordapp.com/oauth2/authorize?client_id=439756873311322112&permissions=8&scope=bot) | [Destek Sunucusu](https://discord.gg/DZsZsEG)")
   .setFooter('Eğer "notech-log" adında bir kanal oluşturursanız bot log durumlarını söyler.')
+  .setThumbnail(message.author.avatarURL)
         
         return message.channel.sendEmbed(embed)
     }
