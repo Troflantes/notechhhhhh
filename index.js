@@ -178,15 +178,15 @@ bot.on('message', msg => {
     });
 
 bot.on('message', msg => {
-  if (msg.content.startsWith(prefix + "saat")) {
-     const moment = require('moment');
-     msg.channel.send(`**:flag_tr: Saati:** **${moment().format('HH:mm:ss')}**`
+  if (msg.content.startsWith(prefix + "çekiliş")) {
+    msg.channel.send(`Çekilişi Kazanan: ${msg.guild.members.random().displayName}`);
     }
     });
 
 bot.on('message', msg => {
-  if (msg.content.startsWith(prefix + "çekiliş")) {
-    msg.channel.send(`Çekilişi Kazanan: ${msg.guild.members.random().displayName}`);
+  if (msg.content.startsWith(prefix + "afk")) {
+      msg.author.setNickname(`[AFK]${msg.author.username}`);
+      msg.channel.send("Başarıyla AFK moduna geçtin.");
     }
     });
 
