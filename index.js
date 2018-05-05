@@ -177,6 +177,12 @@ bot.on('message', msg => {
     });
 
 bot.on('message', msg => {
+  if (msg.content.startsWith(prefix + "çekiliş")) {
+    msg.channel.send(msg.guild.members.random().displayName);
+    }
+    });
+
+bot.on('message', msg => {
   if (msg.content.startsWith(prefix + "syt")) {
     let mesaj = msg.content.substring(2 + 3);
     msg.delete();
