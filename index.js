@@ -1,6 +1,7 @@
 const { stripIndents, oneLine } = require('common-tags');
 const Discord = require("discord.js");
 const bot = new Discord.Client();
+require("moment-duration-format");
 
 let prefix = "n!";
 let owner = "430011871555223553";
