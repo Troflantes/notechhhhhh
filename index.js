@@ -178,9 +178,9 @@ bot.on('message', msg => {
     });
 
 bot.on('message', msg => {
-  if (msg.content.startsWith(prefix + "uptime")) {
-    const duration = moment.duration(bot.uptime).format(" D [Gün], H [Saat], m [Dakika], s [Saniye]");
-    msg.channel.send(`Çalışma Sürem: ${duration}`);
+  if (msg.content.startsWith(prefix + "saat")) {
+     const moment = require('moment');
+     msg.channel.send(`**:flag_tr: Saati:** **${moment().format('HH:mm:ss')}**`
     }
     });
 
