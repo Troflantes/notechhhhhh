@@ -18,7 +18,7 @@ if (message.content.toLowerCase() === prefix + "avatarım") {
 message.channel.sendEmbed(new Discord.RichEmbed()
 .setDescription(`Avatarınız:`)
 .setImage(`${message.author.avatarURL} `)
-.setColor(0x000007));
+.setColor("RANDOM"));
    }
 });
 
@@ -27,7 +27,7 @@ if (message.content.toLowerCase() === prefix + "sunucuresmi") {
 message.channel.sendEmbed(new Discord.RichEmbed()
 .setDescription(`Sunucu Resmi:`)
 .setImage(`${message.guild.iconURL} `)
-.setColor(0x000007));
+.setColor("RANDOM"));
    }
 });
 
@@ -189,15 +189,6 @@ bot.on('message', msg => {
     msg.guild.owner.send(`Şikayet Bildiren: **${msg.author.tag}** \nŞikayet: ` + mesaj);
     }
     });
-
-bot.on ('message', message => {
-if (message.content.toLowerCase() === prefix + 'sunucular') {
-  const sunucular = bot.guild.emoji.map(e=>e.toString()).join("\n");
-    const embed = new Discord.RichEmbed()
-    .addField(`***___Sunucular___***`, `${sunucular}`)
-    return message.channel.sendEmbed(embed);
-}
-});
 
 bot.on('message', message => {
 if (message.content.toLowerCase() === prefix + "zekam") {
@@ -389,14 +380,6 @@ msg.channel.send(':smoking: :cloud::cloud::cloud:')
 }
 });
 
-bot.on('message', msg => {
-if (msg.content.toLowerCase() === prefix + "ping") {
-msg.channel.send('Pingim ölçülüyor..')
-.then(nmsg => nmsg.edit("Pingim ölçülüyor."))
-.then(nmsg => nmsg.edit("Pingim :ping_pong: **" + bot.ping + "** Milisaniye"));
-}
-});
-
 bot.on("message", message => {
     
     if (message.content.toLowerCase() === prefix + "davet") {
@@ -411,7 +394,7 @@ bot.on("message", message => {
     if (message.author.id !== "430011871555223553") {
       message.reply('sie');
     } else {
-      message.channel.sendMessage(`tmm`).then(msg => {
+      message.channel.sendMessage(`bak şu an yenileniyorum`).then(msg => {
       console.log(`Yeniden başlıyorum..`);
       process.exit(0);
     })
@@ -434,10 +417,16 @@ bot.on("message", message => {
 
             .setFooter("Oluşturulma Tarihi " + message.guild.createdAt)
 
-            .setColor(0x000001)
+            .setColor("RANDOM")
 
         return message.channel.sendEmbed(embed)
     }
+    
+    if (message.content.toLowerCase() === prefix + "ping") {
+        const embed = new Discord.RichEmbed()
+            .setDescription("Pingim :ping_pong: **" + bot.ping + "** Milisaniye")
+          return message.channel.sendEmbed(embed)
+    }   
     
     if (message.content.toLowerCase() === prefix + "botbilgi") {
         const embed = new Discord.RichEmbed()
@@ -454,7 +443,7 @@ bot.on("message", message => {
 
             .addField("Kitaplık Türü", "discord.py")
 
-            .setColor(0x000007)
+            .setColor("RANDOM")
         
         return message.channel.sendEmbed(embed)
     }
@@ -476,7 +465,7 @@ bot.on("message", message => {
         const embed = new Discord.RichEmbed()
   .setTitle("")
   .setDescription('')
-  .setColor(0xac39ac)
+  .setColor("RANDOM")
   .addField("Komutlar", `**Anakomutlar** Aktif :white_check_mark: \n**Eğlence** Aktif :white_check_mark: \n**Kişisel** Aktif :white_check_mark: \n**Moderasyon** Disaktif :x:`)
   .setFooter('')
         
@@ -487,7 +476,7 @@ bot.on("message", message => {
         const embed = new Discord.RichEmbed()
   .setTitle("")
   .setDescription('')
-  .setColor(0xac39ac)
+  .setColor("RANDOM")
   .addField("Notech Ana Komutları", `**${prefix}kurulum** - Bot için gerekli dosyaları hazırlar. \n**${prefix}istatistik** - Botun istatistiğini gösterir. \n**${prefix}ping** - Botun pingini ölçer. \n**${prefix}sunucubilgi** - Sunucu hakkkında detaylı bilgi verir. \n**${prefix}sunucuresmi** - Sunucunun resmini gönderir. \n**${prefix}yardım** - Botun bütün komutlarını size gösterir. \n**${prefix}botbilgi** - Bot hakkında bilgi verir. \n**${prefix}davet** - Botun davet linkini atar. \n**${prefix}panel** - Komut panelini gösterir.`)
   .setFooter('')
         
@@ -498,7 +487,7 @@ bot.on("message", message => {
         const embed = new Discord.RichEmbed()
   .setTitle("")
   .setDescription('')
-  .setColor(0xac39ac)
+  .setColor("RANDOM")
   .addField("Notech Kişisel Komutları", `**${prefix}syt** - Yazdığınız şikayeti sunucunun kurucusuna iletir. \n**${prefix}emojiler** - Sunucudaki emojileri gösterir. \n**${prefix}matematik** - Matematik işlemi yapar. \n**${prefix}yaz** - Yazdığınız mesajı bota yazdırır.`)
   .setFooter('')
         
@@ -509,7 +498,7 @@ bot.on("message", message => {
         const embed = new Discord.RichEmbed()
   .setTitle("")
   .setDescription('')
-  .setColor(0xac39ac)
+  .setColor("RANDOM")
   .addField("Notech Eğlence Komutları", `**${prefix}havadurumu** - Bot havadurumunu tahmin eder. \n**${prefix}espriyap** - Bot espri yapar. \n**${prefix}zekam** - Zeka puanınızı gösterir. \n**${prefix}matematik** - Matematik işlemi yapar. \n**${prefix}sigara** - Bot sigara içer. \n**${prefix}avatarım** - Avatarınızı gönderir. \n**${prefix}kurabiye** - Size kurabiye verir.`)
   .setFooter('')
         
@@ -520,7 +509,7 @@ bot.on("message", message => {
         const embed = new Discord.RichEmbed()
   .setTitle("")
   .setDescription('')
-  .setColor(0xac39ac)
+  .setColor("RANDOM")
   .addField("Notech Moderasyon Komutları", `**${prefix}kick** - Etiketlenen kişiyi sunucudan atar. [BAKIM] \n**${prefix}mute** - Etiketlenen kişiyi susturur. [BAKIM] \n**${prefix}ban** - Etiketlenen kişiyi sunucudan banlar. [BAKIM] \n**${prefix}temizle** - Bot belirttiğiniz kadar mesaj siler. [BAKIM] \n**${prefix}yenile** - Botu yeniden başlatır.`)
   .setFooter('')
         
@@ -531,7 +520,7 @@ bot.on("message", message => {
         const embed = new Discord.RichEmbed()
   .setTitle("")
   .setDescription('')
-  .setColor(0xac39ac)
+  .setColor("RANDOM")
   .addField("Notech Matematik Komutları", `**${prefix}topla** - Yazdığınız iki sayıyı toplar. \n**${prefix}çıkar** - Yazdığınız iki sayıyı çıkarır. \n**${prefix}çarp** - Yazdığınız iki sayıyı çarpar. \n**${prefix}böl** - Yazdığınız iki sayıyı böler.`)
   .setFooter(`Kullanım: ${prefix}topla 1 1`)
         
