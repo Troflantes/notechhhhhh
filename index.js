@@ -133,7 +133,6 @@ bot.on("message", message => {
       message.guild.createRole({
                     name: "👥 Member",
                     color: "RANDOM",
-            })
     })
    }
   }
