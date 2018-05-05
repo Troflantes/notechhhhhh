@@ -424,6 +424,7 @@ bot.on("message", message => {
     
     if (message.content.toLowerCase() === prefix + "ping") {
         const embed = new Discord.RichEmbed()
+            .setColor("RANDOM")
             .setDescription("Pingim :ping_pong: **" + bot.ping + "** Milisaniye")
           return message.channel.sendEmbed(embed)
     }   
