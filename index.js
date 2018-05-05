@@ -184,7 +184,7 @@ bot.on('message', msg => {
 
 bot.on('message', msg => {
   if (msg.content.startsWith(prefix + "afk")) {
-      msg.author.setNickname(`[AFK]${msg.author.username}`);
+      msg.member.setNickname(`[AFK]${msg.author.username}`);
       msg.channel.send("Başarıyla AFK moduna geçtin.");
     }
     });
