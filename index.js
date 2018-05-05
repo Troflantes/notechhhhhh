@@ -550,8 +550,7 @@ bot.on("message", message => {
   .setTitle("")
   .setDescription('')
   .setColor(0xac39ac)
-  .addField("Komutlar", `**Anakomutlar** Aktif :white_check_mark: \n**Eğlence** Aktif :white_check_mark:  \n**Moderasyon** Bakım :x: \n**Kişisel** Aktif :white_check_mark:`)
-  .addField("Bağlantılar", "[Davet Linki](https://discordapp.com/oauth2/authorize?client_id=439756873311322112&permissions=8&scope=bot) | [Destek Sunucusu](https://discord.gg/DZsZsEG)")
+  .addField("Komutlar", `**Anakomutlar** Aktif :white_check_mark: \n**Eğlence** Aktif :white_check_mark: \n**Kişisel** Aktif :white_check_mark: \n**Moderasyon** Disaktif :x:`)
   .setFooter('')
         
         return message.channel.sendEmbed(embed)
