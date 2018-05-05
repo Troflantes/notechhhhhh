@@ -545,12 +545,24 @@ bot.on("message", message => {
         return message.channel.sendEmbed(embed)
     }
     
+    if (message.content.toLowerCase() === prefix + "panel") {
+        const embed = new Discord.RichEmbed()
+  .setTitle("")
+  .setDescription('')
+  .setColor(0xac39ac)
+  .addField("Komutlar", `**Anakomutlar** Aktif :white_check_mark: \n**Eğlence** Aktif :white_check_mark:  \n**Moderasyon** Bakım :x: \n**Kişisel** Aktif :white_check_mark:`)
+  .addField("Bağlantılar", "[Davet Linki](https://discordapp.com/oauth2/authorize?client_id=439756873311322112&permissions=8&scope=bot) | [Destek Sunucusu](https://discord.gg/DZsZsEG)")
+  .setFooter('')
+        
+        return message.channel.sendEmbed(embed)
+    }
+    
     if (message.content.toLowerCase() === prefix + "anakomutlar") {
         const embed = new Discord.RichEmbed()
   .setTitle("")
   .setDescription('')
   .setColor(0xac39ac)
-  .addField("Notech Ana Komutları", `**${prefix}kurulum** - Bot için gerekli dosyaları hazırlar. \n**${prefix}istatistik** - Botun istatistiğini gösterir. \n**${prefix}ping** - Botun pingini ölçer. \n**${prefix}sunucubilgi** - Sunucu hakkkında detaylı bilgi verir. \n**${prefix}sunucuresmi** - Sunucunun resmini gönderir. \n**${prefix}yardım** - Botun bütün komutlarını size gösterir. \n**${prefix}botbilgi** - Bot hakkında bilgi verir. \n**${prefix}davet** - Botun davet linkini atar.`)
+  .addField("Notech Ana Komutları", `**${prefix}kurulum** - Bot için gerekli dosyaları hazırlar. \n**${prefix}istatistik** - Botun istatistiğini gösterir. \n**${prefix}ping** - Botun pingini ölçer. \n**${prefix}sunucubilgi** - Sunucu hakkkında detaylı bilgi verir. \n**${prefix}sunucuresmi** - Sunucunun resmini gönderir. \n**${prefix}yardım** - Botun bütün komutlarını size gösterir. \n**${prefix}botbilgi** - Bot hakkında bilgi verir. \n**${prefix}davet** - Botun davet linkini atar. \n**${prefix}panel** - Komut panelini gösterir.`)
   .setFooter('')
         
         return message.channel.sendEmbed(embed)
