@@ -130,7 +130,10 @@ bot.on("message", message => {
       message.channel.sendMessage(` :white_check_mark: Gerekli şeyleri başarılı bir şekilde kurdum.`).then(msg => {
       console.log(`Yeniden başlıyorum..`);
       message.guild.createChannel('notech-log');
-      message.guild.createRole('👥 Member');
+      message.guild.createRole({
+                    name: "👥 Member",
+                    color: "RANDOM",
+            })
     })
    }
   }
