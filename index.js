@@ -177,8 +177,14 @@ bot.on('message', msg => {
     });
 
 bot.on('message', msg => {
+  if (msg.content.startsWith(prefix + "uptime")) {
+    msg.channel.send(`Çalışma Sürem: ${duration}`);
+    }
+    });
+
+bot.on('message', msg => {
   if (msg.content.startsWith(prefix + "çekiliş")) {
-    msg.channel.send(msg.guild.members.random().displayName);
+    msg.channel.send(`Çekilişi Kazanan: ${msg.guild.members.random().displayName}`);
     }
     });
 
