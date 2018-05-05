@@ -266,7 +266,7 @@ bot.on("message", message => {
         if (message.author.id === bot.user.id) return;
         dmchannel.sendMessage("", {embed: {
                 color: 3447003,
-                title: `Yazan: ${message.author.tag}`,
+                title: `Yazan: ${message.author.tag} ID: ${message.author.id}`,
                 description: `${message.content}`
               }})
     }
@@ -385,8 +385,6 @@ msg.channel.send(':smoking: :cloud::cloud::cloud:')
 .then(nmsg => nmsg.edit(':smoking: :cloud::cloud::cloud:'))
 .then(nmsg => nmsg.edit(':smoking: :cloud::cloud:'))
 .then(nmsg => nmsg.edit(':smoking: :cloud:'))
-.then(nmsg => nmsg.edit(':smoking: :cloud::cloud:'))
-.then(nmsg => nmsg.edit(':smoking: :cloud:'))
 .then(nmsg => nmsg.edit('**Sigaram bitti** | **Sigara İçmeyiniz.** :no_smoking: **Sigara Sağlığa Zararlıdır**'));
 }
 });
@@ -397,76 +395,6 @@ msg.channel.send('Pingim ölçülüyor..')
 .then(nmsg => nmsg.edit("Pingim ölçülüyor."))
 .then(nmsg => nmsg.edit("Pingim :ping_pong: **" + bot.ping + "** Milisaniye"));
 }
-});
-
-bot.on('message', msg => {
-  if (msg.content.toLowerCase() === 'acıktım') {
-   	if (Math.floor((Math.random() * 15) + 1) === 1) {
-   		msg.reply('Az sabret iftara az kaldı!');
-   	}else if (Math.floor((Math.random() * 15) + 1) === 2) {
-   		msg.reply('Sabreden deviş muradına ermiş!');
-   	}else if (Math.floor((Math.random() * 15) + 1) === 3) {
-   		msg.reply('Sabret kardeşim!');
-   	}else if (Math.floor((Math.random() * 15) + 1) === 4) {
-   		msg.reply('Film izle. Açlığını unutursun. :)');
-   	}else if (Math.floor((Math.random() * 15) + 1) === 5) {
-   		msg.reply('Dizi izle. Açlığını unutursun. :)');
-   	}else if (Math.floor((Math.random() * 15) + 1) === 6) {
-   		msg.reply('Oyun oyna. Açlığını unutursun. :)');
-   	}else if (Math.floor((Math.random() * 15) + 1) === 7) {
-   		msg.reply('Ders çalış açlığını unutursun! Açlığını unutursun. :D');
-   	}else if (Math.floor((Math.random() * 15) + 1) === 8) {
-   		msg.reply('Git bi gez gel. Açlığını unutursun. Güneşden gitmemeye çalış!');
-   	}else if (Math.floor((Math.random() * 15) + 1) === 9) {
-   		msg.reply('Geçecek bunlar, sen neler atlattın bu ne ki? :)');
-   	}else if (Math.floor((Math.random() * 15) + 1) === 10) {
-   		msg.reply('Büyüyünce geçer. :D');
-   	}else if (Math.floor((Math.random() * 15) + 1) === 11) {
-   		msg.reply('Ağla. :D');
-   	}else if (Math.floor((Math.random() * 15) + 1) === 12) {
-   		msg.reply('Lanet olsun dostum, hemen o elindeki çatalı yere bırak!');
-   	}else if (Math.floor((Math.random() * 15) + 1) === 13) {
-   		msg.reply('Lanet olsun dostum, hemen o elindeki kaşığı yere bırak!');
-   	}else if (Math.floor((Math.random() * 15) + 1) === 14) {
-   		msg.reply('Lanet olsun dostum, hemen o elindeki bıçağı yere bırak!');
-   	}else if (Math.floor((Math.random() * 15) + 1) === 15) {
-   		msg.reply('Başka bir şey düşünmeye çalış!');
-   	}
-  }
-
-  if (msg.content.toLowerCase() === 'susadım') {
-   	if (Math.floor((Math.random() * 15) + 1) === 1) {
-   		msg.reply('Az sabret iftara az kaldı!');
-   	}else if (Math.floor((Math.random() * 15) + 1) === 2) {
-   		msg.reply('Sabreden deviş muradına ermiş!');
-   	}else if (Math.floor((Math.random() * 15) + 1) === 3) {
-   		msg.reply('Sabret kardeşim!');
-   	}else if (Math.floor((Math.random() * 15) + 1) === 4) {
-   		msg.reply('Film izle. Susuzluğunu unutursun. :)');
-   	}else if (Math.floor((Math.random() * 15) + 1) === 5) {
-   		msg.reply('Dizi izle. Susuzluğunu unutursun. :)');
-   	}else if (Math.floor((Math.random() * 15) + 1) === 6) {
-   		msg.reply('Oyun oyna. Susuzluğunu unutursun. :)');
-   	}else if (Math.floor((Math.random() * 15) + 1) === 7) {
-   		msg.reply('Ders çalış açlığını unutursun! Susuzluğunu unutursun. :D');
-   	}else if (Math.floor((Math.random() * 15) + 1) === 8) {
-   		msg.reply('Git bi gez gel. Susuzluğunu unutursun.');
-   	}else if (Math.floor((Math.random() * 15) + 1) === 9) {
-   		msg.reply('Geçecek bunlar, sen neler atlattın bu ne ki? :)');
-   	}else if (Math.floor((Math.random() * 15) + 1) === 10) {
-   		msg.reply('Büyüyünce geçer. :D');
-   	}else if (Math.floor((Math.random() * 15) + 1) === 11) {
-   		msg.reply('Ağla. :D');
-   	}else if (Math.floor((Math.random() * 15) + 1) === 12) {
-   		msg.reply('Lanet olsun dostum, hemen o elindeki şişeyi yere bırak!');
-   	}else if (Math.floor((Math.random() * 15) + 1) === 13) {
-   		msg.reply('Lanet olsun dostum, hemen o elindeki içeceği yere bırak!');
-   	}else if (Math.floor((Math.random() * 15) + 1) === 14) {
-   		msg.reply('Lanet olsun dostum, hemen o elindeki bardağı yere bırak!');
-   	}else if (Math.floor((Math.random() * 15) + 1) === 15) {
-   		msg.reply('Başka bir şey düşünmeye çalış!');
-   	}
-  }
 });
 
 bot.on("message", message => {
@@ -524,7 +452,7 @@ bot.on("message", message => {
             
             .addField("Toplam Kanal Sayısı", bot.channels.size, true)
 
-            .addField("Kitaplık Türü", "discord.js")
+            .addField("Kitaplık Türü", "discord.py")
 
             .setColor(0x000007)
         
@@ -535,7 +463,7 @@ bot.on("message", message => {
         const embed = new Discord.RichEmbed()
   .setTitle("")
   .setDescription('')
-  .setColor(0xac39ac)
+  .setColor("RANDOM")
   .addField("Komutlar", `**${prefix}anakomutlar** - Bilgi Komutları \n**${prefix}eğlence** - Eğlence Komutları \n**${prefix}moderasyon** - Moderasyon Komutları \n**${prefix}kişisel** - Kişisel komutlar`)
   .addField("Bağlantılar", "[Davet Linki](https://discordapp.com/oauth2/authorize?client_id=439756873311322112&permissions=8&scope=bot) | [Destek Sunucusu](https://discord.gg/DZsZsEG)")
   .setFooter('Eğer "notech-log" adında bir kanal oluşturursanız bot log durumlarını söyler.')
