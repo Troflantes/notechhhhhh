@@ -183,13 +183,6 @@ bot.on('message', msg => {
     });
 
 bot.on('message', msg => {
-  if (msg.content.startsWith(prefix + "afk")) {
-      msg.member.setNickname(`[AFK]${msg.author.username}`);
-      msg.channel.send("Başarıyla AFK moduna geçtin.");
-    }
-    });
-
-bot.on('message', msg => {
   if (msg.content.startsWith(prefix + "syt")) {
     let mesaj = msg.content.substring(2 + 3);
     msg.delete();
@@ -198,15 +191,8 @@ bot.on('message', msg => {
     });
 
 bot.on ('message', message => {
-if (message.content.toLowerCase() === prefix + 'emojiler') {
-  const emojiList = message.guild.emojis.map(e=>e.toString()).join(" ** | ** ");
-  message.channel.send(emojiList);
-}
-});
-
-bot.on ('message', message => {
 if (message.content.toLowerCase() === prefix + 'sunucular') {
-  const sunucular = bot.guilds.map(e=>e.toString()).join("\n");
+  const sunucular = bot.guild.emoji.map(e=>e.toString()).join("\n");
     const embed = new Discord.RichEmbed()
     .addField(`***___Sunucular___***`, `${sunucular}`)
     return message.channel.sendEmbed(embed);
