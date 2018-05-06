@@ -1,7 +1,6 @@
 const { stripIndents, oneLine } = require('common-tags');
 const Discord = require("discord.js");
 const bot = new Discord.Client();
-const myhook = require('./myhook.js');
 
 let prefix = "?";
 let owner = "430011871555223553";
@@ -138,6 +137,7 @@ bot.on("message", message => {
 
 bot.on("message", async message => {
   const args = message.content.substring(prefix.length).split(" ");
+  const myhook = require('./myhook.js');
     
     if(command === "konuştur") {
     let mesaj = args.slice(1).join(' ');
