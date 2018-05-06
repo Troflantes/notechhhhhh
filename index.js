@@ -220,6 +220,25 @@ if (message.content.toLowerCase() === prefix + "espriyap") {
 }
 });
 
+bot.on("message", async message => {
+    
+  if(message.author.bot) return;
+  if(message.author.id === bot.user.id)return;
+  if(message.content.indexOf(auth.prefix) !== 0) return;
+  const args = message.content.substring(auth.prefix.length).split(" ");
+  const command = args.shift().toLowerCase();
+  this.args = message.content.substring(auth.prefix.length).split(" ");
+    
+  if(command === "konuştur") {
+    let mesaj = args.slice(1).join(' ');
+    let member = message.mentions.members.first()
+    myhook(message, mesaj, {
+    name: `${member.user.username}`,
+    icon: `${member.user.avatarURL}`
+    })
+    }
+});
+
 bot.on('message', message => {
   if (message.author.bot) return;
   if (!message.content.startsWith(prefix)) return;
