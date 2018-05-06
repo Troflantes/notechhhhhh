@@ -487,7 +487,7 @@ bot.on("message", message => {
   .setTitle("")
   .setDescription('')
   .setColor("RANDOM")
-  .addField("Notech Kişisel Komutları", `**${prefix}syt** - Yazdığınız şikayeti sunucunun kurucusuna iletir. \n**${prefix}emojiler** - Sunucudaki emojileri gösterir. \n**${prefix}matematik** - Matematik işlemi yapar. \n**${prefix}yaz** - Yazdığınız mesajı bota yazdırır. \n**${prefix}çekiliş** - Sunucudan rastgele birisini seçer.`)
+  .addField("Notech Kişisel Komutları", `**${prefix}syt** - Yazdığınız şikayeti sunucunun kurucusuna iletir. \n**${prefix}matematik** - Matematik işlemi yapar. \n**${prefix}yaz** - Yazdığınız mesajı bota yazdırır. \n**${prefix}çekiliş** - Sunucudan rastgele birisini seçer.`)
   .setFooter('')
         
         return message.channel.sendEmbed(embed)
