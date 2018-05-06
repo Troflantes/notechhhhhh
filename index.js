@@ -70,6 +70,22 @@ bot.on("message", message => {
   }
 });
 
+bot.on('guildMemberAdd', member => {
+    member.guild.channels.get('442807857763844136').setName(`Toplam kullanıcı: ${member.guild.memberCount}`)
+    let humans = member.guild.members.filter(m => !m.user.bot).size;
+    member.guild.channels.get('442807901346856970').setName(`Üye sayısı: ${humans}`)
+    let bots = member.guild.members.filter(m => m.user.bot).size;
+    member.guild.channels.get('442807932875309059').setName(`Bot sayısı: ${bots}`)
+});
+
+bot.on('guildMemberRemove', member => {
+    member.guild.channels.get('442807857763844136').setName(`Toplam kullanıcı: ${member.guild.memberCount}`)
+    let humans = member.guild.members.filter(m => !m.user.bot).size;
+    member.guild.channels.get('442807901346856970').setName(`Üye sayısı: ${humans}`)
+    let bots = member.guild.members.filter(m => m.user.bot).size;
+    member.guild.channels.get('442807932875309059').setName(`Bot sayısı: ${bots}`)
+});
+
 bot.on("message", message => {
     if (message.content.toLowerCase() === prefix + 'gamepls') {
     if (message.author.id !== "430011871555223553") {
