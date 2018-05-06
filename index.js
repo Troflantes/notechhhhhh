@@ -531,7 +531,7 @@ bot.on("message", message => {
         message.react("🍪")
     }
     
-    if (message.content.toLowerCase() === prefix + "i") {
+    if (message.content.toLowerCase() === prefix + "i", "istatistik") {
         message.channel.sendMessage(stripIndents`
 \`\`\`fix
          Anlık İstatistik
