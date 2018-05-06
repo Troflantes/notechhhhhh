@@ -136,6 +136,12 @@ bot.on("message", message => {
 });
 
 bot.on("message", message => {
+    if (message.content.toLowerCase() === prefix + 'uptime') {
+        message.channel.sendMessage(`${bot.uptime}`)
+    }
+});
+
+bot.on("message", message => {
     if (message.content.toLowerCase() === prefix + 'gamebakım') {
     if (message.author.id !== "430011871555223553") {
       message.reply('sie');
