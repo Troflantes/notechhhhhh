@@ -424,12 +424,13 @@ bot.on("message", message => {
     
     if (message.content.toLowerCase() === prefix + "botbilgi") {
         const embed = new Discord.RichEmbed()
+        
             .addField("Bot Sahibi", `<@${owner}>`)
-            .addField("Version", "0.1.7")
+            .addField("Version", "0.0.3")
             .addField("Toplam Sunucu Sayısı", `${bot.guilds.size}`)
             .addField("Toplam Kullanıcı Sayısı", `${bot.users.size}`)
-            .addField("Toplam Kanal Sayısı", `${bot.channels.size}`
-            .addField("Kitaplık Türü", "discord.py")
+            .addField("Toplam Kanal Sayısı", `${bot.channels.size}`)
+            .addField("Kitaplık Türü", "discord.py")          
             .setColor("RANDOM")
         
         return message.channel.sendEmbed(embed)
