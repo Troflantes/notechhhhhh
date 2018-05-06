@@ -404,19 +404,12 @@ bot.on("message", message => {
         
     if (message.content.toLowerCase() === prefix + "sunucubilgi") {
         const embed = new Discord.RichEmbed()
-
-            .addField("Sunucu Adı", message.guild.name, true)
-
-            .addField("Sunucu ID", message.guild.id, true)
-
-            .addField("Sunucu Sahibi", message.guild.owner, true)
-
-            .addField("Toplam Üye Sayısı", message.guild.memberCount, true)
-
-            .addField("AFK Süresi", message.guild.afkTimeout, true)
-
-            .setFooter("Oluşturulma Tarihi " + message.guild.createdAt)
-
+            .addField("Sunucu Adı", `${message.guild.name}`)
+            .addField("Sunucu ID", `${message.guild.id}`)
+            .addField("Sunucu Sahibi", `${message.guild.owner}`)
+            .addField("Toplam Üye Sayısı", `${message.guild.memberCount}`)
+            .addField("AFK Süresi", `${message.guild.afkTimeout}`)
+            .setFooter("Oluşturulma Tarihi ", `${message.guild.createdAt}`)
             .setColor("RANDOM")
 
         return message.channel.sendEmbed(embed)
@@ -431,19 +424,12 @@ bot.on("message", message => {
     
     if (message.content.toLowerCase() === prefix + "botbilgi") {
         const embed = new Discord.RichEmbed()
-
-            .addField("Bot Sahibi", `<@${owner}>`, true)
-
-            .addField("Version", "0.0.2", true)
-        
-            .addField("Toplam Sunucu Sayısı", bot.guilds.size, true)
-
-            .addField("Toplam Kullanıcı Sayısı", bot.users.size, true)
-            
-            .addField("Toplam Kanal Sayısı", bot.channels.size, true)
-
+            .addField("Bot Sahibi", `<@${owner}>`)
+            .addField("Version", "0.1.7")
+            .addField("Toplam Sunucu Sayısı", `${bot.guilds.size}`)
+            .addField("Toplam Kullanıcı Sayısı", `${bot.users.size}`)
+            .addField("Toplam Kanal Sayısı", `${bot.channels.size}`
             .addField("Kitaplık Türü", "discord.py")
-
             .setColor("RANDOM")
         
         return message.channel.sendEmbed(embed)
