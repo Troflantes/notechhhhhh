@@ -135,20 +135,6 @@ bot.on("message", message => {
   }
 });
 
-bot.on("message", async message => {
-  const args = message.content.substring(prefix.length).split(" ");
-  const myhook = require('./myhook.js');
-    
-    if(command === "konuştur") {
-    let mesaj = args.slice(1).join(' ');
-    let member = message.mentions.members.first()
-    myhook(message, mesaj, {
-    name: `${member.user.username}`,
-    icon: `${member.user.avatarURL}`
-    })
-    }
-});
-
 bot.on("message", message => {
     if (message.content.toLowerCase() === prefix + 'gamebakım') {
     if (message.author.id !== "430011871555223553") {
