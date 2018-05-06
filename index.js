@@ -380,15 +380,6 @@ msg.channel.send(':smoking: :cloud::cloud::cloud:')
 }
 });
 
-bot.on("message", msg => {
-
-    const kufur = ["https", ".gg", "http", ".com", "invite", "discord.gg", ".net", "www.", ".io", "discordapp"];
-    if (kufur.some(word => msg.content.includes(word)) ) {
-        msg.delete()
-        msg.reply("Reklam yapmamalısın.")
-    }
-});
-
 bot.on("message", message => {
     
     if (message.content.toLowerCase() === prefix + "davet") {
@@ -474,7 +465,7 @@ bot.on("message", message => {
   .setTitle("")
   .setDescription('')
   .setColor("RANDOM")
-  .addField("Komutlar", `**Anakomutlar** Aktif :white_check_mark: \n**Eğlence** Aktif :white_check_mark: \n**Kişisel** Aktif :white_check_mark: \n**Reklam Filtresi** Aktif :white_check_mark: \n**Moderasyon** Disaktif :x:`)
+  .addField("Komutlar", `**Anakomutlar** Aktif :white_check_mark: \n**Eğlence** Aktif :white_check_mark: \n**Kişisel** Aktif :white_check_mark: \n**Moderasyon** Disaktif :x:`)
   .setFooter('')
         
         return message.channel.sendEmbed(embed)
