@@ -544,5 +544,8 @@ bot.on("message", message => {
 
 -`+ bot.users.size + ` Kullanıcı 💞
 \`\`\` `)
-    }
+    break;
+
+    default : return message.channel.send("Komut Bulunamadı.");
+   }
 });
