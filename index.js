@@ -404,8 +404,18 @@ bot.on("message", message => {
         
     if (message.content.toLowerCase() === prefix + "sunucubilgi") {
         const embed = new Discord.RichEmbed()
-            .setDescription(`Sunucu Adı: **${message.guild.name}** \nSunucu ID: **${message.guild.id}** \nSunucu Sahibi: **${message.guild.owner}** \nToplam Üye Sayısı: **${message.guild.memberCount}**`)
-            .setFooter("Oluşturulma Tarihi ", `${message.guild.createdAt}`)
+            .addField("Sunucu Adı", message.guild.name, true)
+
+            .addField("Sunucu ID", message.guild.id, true)
+
+            .addField("Sunucu Sahibi", message.guild.owner, true)
+
+            .addField("Toplam Üye Sayısı", message.guild.memberCount, true)
+
+            .addField("AFK Süresi", message.guild.afkTimeout, true)
+
+            .setFooter("Oluşturulma Tarihi " + message.guild.createdAt)
+        
             .setColor("RANDOM")
 
         return message.channel.sendEmbed(embed)
@@ -420,7 +430,18 @@ bot.on("message", message => {
     
     if (message.content.toLowerCase() === prefix + "botbilgi") {
         const embed = new Discord.RichEmbed()
-            .setDescription(`Bot Sahibi: <@${owner}> \nVersion: **0.0.3** \nToplam Sunucu Sayısı: **${bot.users.size}** \nToplam Kullanıcı Sayısı: **${bot.users.size}** \nToplam Kanal Sayısı: **${bot.channels.size}** \nKitaplık Türü: **discord.py**`)
+            .addField("Bot Sahibi", `<@${owner}>`, true)
+
+            .addField("Version", "0.0.6", true)
+
+            .addField("Toplam Sunucu Sayısı", bot.guilds.size, true)
+
+            .addField("Toplam Kullanıcı Sayısı", bot.users.size, true)
+            
+            .addField("Toplam Kanal Sayısı", bot.channels.size, true)
+
+            .addField("Kitaplık Türü", "discord.py")
+        
             .setColor("RANDOM")
         
         return message.channel.sendEmbed(embed)
@@ -510,7 +531,7 @@ bot.on("message", message => {
         message.react("🍪")
     }
     
-    if (message.content.toLowerCase() === prefix + "istatistik") {
+    if (message.content.toLowerCase() === prefix + "i") {
         message.channel.sendMessage(stripIndents`
 \`\`\`fix
          Anlık İstatistik
