@@ -404,11 +404,7 @@ bot.on("message", message => {
         
     if (message.content.toLowerCase() === prefix + "sunucubilgi") {
         const embed = new Discord.RichEmbed()
-            .addField("Sunucu Adı", `${message.guild.name}`)
-            .addField("Sunucu ID", `${message.guild.id}`)
-            .addField("Sunucu Sahibi", `${message.guild.owner}`)
-            .addField("Toplam Üye Sayısı", `${message.guild.memberCount}`)
-            .addField("AFK Süresi", `${message.guild.afkTimeout}`)
+            .setDescription(`Sunucu Adı: **${message.guild.name}** \nSunucu ID: **${message.guild.id}** \nSunucu Sahibi: **${message.guild.owner}** \nToplam Üye Sayısı: **${message.guild.memberCount}**`)
             .setFooter("Oluşturulma Tarihi ", `${message.guild.createdAt}`)
             .setColor("RANDOM")
 
@@ -424,13 +420,7 @@ bot.on("message", message => {
     
     if (message.content.toLowerCase() === prefix + "botbilgi") {
         const embed = new Discord.RichEmbed()
-        
-            .addField("Bot Sahibi", `<@${owner}>`)
-            .addField("Version", "0.0.3")
-            .addField("Toplam Sunucu Sayısı", `${bot.guilds.size}`)
-            .addField("Toplam Kullanıcı Sayısı", `${bot.users.size}`)
-            .addField("Toplam Kanal Sayısı", `${bot.channels.size}`)
-            .addField("Kitaplık Türü", "discord.py")          
+            .setDescription(`Bot Sahibi: <@${owner}> \nVersion: **0.0.3** \nToplam Sunucu Sayısı: **${bot.users.size}** \nToplam Kullanıcı Sayısı: **${bot.users.size}** \nToplam Kanal Sayısı: **${bot.channels.size}** \nKitaplık Türü: **discord.py**`)
             .setColor("RANDOM")
         
         return message.channel.sendEmbed(embed)
