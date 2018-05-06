@@ -136,8 +136,10 @@ bot.on("message", message => {
 });
 
 bot.on("message", message => {
+    const moment = require("moment-timezone");
+    const duration = moment.duration(bot.uptime).format("D [Gün], H [Saat], m [Dakika], s [Saniye]");
     if (message.content.toLowerCase() === prefix + 'uptime') {
-        message.channel.sendMessage(`${bot.uptime}`)
+        message.channel.sendMessage(`${duration}`)
     }
 });
 
