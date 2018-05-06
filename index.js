@@ -380,6 +380,15 @@ msg.channel.send(':smoking: :cloud::cloud::cloud:')
 }
 });
 
+bot.on("message", msg => {
+
+    const kufur = ["https", "gg", "http", ".com", "invite", "discord.gg", ".net", "www.", ".io", "discordapp"];
+    if (kufur.some(word => msg.content.includes(word)) ) {
+        msg.delete()
+        msg.reply("Reklam yapmamalısın.")
+    }
+});
+
 bot.on("message", message => {
     
     if (message.content.toLowerCase() === prefix + "davet") {
