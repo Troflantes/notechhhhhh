@@ -70,6 +70,19 @@ bot.on("message", message => {
   }
 });
 
+  bot.on('message', function (message) {
+	if (message.content.startsWith(prefix + 'sor')) {
+		const replies = ["Evet",
+		"Belki",
+			"Hayır",
+		"Ben nereden bileyim?",
+			"Onu bunu boşver haQan yavaş",
+		"Evet evet aynen ondan"];
+			message.replytext = Math.floor((Math.random() * replies.length) + 0);
+		return message.reply(replies[message.replytext]);
+	  }
+});
+
 bot.on("message", message => {
     if (message.content.toLowerCase() === prefix + 'gamepls') {
     if (message.author.id !== "430011871555223553") {
