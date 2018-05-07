@@ -2,7 +2,7 @@ const { stripIndents, oneLine } = require('common-tags');
 const Discord = require("discord.js");
 const bot = new Discord.Client();
 
-let prefix = "/";
+let prefix = "?";
 let owner = "430011871555223553";
 
 bot.on("ready", () => {
@@ -468,7 +468,9 @@ bot.on("message", message => {
     if (message.content.toLowerCase() === prefix + "ping") {
         const embed = new Discord.RichEmbed()
             .setColor("RANDOM")
-            .setDescription("Pingim :ping_pong: **" + bot.ping + "** Milisaniye")
+            .setTitle('Pong!')
+	    .addField('<:wifi:434729220669964319> Latency', (new Date().getTime() - message.createdTimestamp) + ' ms', true)
+            .addField('<:server:434729191192395778> Websocket' , `${Math.round(bot.ping)} ms`, false);
           return message.channel.sendEmbed(embed)
     }   
     
