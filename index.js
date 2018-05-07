@@ -57,6 +57,14 @@ message.channel.sendEmbed(new Discord.RichEmbed()
 });
 
 bot.on("message", message => {
+if (message.content.toLowerCase() === prefix + "parti") {
+message.channel.sendEmbed(new Discord.RichEmbed()
+.setDescription(`<a:diskoo:436230259252264962> <a:diskoo:436230259252264962> <a:diskoo:436230259252264962> <a:diskoo:436230259252264962> <a:diskoo:436230259252264962> <a:diskoo:436230259252264962>`)
+.setColor("RANDOM"));
+   }
+});
+
+bot.on("message", message => {
     if (message.content.toLowerCase() === prefix + 'gamesunucu') {
     if (message.author.id !== `${owner}`) {
       message.reply('sie');
