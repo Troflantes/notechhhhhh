@@ -2,7 +2,7 @@ const { stripIndents, oneLine } = require('common-tags');
 const Discord = require("discord.js");
 const bot = new Discord.Client();
 
-let prefix = "?";
+let prefix = "/";
 let owner = "430011871555223553";
 
 bot.on("ready", () => {
