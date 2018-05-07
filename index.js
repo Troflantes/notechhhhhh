@@ -397,7 +397,7 @@ bot.on('guildMemberAdd', member => {
   .setColor('0x00cc44')
   .setAuthor(bot.user.username, bot.user.avatarURL)
   .setThumbnail(member.user.avatarURL)
-  .setTitle(`${member.user.username} Sunucuya katıldı. \n[${member.guild.memberCount} Kişi]`)
+  .setTitle(`<a:parti:443114800843587599> ${member.user.username} Sunucuya katıldı. \n[${member.guild.memberCount} Kişi]`)
   .setTimestamp()
   channel.sendEmbed(embed);
 });
@@ -409,7 +409,7 @@ bot.on('guildMemberRemove', member => {
   .setColor('0xff1a1a')
   .setAuthor(bot.user.username, bot.user.avatarURL)
   .setThumbnail(member.user.avatarURL)
-  .setTitle(`${member.user.username} Sunucudan ayrıldı. \n[${member.guild.memberCount} Kişi]`)
+  .setTitle(`<:GWdbhThonk:441544602835484672> ${member.user.username} Sunucudan ayrıldı. \n[${member.guild.memberCount} Kişi]`)
   .setTimestamp()
   channel.sendEmbed(embed); 
 });
@@ -469,8 +469,8 @@ bot.on("message", message => {
         const embed = new Discord.RichEmbed()
             .setColor("RANDOM")
             .setTitle('Pong!')
-	    .addField('<:parti:441346715673427978> Latency', (new Date().getTime() - message.createdTimestamp) + ' milisaniye', true)
-            .addField('<:wumpus:441346715673427978> Websocket' , `${Math.round(bot.ping)} milisaniye`, false);
+	    .addField('<:GWdbhThonk:441544602835484672> Latency', (new Date().getTime() - message.createdTimestamp) + ' milisaniye', true)
+            .addField('<:GWdbhThonk:441544602835484672> Websocket' , `${Math.round(bot.ping)} milisaniye`, false);
           return message.channel.sendEmbed(embed)
     }   
     
