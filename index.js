@@ -4,7 +4,6 @@ const bot = new Discord.Client();
 
 let prefix = "?";
 let owner = "430011871555223553";
-let owner = "441164897175339010";
 
 bot.on("ready", () => {
     bot.user.setStatus('online');
