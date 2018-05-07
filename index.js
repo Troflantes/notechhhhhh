@@ -4,6 +4,7 @@ const bot = new Discord.Client();
 
 let prefix = "?";
 let owner = "430011871555223553";
+let owner = "441164897175339010";
 
 bot.on("ready", () => {
     bot.user.setStatus('online');
@@ -46,7 +47,7 @@ bot.on("message", message => {
 
 bot.on("message", message => {
     if (message.content.toLowerCase() === prefix + 'gameyeni') {
-    if (message.author.id !== "430011871555223553") {
+    if (message.author.id !== `${owner}`) {
       message.reply('sie');
     } else {
       message.channel.sendMessage(`Başarılı bir şekilde profilime yardım ve daveti koydum.`).then(msg => {
@@ -59,7 +60,7 @@ bot.on("message", message => {
 
 bot.on("message", message => {
     if (message.content.toLowerCase() === prefix + 'gameyenilik') {
-    if (message.author.id !== "430011871555223553") {
+    if (message.author.id !== `${owner}`) {
       message.reply('sie');
     } else {
       message.channel.sendMessage(`Başarılı bir şekilde profilime yeniliğimi koydum.`).then(msg => {
@@ -85,7 +86,7 @@ bot.on("message", message => {
 
 bot.on("message", message => {
     if (message.content.toLowerCase() === prefix + 'gamepls') {
-    if (message.author.id !== "430011871555223553") {
+    if (message.author.id !== `${owner}`) {
       message.reply('sie');
     } else {
       message.channel.sendMessage(`Başarılı bir şekilde profilime yalvarma mesajını koydum.`).then(msg => {
@@ -98,7 +99,7 @@ bot.on("message", message => {
 
 bot.on("message", message => {
     if (message.content.toLowerCase() === prefix + 'gametoplam') {
-    if (message.author.id !== "430011871555223553") {
+    if (message.author.id !== `${owner}`) {
       message.reply('sie');
     } else {
       message.channel.sendMessage(`Başarılı bir şekilde profilime bütün sayılarımı koydum.`).then(msg => {
@@ -111,7 +112,7 @@ bot.on("message", message => {
 
 bot.on("message", message => {
     if (message.content.toLowerCase() === prefix + 'gamekanal') {
-    if (message.author.id !== "430011871555223553") {
+    if (message.author.id !== `${owner}`) {
       message.reply('sie');
     } else {
       message.channel.sendMessage(`Başarılı bir şekilde profilime kanal sayımı koydum.`).then(msg => {
@@ -124,7 +125,7 @@ bot.on("message", message => {
 
 bot.on("message", message => {
     if (message.content.toLowerCase() === prefix + 'gamekullanıcı') {
-    if (message.author.id !== "430011871555223553") {
+    if (message.author.id !== `${owner}`) {
       message.reply('sie');
     } else {
       message.channel.sendMessage(`Başarılı bir şekilde profilime kullanıcı sayımı koydum.`).then(msg => {
@@ -137,7 +138,7 @@ bot.on("message", message => {
 
 bot.on("message", message => {
     if (message.content.toLowerCase() === prefix + 'kurulum') {
-    if (message.author.id !== "430011871555223553") {
+    if (message.author.id !== `${owner}`) {
       message.reply('Kurucumun izni olması lazım. Kurucum: <@430011871555223553> ');
     } else {
       message.channel.sendMessage(` :white_check_mark: Gerekli şeyleri başarılı bir şekilde kurdum.`).then(msg => {
@@ -150,7 +151,7 @@ bot.on("message", message => {
 
 bot.on("message", message => {
     if (message.content.toLowerCase() === prefix + 'gamebakım') {
-    if (message.author.id !== "430011871555223553") {
+    if (message.author.id !== `${owner}`) {
       message.reply('sie');
     } else {
       message.channel.sendMessage(`Başarılı bir şekilde profilime bakım komudunu koydum.`).then(msg => {
@@ -163,7 +164,7 @@ bot.on("message", message => {
 
 bot.on("message", message => {
     if (message.content.toLowerCase() === prefix + 'gameyardım') {
-    if (message.author.id !== "430011871555223553") {
+    if (message.author.id !== `${owner}`) {
       message.reply('sie');
     } else {
       message.channel.sendMessage(`Başarılı bir şekilde profilime yardım komudunu koydum.`).then(msg => {
@@ -191,7 +192,7 @@ bot.on('message', msg => {
 
 bot.on('message', msg => {
   if (msg.content.startsWith(prefix + "çekiliş")) {
-    msg.channel.send(`Çekilişi Kazanan: ${msg.guild.members.random().displayName}`);
+    msg.channel.send(`Çekilişi Kazanan: **${msg.guild.members.random().displayName}**`);
     }
     });
 
@@ -279,7 +280,7 @@ bot.on("message", message => {
 
 bot.on("message", message => {
     if (message.content.toLowerCase() === prefix + 'avatar 1') {
-    if (message.author.id !== "430011871555223553") {
+    if (message.author.id !== `${owner}`) {
       message.reply('sie');
     } else {
       message.channel.sendMessage(`Notech yazısını başarılı bir şekilde profilime koydum.`).then(msg => {
@@ -292,7 +293,7 @@ bot.on("message", message => {
 
 bot.on("message", message => {
     if (message.content.toLowerCase() === prefix + 'avatar 2') {
-    if (message.author.id !== "430011871555223553") {
+    if (message.author.id !== `${owner}`) {
       message.reply('sie');
     } else {
       message.channel.sendMessage(`Glitch efektini başarılı bir şekilde profilime koydum.`).then(msg => {
@@ -305,7 +306,7 @@ bot.on("message", message => {
 
 bot.on("message", message => {
     if (message.content.toLowerCase() === prefix + 'avatar 3') {
-    if (message.author.id !== "430011871555223553") {
+    if (message.author.id !== `${owner}`) {
       message.reply('sie');
     } else {
       message.channel.sendMessage(`Büyük yeşil yazı stilini başarılı bir şekilde profilime koydum.`).then(msg => {
@@ -318,7 +319,7 @@ bot.on("message", message => {
 
 bot.on("message", message => {
     if (message.content.toLowerCase() === prefix + 'durum1') {
-    if (message.author.id !== "430011871555223553") {
+    if (message.author.id !== `${owner}`) {
       message.reply('sie');
     } else {
       message.channel.sendMessage(`Başarıyla çevrimiçi moduna geçtim.`).then(msg => {
@@ -331,7 +332,7 @@ bot.on("message", message => {
 
 bot.on("message", message => {
     if (message.content.toLowerCase() === prefix + 'durum2') {
-    if (message.author.id !== "430011871555223553") {
+    if (message.author.id !== `${owner}`) {
       message.reply('sie');
     } else {
       message.channel.sendMessage(`Başarıyla afk moduna geçtim.`).then(msg => {
@@ -344,7 +345,7 @@ bot.on("message", message => {
 
 bot.on("message", message => {
     if (message.content.toLowerCase() === prefix + 'durum3') {
-    if (message.author.id !== "430011871555223553") {
+    if (message.author.id !== `${owner}`) {
       message.reply('sie');
     } else {
       message.channel.sendMessage(`Başarıyla rahatsız etmeyin moduna geçtim.`).then(msg => {
@@ -500,7 +501,7 @@ bot.on("message", message => {
   .setTitle("")
   .setDescription('')
   .setColor("RANDOM")
-  .addField("Notech Kişisel Komutları", `**${prefix}syt** - Yazdığınız şikayeti sunucunun kurucusuna iletir. \n**${prefix}yaz** - Yazdığınız mesajı bota yazdırır. \n**${prefix}çekiliş** - Sunucudan rastgele birisini seçer.`)
+  .addField("Notech Kişisel Komutları", `**${prefix}syt** - Yazdığınız şikayeti sunucunun kurucusuna iletir. \n**${prefix}sor** - Sorduğunuz soruya kısa cevaplar verir. \n**${prefix}yaz** - Yazdığınız mesajı bota yazdırır. \n**${prefix}çekiliş** - Sunucudan rastgele birisini seçer.`)
   .setFooter('')
         
         return message.channel.sendEmbed(embed)
