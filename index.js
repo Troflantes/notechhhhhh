@@ -70,6 +70,13 @@ bot.on("message", message => {
   }
 });
 
+bot.on('message', function (message) {
+	const randomNumber = Math.random();
+    if (randomNumber < 0.05) {
+		return message.reply(`Level atladın! Şu anki levelin **${Math.floor((Math.random() * 21) + 2)}**`);
+    }
+});
+
   bot.on('message', function (message) {
 	if (message.content.startsWith(prefix + 'sor')) {
 		const replies = ["Evet",
