@@ -69,32 +69,6 @@ bot.on("message", message => {
   }
 });
 
-bot.on("message", msg => {
-  const args = msg.content.split(" ").slice(1);
-
-    if (msg.author.id == `${owner}`) {
-    try {
-      var code = args.join(" ");
-      var evaled = eval(code);
-
-      if (typeof evaled !== "string")
-        evaled = require("util").inspect(evaled);
-
-      msg.channel.sendCode("xl", clean(evaled));
-    } catch (err) {
-      msg.channel.sendMessage(`\`HATA\` \`\`\`xl\n${clean(err)}\n\`\`\``);
-    }
-function clean(text) {
-  if (typeof(text) === "string")
-    return text.replace(/`/g, "`" + String.fromCharCode(8203)).replace(/@/g, "@" + String.fromCharCode(8203));
-  else
-      return text;
-}
-    } else {
-        msg.reply('Bu komutu kullanmak için gerekli izine sahip değilsin.')
-    }
-});
-
 bot.on("message", message => {
     if (message.content.toLowerCase() === prefix + 'gameyeni') {
     if (message.author.id !== `${owner}`) {
