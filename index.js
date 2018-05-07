@@ -87,7 +87,6 @@ bot.on("message", message => {
     }
   }
 });
-That's it
 
 bot.on("message", message => {
     if (message.content.toLowerCase() === prefix + 'gameyeni') {
