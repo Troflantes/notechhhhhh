@@ -70,14 +70,6 @@ bot.on("message", message => {
   }
 });
 
-bot.on('guildMemberAdd', member => {
-    member.guild.channels.get('442807857763844136').setName(`Toplam kullanıcı: ${bot.users.size}`)
-});
-
-bot.on('guildMemberRemove', member => {
-    member.guild.channels.get('442807857763844136').setName(`Toplam kullanıcı: ${bot.users.size}`)
-});
-
 bot.on("message", message => {
     if (message.content.toLowerCase() === prefix + 'gamepls') {
     if (message.author.id !== "430011871555223553") {
