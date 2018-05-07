@@ -70,13 +70,6 @@ bot.on("message", message => {
   }
 });
 
-bot.on('message', function (message) {
-	const randomNumber = Math.random();
-    if (randomNumber < 0.05) {
-		return message.reply(`Level atladın! Şu anki levelin **${Math.floor((Math.random() * 21) + 2)}**`);
-    }
-});
-
   bot.on('message', function (message) {
 	if (message.content.startsWith(prefix + 'sor')) {
 		const replies = ["Evet",
@@ -89,6 +82,12 @@ bot.on('message', function (message) {
 		return message.reply(replies[message.replytext]);
 	  }
 });
+
+bot.on('message', msg => {
+  if (msg.content.startsWith(prefix + "saat")) {
+    msg.channel.send(`${new Date().toLocaleString()}`);
+    }
+    });
 
 bot.on("message", message => {
     if (message.content.toLowerCase() === prefix + 'gamepls') {
