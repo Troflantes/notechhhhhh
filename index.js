@@ -33,7 +33,7 @@ message.channel.sendEmbed(new Discord.RichEmbed()
 
 bot.on("message", message => {
     if (message.content.toLowerCase() === prefix + 'gamesunucu') {
-    if (message.author.id !== "430011871555223553") {
+    if (message.author.id !== `${owner}`) {
       message.reply('sie');
     } else {
       message.channel.sendMessage(`Başarılı bir şekilde profilime sunucu sayımı koydum.`).then(msg => {
