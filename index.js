@@ -59,7 +59,7 @@ message.channel.sendEmbed(new Discord.RichEmbed()
 bot.on("message", message => {
 if (message.content.toLowerCase() === prefix + "parti") {
 message.channel.sendEmbed(new Discord.RichEmbed()
-.setDescription(`<a:diskoo:436230259252264962> <a:diskoo:436230259252264962> <a:diskoo:436230259252264962> <a:diskoo:436230259252264962> <a:diskoo:436230259252264962> <a:diskoo:436230259252264962>`)
+.setDescription(`<a:disko:443135556185096212> <a:disko:443135556185096212> <a:disko:443135556185096212> <a:disko:443135556185096212> <a:disko:443135556185096212> <a:disko:443135556185096212> <a:disko:443135556185096212> <a:disko:443135556185096212> <a:disko:443135556185096212>`)
 .setColor("RANDOM"));
    }
 });
