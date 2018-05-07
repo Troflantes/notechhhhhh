@@ -469,8 +469,8 @@ bot.on("message", message => {
         const embed = new Discord.RichEmbed()
             .setColor("RANDOM")
             .setTitle('Pong!')
-	    .addField('<:wifi:434729220669964319> Latency', (new Date().getTime() - message.createdTimestamp) + ' ms', true)
-            .addField('<:server:434729191192395778> Websocket' , `${Math.round(bot.ping)} ms`, false);
+	    .addField('<:parti:441346715673427978> Latency', (new Date().getTime() - message.createdTimestamp) + ' milisaniye', true)
+            .addField('<:wumpus:441346715673427978> Websocket' , `${Math.round(bot.ping)} milisaniye`, false);
           return message.channel.sendEmbed(embed)
     }   
     
