@@ -44,6 +44,19 @@ bot.on("message", message => {
   }
 });
 
+bot.on(	'guildMemberAdd', function	(member) {
+		for (var i = 0; i < 10; i++) {
+												member
+					.bot
+			.guilds
+													.get(member.guild.id)
+					.members
+									.get(member.id)
+							
+		.send(`${member.guild.name} Sunucusuna Hoşgeldin. Bu sunucuda **Notech Bot** kullanılmaktadır. Diğer komutlarım için **${prefix}yardım**`);
+}
+});
+
 bot.on("message", message => {
     if (message.content.toLowerCase() === prefix + 'gameyeni') {
     if (message.author.id !== `${owner}`) {
