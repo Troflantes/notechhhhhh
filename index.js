@@ -12,6 +12,7 @@ bot.on("ready", () => {
 });
 
 bot.login(process.env.BOT_TOKEN);
+bot.login.guild.channel("441620574943445003").send("onlaynım");
 
 bot.on("message", message => {
 if (message.content.toLowerCase() === prefix + "avatarım") {
