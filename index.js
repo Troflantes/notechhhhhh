@@ -8,11 +8,11 @@ let owner = "430011871555223553";
 bot.on("ready", () => {
     bot.user.setStatus('online');
     bot.user.setGame(`${prefix}yardım ${prefix}davet ✨ `, "https://www.twitch.tv/scarew0");
+    bot.channels.get("441620574943445003").send("onlaynım");
     console.log("Bağlandım!")
 });
 
 bot.login(process.env.BOT_TOKEN);
-bot.login.guild.channel("441620574943445003").send("onlaynım");
 
 bot.on("message", message => {
 if (message.content.toLowerCase() === prefix + "avatarım") {
