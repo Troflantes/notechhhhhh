@@ -508,7 +508,7 @@ bot.on("message", message => {
   .setDescription('')
   .setColor("RANDOM")
   .addField("Komutlar", `**${prefix}anakomutlar** - Bilgi Komutları \n**${prefix}eğlence** - Eğlence Komutları \n**${prefix}moderasyon** - Moderasyon Komutları \n**${prefix}kişisel** - Kişisel komutlar`)
-  .addField("Bağlantılar", "[Davet Linki](https://discordapp.com/oauth2/authorize?client_id=439756873311322112&permissions=8&scope=bot) | [Destek Sunucusu](https://discord.gg/DZsZsEG)")
+  .addField("Bağlantılar", "[Davet Linki](https://discordapp.com/oauth2/authorize?client_id=439756873311322112&permissions=8&scope=bot) | [Destek Sunucusu](https://discord.gg/DZsZsEG) | [Web Site](https://hastebin.com/pidacisule.erl)")
   .setFooter('Eğer "notech-log" adında bir kanal oluşturursanız bot log durumlarını söyler.')
         
         return message.channel.sendEmbed(embed)
