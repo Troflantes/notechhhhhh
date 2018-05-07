@@ -417,7 +417,7 @@ bot.on('guildMemberRemove', member => {
   .setColor('0xff1a1a')
   .setAuthor(bot.user.username, bot.user.avatarURL)
   .setThumbnail(member.user.avatarURL)
-  .setTitle(`<:GWdbhThonk:441544602835484672> ${member.user.username} Sunucudan ayrıldı. \n[${member.guild.memberCount} Kişi]`)
+  .setTitle(`<:kizgin:441544726596943872> ${member.user.username} Sunucudan ayrıldı. \n[${member.guild.memberCount} Kişi]`)
   .setTimestamp()
   channel.sendEmbed(embed); 
 });
