@@ -69,23 +69,30 @@ bot.on("message", message => {
   }
 });
 
-bot.on("message", message => {
-  const args = message.content.split(" ").slice(1);
+bot.on("message", msg => {
+  const args = msg.content.split(" ").slice(1);
 
-  if (message.content.startsWith(prefix + "eval")) {
-    if(message.author.id !== `${owner}`) return;
+    if (msg.author.id == `${owner}`) {
     try {
-      const code = args.join(" ");
-      let evaled = eval(code);
+      var code = args.join(" ");
+      var evaled = eval(code);
 
       if (typeof evaled !== "string")
         evaled = require("util").inspect(evaled);
 
-      message.channel.send(clean(evaled), {code:"xl"});
+      msg.channel.sendCode("xl", clean(evaled));
     } catch (err) {
-      message.channel.send(`\`ERROR\` \`\`\`xl\n${clean(err)}\n\`\`\``);
+      msg.channel.sendMessage(`\`HATA\` \`\`\`xl\n${clean(err)}\n\`\`\``);
     }
-  }
+function clean(text) {
+  if (typeof(text) === "string")
+    return text.replace(/`/g, "`" + String.fromCharCode(8203)).replace(/@/g, "@" + String.fromCharCode(8203));
+  else
+      return text;
+}
+    } else {
+        msg.reply('Bu komutu kullanmak için gerekli izine sahip değilsin.')
+    }
 });
 
 bot.on("message", message => {
