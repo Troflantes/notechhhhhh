@@ -189,6 +189,13 @@ bot.on('message', msg => {
     }
     });
 
+bot.on('message',  function (message) {
+  const cat = request.get('https://aws.random.cat/meow');
+   if(message.content.toLowerCase === prefix + 'kedi') {
+	cat.then(r => message.reply(r.body.file));
+   }
+});
+
 bot.on('message', msg => {
   if (msg.content.startsWith(prefix + "çekiliş")) {
     msg.channel.send(`Çekilişi Kazanan: **${msg.guild.members.random().displayName}**`);
