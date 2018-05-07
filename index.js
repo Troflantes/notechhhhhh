@@ -22,6 +22,31 @@ message.channel.sendEmbed(new Discord.RichEmbed()
    }
 });
 
+	bot.on('guildCreate', guild => {
+	      let channel = bot.channels.get("441620137313828864")
+        const embed = new Discord.RichEmbed()
+        .setColor(RANDOM)
+        .setAuthor(`Giriş ${guild.name}`)
+        .setThumbnail(guild.iconURL)
+        .addField("Kurucu", guild.owner)
+        .addField("Sunucu ID", guild.id, true)
+        .addField("Toplam Kullanıcı", guild.memberCount, true)
+        .addField("Toplam Kanal", guild.channels.size, true)
+         channel.send(embed);
+	});
+	bot.on('guildDelete', guild => {
+	      let channel = bot.channels.get("441620137313828864")
+        const embed = new Discord.RichEmbed()
+        .setColor(RANDOM)
+        .setAuthor(`Çıkış ${guild.name}`)
+        .setThumbnail(guild.iconURL)
+        .addField("Kurucu", guild.owner)
+        .addField("Sunucu ID", guild.id, true)
+        .addField("Toplam Kullanıcı", guild.memberCount, true)
+        .addField("Toplam Kanal", guild.channels.size, true)
+         channel.send(embed);
+	});
+
 bot.on("message", message => {
 if (message.content.toLowerCase() === prefix + "sunucuresmi") {
 message.channel.sendEmbed(new Discord.RichEmbed()
