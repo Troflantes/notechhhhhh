@@ -98,7 +98,7 @@ bot.on("message", message => {
     } else {
       message.channel.sendMessage(`Başarılı bir şekilde profilime yeniliğimi koydum.`).then(msg => {
       console.log(`Yeniden başlıyorum..`);
-      bot.user.setGame(`Yeni komutlar eklendi! görmek içim: ${prefix}yardım ✨ `, "https://www.twitch.tv/scarew0");
+      bot.user.setGame(`Yeni komutlar eklendi! görmek için: ${prefix}yardım ✨ `, "https://www.twitch.tv/scarew0");
     })
    }
   }
