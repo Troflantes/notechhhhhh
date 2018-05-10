@@ -12,8 +12,6 @@ bot.on("ready", () => {
     console.log("Bağlandım!")
 });
 
-bot.login(process.env.BOT_TOKEN);
-
 bot.on("message", message => {
 if (message.content.toLowerCase() === prefix + "avatarım") {
 message.channel.sendEmbed(new Discord.RichEmbed()
@@ -629,3 +627,25 @@ bot.on("message", message => {
 \`\`\` `)
    }
 });
+
+bot.on("message", message => {
+  const args = message.content.split(" ").slice(1);
+
+  if (message.content.startsWith(prefix + "eval")) {
+    if(message.author.id !== "430011871555223553") return;
+    try {
+      const code = args.join(" ");
+      let evaled = eval(code);
+
+      if (typeof evaled !== "string")
+        evaled = require("util").inspect(evaled);
+
+      message.channel.send(clean(evaled), {code:"xl"});
+    } catch (err) {
+      message.channel.send(`\`ERROR\` \`\`\`xl\n${clean(err)}\n\`\`\``);
+    }
+  }
+});
+
+bot.login(process.env.BOT_TOKEN);
+
