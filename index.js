@@ -110,7 +110,7 @@ bot.on("message", message => {
 		"Belki",
 			"Hayır",
 		"Ben nereden bileyim?",
-			"Onu bunu boşver haQan yavaş",
+			"Hayır amq",
 		"Evet evet aynen ondan"];
 			message.replytext = Math.floor((Math.random() * replies.length) + 0);
 		return message.reply(replies[message.replytext]);
