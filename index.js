@@ -79,6 +79,36 @@ bot.on("message", message => {
 });
 
 bot.on("message", message => {
+
+    if(message.author.bot) return;
+
+    if(!message.content.startsWith(prefix)) return;
+
+    let command = message.content.split(" ")[0].toLowerCase();
+    command = command.slice(prefix.length);
+
+    let args = message.content.split(" ").slice(1);
+
+    console.log(message.author.username + ": " + message.content.toString())
+
+    /* Commands */
+
+    if(command === "blok") {
+        var letters = args.join("").toLowerCase().split("");
+        var i = 0;
+        var output = "";
+        while(i < letters.length) {
+            output = output + ":regional_indicator_" + letters[i] + ":";
+            i++
+        }
+        message.channel.sendMessage(output);
+    }
+
+    /*-----------*/
+
+});
+
+bot.on("message", message => {
     if (message.content.toLowerCase() === prefix + 'gameyeni') {
     if (message.author.id !== `${owner}`) {
       message.reply('sie');
@@ -542,7 +572,7 @@ bot.on("message", message => {
   .setTitle("")
   .setDescription('')
   .setColor("RANDOM")
-  .addField("Notech Kişisel Komutları", `**${prefix}syt** - Yazdığınız şikayeti sunucunun kurucusuna iletir. \n**${prefix}sor** - Sorduğunuz soruya kısa cevaplar verir. \n**${prefix}yaz** - Yazdığınız mesajı bota yazdırır. \n**${prefix}çekiliş** - Sunucudan rastgele birisini seçer.`)
+  .addField("Notech Kişisel Komutları", `**${prefix}syt** - Yazdığınız şikayeti sunucunun kurucusuna iletir. \n**${prefix}sor** - Sorduğunuz soruya kısa cevaplar verir.  \n${prefix}blok - Yazdığınız mesajı blok olarak gönderir. \n**${prefix}yaz** - Yazdığınız mesajı bota yazdırır. \n**${prefix}çekiliş** - Sunucudan rastgele birisini seçer.`)
   .setFooter('')
         
         return message.channel.sendEmbed(embed)
