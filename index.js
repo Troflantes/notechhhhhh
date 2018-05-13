@@ -115,6 +115,7 @@ bot.on("message", message => {
             output = output + ":regional_indicator_" + letters[i] + ":";
             i++
         }
+	message.delete()
         message.channel.sendMessage(output);
     }
 
