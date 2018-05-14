@@ -21,6 +21,17 @@ message.channel.sendEmbed(new Discord.RichEmbed()
    }
 });
 
+bot.on("message", message => {
+const moment = require("moment");
+require("moment-duration-format");
+const duration = moment.duration(bot.uptime).format(" D [gün], H [saat], m [dakika], s [saniye]");
+if (message.content.toLowerCase() === prefix + "uptime") {
+message.channel.sendEmbed(new Discord.RichEmbed()
+.setDescription(`Açık Kalma Sürem: ${duration} `)
+.setColor("RANDOM"));
+   }
+});
+
 	bot.on('guildCreate', guild => {
 	      let channel = bot.channels.get("441620137313828864")
         const embed = new Discord.RichEmbed()
