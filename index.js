@@ -502,18 +502,16 @@ bot.on("message", message => {
         
     if (message.content.toLowerCase() === prefix + "sunucubilgi") {
         const embed = new Discord.RichEmbed()
-            .addField("Sunucu Adı", message.guild.name, true)
-
-            .addField("Sunucu ID", message.guild.id, true)
-
-            .addField("Sunucu Sahibi", message.guild.owner, true)
-
-            .addField("Toplam Üye Sayısı", message.guild.memberCount, true)
-
-            .addField("AFK Süresi", message.guild.afkTimeout, true)
-
-            .setFooter("Oluşturulma Tarihi " + message.guild.createdAt)
-        
+    .setTimestamp()
+    .setAuthor(message.guild.name, message.guild.iconURL)
+    .addField('Sunucu Adı:', message.guild.name)
+    .addField('Sunucu ID:', message.guild.id)
+    .addField('Ana kanal:', message.guild.defaultChannel)
+    .addField('Sunucu Bölgesi:', message.guild.region)
+    .addField('Üye sayısı:', message.guild.memberCount)
+    .addField('Sahibi:', message.guild.owner + ' (' + message.guild.ownerID + ')')
+    .addField('Kanal sayısı:', message.guild.channels.size)
+    .addField('Oluşturulma tarihi:', message.guild.createdAt)
             .setColor("RANDOM")
 
         return message.channel.sendEmbed(embed)
@@ -527,7 +525,22 @@ bot.on("message", message => {
             .addField('<:GWdbhThonk:441544602835484672> Websocket' , `${Math.round(bot.ping)} milisaniye`, false);
           return message.channel.sendEmbed(embed)
     }   
-    
+	
+    if (message.content.toLowerCase() === prefix + "bilgim") {
+        const embed = new Discord.RichEmbed()
+	const kullanicibilgimk = new Discord.RichEmbed()
+	var Durum = message.author.presence.status;
+	var Durm = (Durum == "online" ? (0x00AE86) : (Durum == "offline" ? (0x808080) : (Durum == "idle" ? (0xFFFF00) : (Durum == "dnd" ? (0xFF0000) : (0x00AE86)))))
+        var durm = (Durum == "online" ? ("Çevrimiçi") : (Durum == "offline" ? ("Çevrimdışı") : (Durum == "idle" ? ("Boşta") : (Durum == "dnd" ? ("Rahatsız Etmeyin") : ("Bilinmiyor")))))
+      .addField('Ad:', message.author.username + '#' + message.author.discriminator)
+      .addField('ID:', message.author.id)
+      .addField('Kayıt tarihi:', message.author.createdAt)
+      .addField('Durum:', durm)
+      .addField('Şu an oynadığı oyun:', message.author.presence.game ? message.author.presence.game.name : 'Şu an oyun oynamıyor')
+      .addField('BOT mu?', message.author.bot ? '\n Evet' : 'Hayır')
+      return message.channel.sendEmbed(kullanicibilgimk);
+    }
+	
     if (message.content.toLowerCase() === prefix + "botbilgi") {
         const embed = new Discord.RichEmbed()
             .addField("Bot Sahibi", `<@${owner}>`, true)
