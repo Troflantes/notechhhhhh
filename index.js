@@ -55,6 +55,23 @@ message.channel.sendEmbed(new Discord.RichEmbed()
    }
 });
 
+bot.on("message", msg => {
+if (msg.content.toLowerCase() === prefix + "nsfw") {
+ if(msg.channel.nsfw || msg.channel.type === 'dm'){
+   let embed = new Discord.RichEmbed()
+   .setTitle(':underage: +18')
+   .setColor(0x00AE86)
+   .setImage(("https://cdn.boobbot.us/4k/4k"+ Math.floor(Math.random() * 1460)+".jpg"))
+   msg.channel.send(embed)
+}
+ else{
+       msg.channel.send({embed: {
+color: Math.floor(Math.random() * (0xFFFFFF + 1)),
+description: ('Bu kanal NSFW(Not Safe For Work) kanalı değil!')
+ }})
+ }
+};
+
 bot.on('message', message => {
   if (!message.guild) return;
 
