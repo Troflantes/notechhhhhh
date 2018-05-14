@@ -354,7 +354,7 @@ bot.on("message", message => {
     if (message.channel.type === "dm") {
         if (message.author.id === bot.user.id) return;
         dmchannel.sendMessage("", {embed: {
-                color: "RANDOM",
+                color: 000007,
                 title: `Yazan: ${message.author.tag} ID: ${message.author.id}`,
                 description: `${message.content}`
               }})
