@@ -577,8 +577,8 @@ bot.on("message", message => {
   .setTitle("Bot Yetkilileri")
   .setDescription('')
   .setColor("RANDOM")
-  .addField("Admin", `Sean Carew - <@430011871555223553> \nFlyNude - <@341194704085319683>`)
-  .addField("Developer", `Lui Carew - <@441164897175339010>`)
+  .addField("Admin", `<@430011871555223553> \n<@341194704085319683>`)
+  .addField("Developer", `<@441164897175339010>`)
   .addField("Medya", "[YouTube](https://www.youtube.com/channel/UC-vmxOLvfLPUSzHA_WMIV4g) | [Instagram](https://www.instagram.com/talhanehirx) | [Web Site](https://notechbot.glitch.me/)")
   .setFooter('')
         
