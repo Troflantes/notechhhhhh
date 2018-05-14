@@ -545,7 +545,7 @@ bot.on("message", message => {
         const embed = new Discord.RichEmbed()
             .addField("Bot Sahibi", `<@${owner}>`, true)
 
-            .addField("Version", "0.0.6", true)
+            .addField("Version", "11.3.2", true)
 
             .addField("Toplam Sunucu Sayısı", bot.guilds.size, true)
 
