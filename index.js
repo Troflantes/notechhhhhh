@@ -55,7 +55,7 @@ message.channel.sendEmbed(new Discord.RichEmbed()
    }
 });
 
-client.on("message", (message) => {
+bot.on("message", (message) => {
     const arg = message.content.slice(prefix.length).trim().split(/ +/g);
     const komut = arg.shift().toLowerCase();
     if(komut === "çevir") {
