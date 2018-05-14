@@ -21,7 +21,7 @@ if (message.content.toLowerCase() === prefix + "avatarım") {
     if(!member) 
     return message.channel.send(embed)
     let second = new Discord.RichEmbed()
-    .setImage(`&{member.user.avatarURL}`)
+    .setImage(member.user.avatarURL)
     .setColor("RANDOM")
     message.channel.send(second)
     }
