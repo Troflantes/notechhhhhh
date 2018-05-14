@@ -559,7 +559,6 @@ bot.on("message", message => {
         
         return message.channel.sendEmbed(embed)
     }
-    
     if (message.content.toLowerCase() === prefix + "yardım") {
         const embed = new Discord.RichEmbed()
   .setTitle("")
@@ -573,6 +572,19 @@ bot.on("message", message => {
         return message.channel.sendEmbed(embed)
     }
     
+    if (message.content.toLowerCase() === prefix + "yetkililer") {
+        const embed = new Discord.RichEmbed()
+  .setTitle("Bot Yetkilileri")
+  .setDescription('')
+  .setColor("RANDOM")
+  .addField("Admin", `Sean Carew - <@430011871555223553> \nFlyNude - <@341194704085319683>`)
+  .addField("Developer", `Lui Carew - <@441164897175339010>`)
+  .addField("Medya", "[YouTube](https://www.youtube.com/channel/UC-vmxOLvfLPUSzHA_WMIV4g) | [Instagram](https://www.instagram.com/talhanehirx) | [Web Site](https://notechbot.glitch.me/)")
+  .setFooter('')
+        
+        return message.channel.sendEmbed(embed)
+    }
+	
     if (message.content.toLowerCase() === prefix + "panel") {
         const embed = new Discord.RichEmbed()
   .setTitle("")
@@ -622,7 +634,7 @@ bot.on("message", message => {
   .setTitle("")
   .setDescription('')
   .setColor("RANDOM")
-  .addField("Notech Moderasyon Komutları", `**${prefix}kick** - Etiketlenen kişiyi sunucudan atar. [BAKIM] \n**${prefix}mute** - Etiketlenen kişiyi susturur. [BAKIM] \n**${prefix}ban** - Etiketlenen kişiyi sunucudan banlar. [BAKIM] \n**${prefix}temizle** - Bot belirttiğiniz kadar mesaj siler. [BAKIM] \n**${prefix}yenile** - Botu yeniden başlatır.`)
+  .addField("Notech Moderasyon Komutları", `**${prefix}kick** - Etiketlenen kişiyi sunucudan atar. [BAKIM] \n**${prefix}mute** - Etiketlenen kişiyi susturur. [BAKIM] \n**${prefix}ban** - Etiketlenen kişiyi sunucudan banlar. [BAKIM] \n**${prefix}temizle** - Bot belirttiğiniz kadar mesaj siler. [BAKIM] \n**${prefix}yenile** - Botu yeniden başlatır. \n**${prefix}yetkililer** - Botun yetkililerini gösterir.`)
   .setFooter('')
         
         return message.channel.sendEmbed(embed)
