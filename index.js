@@ -324,6 +324,25 @@ bot.on('message', message => {
 
   let command = message.content.split(' ')[0];
   command = command.slice(prefix.length);
+	
+  if (command === 'çekiç') {
+  let args = message.content.split(' ').slice(1);
+	let mesaj = args.slice(0).join(' ');
+	if (mesaj.length < 1) return message.reply('**Kime Çekiç Atcağımı Yazmalısın**');
+    const embed = new Discord.RichEmbed()
+    .setAuthor('')
+    .setColor(RANDOM)
+    .setDescription(`** ${mesaj} ` + message.author.username + ' Sana :hammer: Attı. Canın Acımış Olmalı!**')
+    return message.channel.sendEmbed(embed);
+}
+};
+
+bot.on('message', message => {
+  if (message.author.bot) return;
+  if (!message.content.startsWith(prefix)) return;
+
+  let command = message.content.split(' ')[0];
+  command = command.slice(prefix.length);
 
   let args = message.content.split(' ').slice(1);
 
