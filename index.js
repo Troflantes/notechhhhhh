@@ -24,7 +24,7 @@ message.channel.sendEmbed(new Discord.RichEmbed()
 	bot.on('guildCreate', guild => {
 	      let channel = bot.channels.get("441620137313828864")
         const embed = new Discord.RichEmbed()
-        .setColor("0x000007")
+        .setColor("RANDOM")
         .setAuthor(`Giriş ${guild.name}`)
         .setThumbnail(guild.iconURL)
         .addField("Kurucu", guild.owner)
@@ -36,7 +36,7 @@ message.channel.sendEmbed(new Discord.RichEmbed()
 	bot.on('guildDelete', guild => {
 	      let channel = bot.channels.get("441620137313828864")
         const embed = new Discord.RichEmbed()
-        .setColor("0x000007")
+        .setColor("RANDOM")
         .setAuthor(`Çıkış ${guild.name}`)
         .setThumbnail(guild.iconURL)
         .addField("Kurucu", guild.owner)
@@ -155,7 +155,7 @@ bot.on("message", message => {
 		"Belki",
 			"Hayır",
 		"Ben nereden bileyim?",
-			"Hayır amq",
+			"Hayır amq hayır",
 		"Evet evet aynen ondan"];
 			message.replytext = Math.floor((Math.random() * replies.length) + 0);
 		return message.reply(replies[message.replytext]);
@@ -324,25 +324,6 @@ bot.on('message', message => {
 
   let command = message.content.split(' ')[0];
   command = command.slice(prefix.length);
-	
-  if (command === 'çekiç') {
-  let args = message.content.split(' ').slice(1);
-	let mesaj = args.slice(0).join(' ');
-	if (mesaj.length < 1) return message.reply('**Kime Çekiç Atcağımı Yazmalısın**');
-    const embed = new Discord.RichEmbed()
-    .setAuthor('')
-    .setColor(RANDOM)
-    .setDescription(`** ${mesaj} ` + message.author.username + ' Sana :hammer: Attı. Canın Acımış Olmalı!**')
-    return message.channel.sendEmbed(embed);
-}
-};
-
-bot.on('message', message => {
-  if (message.author.bot) return;
-  if (!message.content.startsWith(prefix)) return;
-
-  let command = message.content.split(' ')[0];
-  command = command.slice(prefix.length);
 
   let args = message.content.split(' ').slice(1);
 
@@ -373,7 +354,7 @@ bot.on("message", message => {
     if (message.channel.type === "dm") {
         if (message.author.id === bot.user.id) return;
         dmchannel.sendMessage("", {embed: {
-                color: 3447003,
+                color: RANDOM,
                 title: `Yazan: ${message.author.tag} ID: ${message.author.id}`,
                 description: `${message.content}`
               }})
