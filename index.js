@@ -55,17 +55,17 @@ message.channel.sendEmbed(new Discord.RichEmbed()
    }
 });
 
-bot.on("message", (message) => {
+client.on("message", (message) => {
     const arg = message.content.slice(prefix.length).trim().split(/ +/g);
     const komut = arg.shift().toLowerCase();
     if(komut === "çevir") {
             var cevir = require('node-google-translate-skidz');
             let hdil = arg[0];
-            if(!hdil) return message.channel.send(`**Hata,** şöyle yazmalısın: '${prefix}çevir [tr/en vs.] [kelime]'`);
-            if(hdil.length > 2) return message.channel.send(`**Hata,** şöyle yazmalısın: '${prefix}çevir [tr/en vs.] [kelime]'`);
+            if(!hdil) return message.channel.send("**Hata,** şöyle yazmalısın: `${prefix}çevir [tr/en vs.] [kelime]`");
+            if(hdil.length > 2) return message.channel.send("**Hata,** şöyle yazmalısın: `${prefix}çevir [tr/en vs.] [kelime]`");
             var cevrt = arg.slice(1).join(" ");
             if(!cevrt){
-                message.channel.send("Çevirmek istediğin dili yazmalıydın.");
+                message.channel.send("Çevirmek istediğin dili yazmalıydın!");
             }
             cevir({
                 text: cevrt,
