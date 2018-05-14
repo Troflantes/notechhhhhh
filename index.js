@@ -14,13 +14,18 @@ bot.on("ready", () => {
 
 bot.on("message", message => {
 if (message.content.toLowerCase() === prefix + "avatarım") {
-message.channel.sendEmbed(new Discord.RichEmbed()
-.setDescription(`Avatarınız:`)
-.setImage(`${message.author.avatarURL} `)
-.setColor("RANDOM"));
-   }
+    let member = message.mentions.members.first()
+    let embed = new Discord.RichEmbed()
+    .setImage(message.author.avatarURL)
+    .setColor("RANDOM")
+    if(!member) 
+    return message.channel.send(embed)
+    let second = new Discord.RichEmbed()
+    .setImage(`&{member.user.avatarURL}`)
+    .setColor("RANDOM")
+    message.channel.send(second)
+    }
 });
-
 	bot.on('guildCreate', guild => {
 	      let channel = bot.channels.get("441620137313828864")
         const embed = new Discord.RichEmbed()
