@@ -3,6 +3,7 @@ const Discord = require("discord.js");
 const bot = new Discord.Client();
 
 let prefix = "?";
+let prefix2 = "<@439756873311322112>";
 let owner = "430011871555223553";
 
 bot.on("ready", () => {
@@ -261,6 +262,13 @@ bot.on("message", message => {
 
 bot.on('message', async msg => {
   if (msg.content.toLowerCase() === prefix + 'yardım') {
+    await msg.react('🇹');
+    msg.react('🇲');
+  }
+});
+
+bot.on('message', async msg => {
+  if (msg.content.toLowerCase() === prefix2 + 'yardım') {
     await msg.react('🇹');
     msg.react('🇲');
   }
@@ -526,21 +534,6 @@ bot.on("message", message => {
           return message.channel.sendEmbed(embed)
     }   
 	
-    if (message.content.toLowerCase() === prefix + "bilgim") {
-        const embed = new Discord.RichEmbed()
-	const kullanicibilgimk = new Discord.RichEmbed()
-	var Durum = message.author.presence.status;
-	var Durm = (Durum == "online" ? (0x00AE86) : (Durum == "offline" ? (0x808080) : (Durum == "idle" ? (0xFFFF00) : (Durum == "dnd" ? (0xFF0000) : (0x00AE86)))))
-        var durm = (Durum == "online" ? ("Çevrimiçi") : (Durum == "offline" ? ("Çevrimdışı") : (Durum == "idle" ? ("Boşta") : (Durum == "dnd" ? ("Rahatsız Etmeyin") : ("Bilinmiyor")))))
-      .addField('Ad:', message.author.username + '#' + message.author.discriminator)
-      .addField('ID:', message.author.id)
-      .addField('Kayıt tarihi:', message.author.createdAt)
-      .addField('Durum:', durm)
-      .addField('Şu an oynadığı oyun:', message.author.presence.game ? message.author.presence.game.name : 'Şu an oyun oynamıyor')
-      .addField('BOT mu?', message.author.bot ? '\n Evet' : 'Hayır')
-      return message.channel.sendEmbed(kullanicibilgimk);
-    }
-	
     if (message.content.toLowerCase() === prefix + "botbilgi") {
         const embed = new Discord.RichEmbed()
             .addField("Bot Sahibi", `<@${owner}>`, true)
@@ -572,7 +565,7 @@ bot.on("message", message => {
         return message.channel.sendEmbed(embed)
     }
 	
-    if (message.content.toLowerCase() === "<@439756873311322112> yardım") {
+    if (message.content.toLowerCase() === prefix2 + "yardım") {
         const embed = new Discord.RichEmbed()
   .setTitle("")
   .setDescription('')
