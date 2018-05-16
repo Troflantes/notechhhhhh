@@ -3,7 +3,6 @@ const Discord = require("discord.js");
 const bot = new Discord.Client();
 
 let prefix = "?";
-let prefix2 = "<@439756873311322112>";
 let owner = "430011871555223553";
 
 bot.on("ready", () => {
@@ -268,7 +267,7 @@ bot.on('message', async msg => {
 });
 
 bot.on('message', async msg => {
-  if (msg.content.toLowerCase() === prefix2 + 'yardım') {
+  if (msg.content.toLowerCase() === '<@439756873311322112> yardım') {
     await msg.react('🇹');
     msg.react('🇲');
   }
@@ -565,7 +564,7 @@ bot.on("message", message => {
         return message.channel.sendEmbed(embed)
     }
 	
-    if (message.content.toLowerCase() === prefix2 + "yardım") {
+    if (message.content.toLowerCase() === "<@439756873311322112> yardım") {
         const embed = new Discord.RichEmbed()
   .setTitle("")
   .setDescription('')
