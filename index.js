@@ -130,7 +130,7 @@ bot.on("message", message => {
     } else {
       message.channel.sendMessage(`Başarılı bir şekilde profilime yardım ve daveti koydum.`).then(msg => {
       console.log(`Yeniden başlıyorum..`);
-      bot.user.setGame(`${prefix}yardım ${prefix}davet ✨ `, "https://www.twitch.tv/scarew0");
+      bot.user.setGame(`${prefix}yardım @Notech yardım ✨ `, "https://www.twitch.tv/scarew0");
     })
    }
   }
