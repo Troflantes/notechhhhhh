@@ -575,7 +575,7 @@ bot.on("message", message => {
         return message.channel.sendEmbed(embed)
     }
     
-    if (message.content.toLowerCase() === prefix + "yetkililer") {
+    if (message.content.toLowerCase() === prefix + "ekip") {
         const embed = new Discord.RichEmbed()
   .setTitle("Bot Yetkilileri")
   .setDescription('')
@@ -637,7 +637,7 @@ bot.on("message", message => {
   .setTitle("")
   .setDescription('')
   .setColor("RANDOM")
-  .addField("Notech Moderasyon Komutları", `**${prefix}kick** - Etiketlenen kişiyi sunucudan atar. [BAKIM] \n**${prefix}mute** - Etiketlenen kişiyi susturur. [BAKIM] \n**${prefix}ban** - Etiketlenen kişiyi sunucudan banlar. [BAKIM] \n**${prefix}temizle** - Bot belirttiğiniz kadar mesaj siler. [BAKIM] \n**${prefix}yenile** - Botu yeniden başlatır. \n**${prefix}yetkililer** - Botun yetkililerini gösterir.`)
+  .addField("Notech Moderasyon Komutları", `**${prefix}kick** - Etiketlenen kişiyi sunucudan atar. [BAKIM] \n**${prefix}mute** - Etiketlenen kişiyi susturur. [BAKIM] \n**${prefix}ban** - Etiketlenen kişiyi sunucudan banlar. [BAKIM] \n**${prefix}temizle** - Bot belirttiğiniz kadar mesaj siler. [BAKIM] \n**${prefix}yenile** - Botu yeniden başlatır. \n**${prefix}ekip** - Botun ekibini gösterir.`)
   .setFooter('')
         
         return message.channel.sendEmbed(embed)
