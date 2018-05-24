@@ -1,7 +1,6 @@
 const { stripIndents, oneLine } = require('common-tags');
 const Discord = require("discord.js");
 const bot = new Discord.Client();
-const { Command } = require('discord.js-commando');
 
 let prefix = "?";
 let owner = "430011871555223553";
@@ -132,51 +131,6 @@ bot.on("message", message => {
    }
   }
 });
-
-bot.on("message", message => {
-    if (message.content.toLowerCase() === prefix + 'discrim') {
-module.exports = class DiscrimCommand extends Command {
-	constructor(bot) {
-		super(bot, {
-			name: 'discrim',
-			aliases: ['discriminator', 'search-discrim'],
-			group: 'eglence',
-			memberName: 'discrim',
-			description: 'Discrimleri aratır.',
-			
-			args: [
-				{
-					key: 'discrim',
-					prompt: 'Bir discrim yazınız.',
-					type: 'string',
-					default: '',
-					validate: discrim => {
-						if (/^[0-9]+$/g.test(discrim) && discrim.length === 4 && discrim != "0000") return true;
-						return 'Geçersiz discrim.';
-					}
-				}
-			]
-		});
-	}
-
-	run(msg, args) {
-		const discrim = args.discrim || message.author.discriminator;
-        const users = this.bot.users.filter(user => user.discriminator === discrim).map(user => user.tag);
-        if (users < 1) {
-            let embed = {
-                color: 3447003,
-                description: `${discrim} bulunamadı!`,
-              };
-            return message.channel.send({embed});
-        } else {
-            let embed = {
-                color: 3447003,
-                description: `${users.join('\n ')}`,
-              };
-            return msg.channel.send({embed});
-        }
-	}
-};
 
 bot.on("message", message => {
     if (message.content.toLowerCase() === prefix + 'gameyenilik') {
