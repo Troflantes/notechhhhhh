@@ -21,6 +21,15 @@ message.channel.sendEmbed(new Discord.RichEmbed()
    }
 });
 
+bot.on("message", message => {
+if (message.content.toLowerCase() === prefix + "köpek") {
+message.channel.sendEmbed(new Discord.RichEmbed()
+.setDescription(`Hav Havv`)
+.setImage(`https://random.dog/woof.json`)
+.setColor("RANDOM"));
+   }
+});
+
 bot.on('guildCreate', guild => {
 	let channel = bot.channels.get("441620137313828864")
         const embed = new Discord.RichEmbed()
