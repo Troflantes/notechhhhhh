@@ -21,15 +21,6 @@ message.channel.sendEmbed(new Discord.RichEmbed()
    }
 });
 
-bot.on("message", message => {
-if (message.content.toLowerCase() === prefix + "kedi") {
-message.channel.sendEmbed(new Discord.RichEmbed()
-.setDescription(`Meoww`)
-.setImage(`http://aws.random.cat/meow`)
-.setColor("RANDOM"));
-   }
-});
-
 bot.on('guildCreate', guild => {
 	let channel = bot.channels.get("441620137313828864")
         const embed = new Discord.RichEmbed()
