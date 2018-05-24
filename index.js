@@ -21,8 +21,17 @@ message.channel.sendEmbed(new Discord.RichEmbed()
    }
 });
 
-	bot.on('guildCreate', guild => {
-	      let channel = bot.channels.get("441620137313828864")
+bot.on("message", message => {
+if (message.content.toLowerCase() === prefix + "kedi") {
+message.channel.sendEmbed(new Discord.RichEmbed()
+.setDescription(`Meoww`)
+.setImage(`http://aws.random.cat/meow`)
+.setColor("RANDOM"));
+   }
+});
+
+bot.on('guildCreate', guild => {
+	let channel = bot.channels.get("441620137313828864")
         const embed = new Discord.RichEmbed()
         .setColor("RANDOM")
         .setAuthor(`Giriş ${guild.name}`)
@@ -33,8 +42,8 @@ message.channel.sendEmbed(new Discord.RichEmbed()
         .addField("Toplam Kanal", guild.channels.size, true)
          channel.send(embed);
 	});
-	bot.on('guildDelete', guild => {
-	      let channel = bot.channels.get("441620137313828864")
+bot.on('guildDelete', guild => {
+	let channel = bot.channels.get("441620137313828864")
         const embed = new Discord.RichEmbed()
         .setColor("RANDOM")
         .setAuthor(`Çıkış ${guild.name}`)
