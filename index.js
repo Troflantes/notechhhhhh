@@ -484,11 +484,13 @@ msg.channel.send(':smoking: :cloud::cloud::cloud:')
 bot.on("message", message => {
     
     if (message.content.toLowerCase() === prefix + "davet") {
-        message.author.send("Davet linkim: **https://discordapp.com/oauth2/authorize?client_id=439756873311322112&permissions=8&scope=bot**")    
+        const embed = new Discord.RichEmbed()
+    .setDescription('Davet linkim için [üzerime tıkla.](https://discordapp.com/oauth2/authorize?client_id=439756873311322112&permissions=8&scope=bot)')
+        return message.channel.sendEmbed(embed);
     }
     
     if (message.content.toLowerCase() === "notech") {
-        message.reply("ne var nee")
+        message.reply("rahat bırak beni krdşm")
     }
     
     if (message.content.toLowerCase() === prefix + 'yenile') {
