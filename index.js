@@ -87,7 +87,7 @@ bot.on("message", message => {
 
     let args = message.content.split(" ").slice(1);
 
-    console.log(message.author.username + message.author.id + ": " + message.content.toString())
+    console.log(message.author.username + " " + message.author.id + ": " + message.content.toString())
 
     if(command === "blok") {
         var letters = args.join("").toLowerCase().split("");
