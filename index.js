@@ -334,6 +334,16 @@ bot.on('message', message => {
     let total = numArray.reduce( (p, c) => p/c);
     message.channel.sendMessage(`${total}`);
   }
+    if(command === "pong") {
+    let latency = new Discord.RichEmbed()
+    .setDescription("Ping?")
+    .setColor("RANDOM")
+    const m = await message.channel.send(latency);
+    let ping = new Discord.RichEmbed()
+    .setDescription(`**Mesaj gecikmesi: ${m.createdTimestamp - message.createdTimestamp}ms.\nAPI gecikmesi: ${Math.round(bot.ping)}ms**`)
+    .setColor("RANDOM")
+    m.edit(ping);
+    }   
 });
 
 bot.on("message", message => {
