@@ -63,18 +63,6 @@ message.channel.sendEmbed(new Discord.RichEmbed()
    }
 });
 
-	bot.on('message', async msg => {
-		if (!msg.guild) return;
-		if (msg.guild.id !== "441346715673427978") return;
-		const talkedRecently = new Set();
-		if (talkedRecently.has(msg.author.id)) {
-			return msg.delete();
-		};
-		talkedRecently.add(msg.author.id);
-		setTimeout(() => {
-			talkedRecently.delete(msg.author.id);
-		}, 1000);
-
 bot.on("message", message => {
     if (message.content.toLowerCase() === prefix + 'gamesunucu') {
     if (message.author.id !== `${owner}`) {
