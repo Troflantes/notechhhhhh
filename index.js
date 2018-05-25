@@ -55,8 +55,7 @@ message.channel.sendEmbed(new Discord.RichEmbed()
    }
 });
 
-bot
-	.on('messageDelete', async msg => {
+	bot.on('messageDelete', async msg => {
 			if (msg.type === "text") {
 			const trtr = member.guild.channels.find('name', 'log');
 			var embed = new Discord.RichEmbed()
@@ -66,9 +65,9 @@ bot
 			.setFooter(`ID: ${msg.id}`)
 		         trtr.sendEmbed(embed);
 		}
-	})
+	});
 	
-	.on('channelCreate', async channel => {
+	bot.on('channelCreate', async channel => {
 			if (channel.type === "text") {
 				const trtr = member.guild.channels.find('name', 'log');
 				var embed = new Discord.RichEmbed()
@@ -77,7 +76,8 @@ bot
 				.setDescription(`<#${channel.id}> kanalı oluşturuldu.`)
 				.setFooter(`ID: ${channel.id}`)
 		         	trtr.sendEmbed(embed);
-			};
+			}
+		
 			if (channel.type === "voice") {
 				var embed = new Discord.RichEmbed()
 				.setColor(3066993)
@@ -87,9 +87,9 @@ bot
 		         	trtr.sendEmbed(embed);
 			}
 		}
-	})
+	});
 		
-	.on('channelDelete', async channel => {
+	bot.on('channelDelete', async channel => {
 			if (channel.type === "text") {
 				const trtr = member.guild.channels.find('name', 'log');
 				let embed = new Discord.RichEmbed()
@@ -98,7 +98,8 @@ bot
 				.setDescription(`${channel.name} kanalı silindi.`)
 				.setFooter(`ID: ${channel.id}`)
 		         	trtr.sendEmbed(embed);
-			};
+			}
+		
 			if (channel.type === "voice") {
 				let embed = new Discord.RichEmbed()
 				.setColor(3066993)
@@ -108,9 +109,9 @@ bot
 		         	trtr.sendEmbed(embed);
 			}
 		}
-	})
+	});
 
-	.on('messageUpdate', async (oldMsg, newMsg) => {
+	bot.on('messageUpdate', async (oldMsg, newMsg) => {
 			const trtr = member.guild.channels.find('name', 'log');
 			const embed = new Discord.RichEmbed()
 			.setColor(3066993)
@@ -118,7 +119,7 @@ bot
 			.setDescription(`${oldMsg.author} adlı kullanıcı <#${oldMsg.channel.id}> kanalına gönderdiği "${oldMsg.content}" mesajı "${newMsg.content}" olarak düzenledi.`)
 			.setFooter(`ID: ${oldMsg.id}`);
 		         trtr.sendEmbed(embed);
-		};
+		}
 	});
 
 bot.on("message", message => {
