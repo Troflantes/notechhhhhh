@@ -8,7 +8,6 @@ let owner = "430011871555223553";
 bot.on("ready", () => {
     bot.user.setStatus('online');
     bot.user.setGame(`${prefix}yardım ${prefix}davet ✨ `, "https://www.twitch.tv/scarew0");
-    bot.channels.get("449660400502308875").send(`-------------------------------------- \n**Bot başarıyla başlatıldı!**`)
     console.log("Bağlandım.")
 });
 
