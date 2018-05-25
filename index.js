@@ -336,6 +336,14 @@ bot.on('message', message => {
   }
 });
 
+bot.on("message", msg => {
+    const kufur = ["yarrak", "piç"];
+    if (kufur.some(word => msg.content.includes(word)) ) {
+        msg.reply("Yahu mal herif neden küfür ediyorsun?")
+	msg.react('😡')
+    }
+});
+
 bot.on("message", message => {
     const dmchannel = bot.channels.find("name", "notechdm");
     if (message.channel.type === "dm") {
@@ -461,7 +469,7 @@ msg.channel.send(':smoking: :cloud::cloud::cloud:')
 .then(nmsg => nmsg.edit(':smoking: :cloud::cloud::cloud:'))
 .then(nmsg => nmsg.edit(':smoking: :cloud::cloud:'))
 .then(nmsg => nmsg.edit(':smoking: :cloud:'))
-.then(nmsg => nmsg.edit('**Sigaram bitti** | **Sigara İçmeyiniz.** :no_smoking: **Sigara Sağlığa Zararlıdır**'));
+.then(nmsg => nmsg.edit('[**Sigaram bitti**](https://discord.gg/DZsZsEG) | **Sigara İçmeyiniz.** :no_smoking: **Sigara Sağlığa Zararlıdır**'));
 }
 });
 
@@ -469,7 +477,7 @@ msg.channel.send(':smoking: :cloud::cloud::cloud:')
 bot.on('message', msg => {
 if (msg.content.toLowerCase() === prefix + "ping") {
 msg.channel.send(' :ping_pong: ')
-.then(nmsg => nmsg.edit(`[Ping?](https://discord.gg/DZsZsEG) **${Math.round(bot.ping)}ms**`));
+.then(nmsg => nmsg.edit(`Ping? **${Math.round(bot.ping)}ms**`));
 }
 });
 
@@ -655,7 +663,7 @@ bot.on("message", message => {
   const args = message.content.split(" ").slice(1);
 
   if (message.content.startsWith(prefix + "eval")) {
-    if(message.author.id !== "430011871555223553") return;
+    if(message.author.id !== `${owner}`) return;
     try {
       const code = args.join(" ");
       let evaled = eval(code);
