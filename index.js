@@ -671,6 +671,43 @@ bot.on("message", message => {
    }
 });
 
+
+const Command = require('discord.js-commando');
+const { stripIndents } = require('common-tags');
+
+module.exports = class DiscriminatorCommand extends Command {
+	constructor(bot) {
+		super(bot, {
+			name: 'discriminator',
+			aliases: ['discrim', 'search-discrim', 'search-discriminator'],
+			group: 'info',
+			memberName: 'discriminator',
+			description: 'Searches for other users with a certain discriminator.',
+			args: [
+				{
+					key: 'discrim',
+					label: 'discriminator',
+					prompt: 'Which discriminator would you like to search for?',
+					type: 'string',
+					default: msg => msg.author.discriminator,
+					validate: discrim => {
+						if (/^[0-9]+$/.test(discrim) && discrim.length === 4) return true;
+						return 'Invalid discriminator.';
+					}
+				}
+			]
+		});
+	}
+
+	run(msg, { discrim }) {
+		const users = this.client.users.filter(user => user.discriminator === discrim).map(user => user.username);
+		return msg.say(stripIndents`
+			**Found ${users.length} users with the discriminator #${discrim}**
+			${users.join(', ')}
+		`);
+	}
+};
+
 bot.on("message", message => {
   const args = message.content.split(" ").slice(1);
 
