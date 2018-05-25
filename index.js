@@ -8,12 +8,12 @@ let owner = "430011871555223553";
 bot.on("ready", () => {
     bot.user.setStatus('online');
     bot.user.setGame(`${prefix}yardım ${prefix}davet ✨ `, "https://www.twitch.tv/scarew0");
-    bot.channels.get("441620574943445003").send(`-------------------------------------- \n**Bot başarıyla başlatıldı!** \n**Latency:** ${bot.ping} \n**Zamanlama:** ${new Date().toLocaleString()} \n**Notech bot hazır.**`)
+    bot.channels.get("449660400502308875").send(`-------------------------------------- \n**Bot başarıyla başlatıldı!** \n**Latency:** ${bot.ping} \n**Zamanlama:** ${new Date().toLocaleString()} \n**Notech bot hazır.**`)
     console.log("Bağlandım!")
 });
 
 bot.on('guildCreate', guild => {
-	let channel = bot.channels.get("441620137313828864")
+	let channel = bot.channels.get("449659739874394113")
         const embed = new Discord.RichEmbed()
         .setColor("RANDOM")
         .setAuthor(`Giriş ${guild.name}`)
@@ -25,7 +25,7 @@ bot.on('guildCreate', guild => {
          channel.send(embed);
 	});
 bot.on('guildDelete', guild => {
-	let channel = bot.channels.get("441620137313828864")
+	let channel = bot.channels.get("449659739874394113")
         const embed = new Discord.RichEmbed()
         .setColor("RANDOM")
         .setAuthor(`Çıkış ${guild.name}`)
@@ -355,7 +355,7 @@ bot.on("message", msg => {
 });
 
 bot.on("message", message => {
-    const dmchannel = bot.channels.find("name", "notechdm");
+    const dmchannel = bot.channels.find("name", "modlog");
     if (message.channel.type === "dm") {
         if (message.author.id === bot.user.id) return;
         dmchannel.sendMessage("", {embed: {
