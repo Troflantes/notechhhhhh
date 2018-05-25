@@ -64,6 +64,24 @@ message.channel.sendEmbed(new Discord.RichEmbed()
 });
 
 bot.on("message", message => {
+    if (message.content.toLowerCase() === prefix + 'afk') {
+      message.reply(`Başarılı bir şekilde ``Away From Keyboard [AFK]`` oldun.`)
+      message.member.setNickname('[AFK] ' + message.author.username + '');
+    })
+   }
+  }
+});
+
+bot.on("message", message => {
+    if (message.content.toLowerCase() === prefix + 'gldm') {
+      message.reply(`Başarılı bir şekilde ``Away From Keyboard [AFK]`` durumundan çıktın.`)
+      message.member.setNickname('' + message.author.username + '');
+    })
+   }
+  }
+});
+
+bot.on("message", message => {
     if (message.content.toLowerCase() === prefix + 'gamesunucu') {
     if (message.author.id !== `${owner}`) {
       message.reply('sie');
@@ -613,7 +631,7 @@ bot.on("message", message => {
   .setTitle("")
   .setDescription('')
   .setColor("RANDOM")
-  .addField("Notech Kişisel Komutları", `**${prefix}syt** - Yazdığınız şikayeti sunucunun kurucusuna iletir. \n**${prefix}avatar** - Bot sizin veya etiketlediğiniz kişinin avatarını gösterir. \n**${prefix}gir** - Bot sesli kanala girer. \n**${prefix}sor** - Sorduğunuz soruya kısa cevaplar verir.  \n**${prefix}blok** - Yazdığınız mesajı blok olarak gönderir. \n**${prefix}yaz** - Yazdığınız mesajı bota yazdırır. \n**${prefix}çekiliş** - Sunucudan rastgele birisini seçer.`)
+  .addField("Notech Kişisel Komutları", `**${prefix}syt** - Yazdığınız şikayeti sunucunun kurucusuna iletir. \n**${prefix}avatar** - Bot sizin veya etiketlediğiniz kişinin avatarını gösterir. \n**${prefix}gir** - Bot sesli kanala girer. \n**${prefix}sor** - Sorduğunuz soruya kısa cevaplar verir.  \n**${prefix}blok** - Yazdığınız mesajı blok olarak gönderir. \n**${prefix}yaz** - Yazdığınız mesajı bota yazdırır. \n**${prefix}çekiliş** - Sunucudan rastgele birisini seçer. \n**${prefix}afk** - AFK durumuna geçersiniz. \n**${prefix}gldm** - AFK durumundan çıkarsınız.`)
   .setFooter('')
         
         return message.channel.sendEmbed(embed)
