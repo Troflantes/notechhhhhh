@@ -297,7 +297,7 @@ if (message.content.toLowerCase() === prefix + "havadurumu") {
 
 bot.on('message', message => {
 if (message.content.toLowerCase() === prefix + "espriyap") {
-    var sans = ["Geçen gün geçmiş günlerimi aradım ama meşguldü.", "Yağmur yağmış kar peynir", "Dünya dönermiş ay da köfte…", "Bu erikson başka erik yok.", "Yıkanan Ton a ne denir Washington", "Hadi oyun oynayalım. Vazgeçtim oymadan oynayalım!", "Geçen gün kamyonu sürdüm Leonardo da Vinci.", "Doğumdan sonra çok kilo aldım. Doğduğumda 2 kiloydum şimdi 62.", "Adam 7 gün boyunca nezle olmuş. Sıkılmış bugün de Petek le olayım demiş.", "Yarasa yararlı bir hayvandır. Yararlı bir hayvan olmasaydı yaramasa derlerdi.", " Benim neden kardeşim yok baba  Seni görünce ikincisine cesaret edemedik.", "Osmanlıda kimseye borç takamıyordun mesela sikke sikke ödüyodun…", "Tatlı yiyip, tatlı konuşuluyorsa bundan sonra mantı yiyip mantıklı konuşacağız.", "Babamı sahura kaldırmayı unuttuk anneme masada ne eksik diyorum tuzluk mu diyor.", "+Okeyde kıza elin nasıl dedim. Ojeli dedi. Ben Şoka girdim. O Migrosa."];
+    var sans = ["Geçen gün geçmiş günlerimi aradım ama meşguldü.", "Yağmur yağmış kar peynir", "Dünya dönermiş ay da köfte…", "Bu erikson başka erik yok.", "Yıkanan Ton a ne denir Washington", "Hadi oyun oynayalım. Vazgeçtim oymadan oynayalım!", "Geçen gün kamyonu sürdüm Leonardo da Vinci.", "Doğumdan sonra çok kilo aldım. Doğduğumda 2 kiloydum şimdi 62.", "Adam 7 gün boyunca nezle olmuş. Sıkılmış bugün de Petek le olayım demiş.", "Yarasa yararlı bir hayvandır. Yararlı bir hayvan olmasaydı yaramasa derlerdi.", " Benim neden kardeşim yok baba  Seni görünce ikincisine cesaret edemedik.", "Osmanlıda kimseye borç takamıyordun mesela sikke sikke ödüyodun…", "Tatlı yiyip, tatlı konuşuluyorsa bundan sonra mantı yiyip mantıklı konuşacağız.", "Babamı sahura kaldırmayı unuttuk anneme masada ne eksik diyorum tuzluk mu diyor.", "+Okeyde kıza elin nasıl dedim. Ojeli dedi. Ben Şoka girdim. O Migrosa.", "Canım sıkkın kanka sonra gel"];
     var sonuc = sans[Math.floor((Math.random() * sans.length))];
     const embed = new Discord.RichEmbed()
     .addField(`***___Espri___***`, `${sonuc}`)
@@ -469,7 +469,7 @@ msg.channel.send(':smoking: :cloud::cloud::cloud:')
 bot.on('message', msg => {
 if (msg.content.toLowerCase() === prefix + "ping") {
 msg.channel.send(' :ping_pong: ')
-.then(nmsg => nmsg.edit(`[Ping?](https://discord.gg/DZsZsEG) ``${Math.round(bot.ping)}ms`` `));
+.then(nmsg => nmsg.edit(`[Ping?](https://discord.gg/DZsZsEG) **${Math.round(bot.ping)}ms**`));
 }
 });
 
@@ -556,10 +556,10 @@ bot.on("message", message => {
   .setTitle("Notech™ Ekip")
   .setDescription('')
   .setColor("RANDOM")
-  .addField("[🎩 Admin](https://discord.gg/DZsZsEG)", `<@430011871555223553> <:onay:441544015670804480> \n<@341194704085319683> <:onay:441544015670804480>`)
-  .addField("[✨ Crazy Lady](https://discord.gg/DZsZsEG)", `<@441164897175339010> <:onay:441544015670804480>`)
-  .addField("[🎈 Divilgador](https://discord.gg/DZsZsEG)", `Şu anda **Divilgador** bulunmamaktadır.`)
-  .addField("[👁‍🗨 Coadjutor](https://discord.gg/DZsZsEG)", `Şu anda **Coadjutor** bulunmamaktadır.`)
+  .addField("🎩 Admin", `<@430011871555223553> <:onay:441544015670804480> \n<@341194704085319683> <:onay:441544015670804480>`)
+  .addField("✨ Crazy Lady", `<@441164897175339010> <:onay:441544015670804480>`)
+  .addField("🎈 Divilgador", `Şu anda [**Divilgador**](https://discord.gg/DZsZsEG) bulunmamaktadır.`)
+  .addField("👁‍🗨 Coadjutor", `Şu anda [**Coadjutor**](https://discord.gg/DZsZsEG) bulunmamaktadır.`)
   .addField("Medya", "[YouTube](https://www.youtube.com/channel/UC-vmxOLvfLPUSzHA_WMIV4g) | [Instagram](https://www.instagram.com/talhanehirx) | [Web Site](https://notechbot.glitch.me/)")
   .setFooter('')
         
@@ -571,7 +571,7 @@ bot.on("message", message => {
   .setTitle("")
   .setDescription('')
   .setColor("RANDOM")
-  .addField("Komutlar", `**Anakomutlar** Aktif :white_check_mark: \n**Eğlence** Aktif :white_check_mark: \n**Kişisel** Aktif :white_check_mark: \n**Moderasyon** Disaktif :x:`)
+  .addField("Komutlar", `[**Anakomutlar**](https://discord.gg/DZsZsEG) Aktif :white_check_mark: \n[**Eğlence**](https://discord.gg/DZsZsEG) Aktif :white_check_mark: \n[**Kişisel**](https://discord.gg/DZsZsEG) Aktif :white_check_mark: \n[**Moderasyon**](https://discord.gg/DZsZsEG) Disaktif :x:`)
   .setFooter('')
         
         return message.channel.sendEmbed(embed)
