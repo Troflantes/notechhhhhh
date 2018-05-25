@@ -46,6 +46,17 @@ message.channel.sendEmbed(new Discord.RichEmbed()
    }
 });
 
+bot.on('guildCreate', async guild => {
+		const girismesaj = [
+		  '**Notech** sunucunuza başarıyla eklendi.',
+		  `Botumuzun özelliklerini öğrenmek için ${prefix}yardım yazabilirsiniz.`,
+		  '',
+		  '[Bot Davet](https://discordapp.com/oauth2/authorize?client_id=439756873311322112&permissions=8&scope=bot) | [Destek Sunucusu](https://discord.gg/DZsZsEG)**'
+		]
+		guild.owner.send(girismesaj)
+	});
+
+
 bot.on("message", message => {
 if (message.content.toLowerCase() === prefix + "parti") {
 message.channel.sendEmbed(new Discord.RichEmbed()
