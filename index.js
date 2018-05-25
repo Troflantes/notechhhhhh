@@ -477,8 +477,8 @@ msg.channel.send(':smoking: :cloud::cloud::cloud:')
 
 bot.on('message', msg => {
 if (msg.content.toLowerCase() === prefix + "ping") {
-msg.channel.send(' :ping_pong: ')
-.then(nmsg => nmsg.edit(`Ping? **${Math.round(bot.ping)}ms**`));
+msg.channel.send('Pong!')
+.then(nmsg => nmsg.edit(`:ping_pong: **${Math.round(bot.ping)}ms**`));
 }
 });
 
