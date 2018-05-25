@@ -465,6 +465,14 @@ msg.channel.send(':smoking: :cloud::cloud::cloud:')
 }
 });
 
+
+bot.on('message', msg => {
+if (msg.content.toLowerCase() === prefix + "ping") {
+msg.channel.send(' :ping_pong: ')
+.then(nmsg => nmsg.edit(`Ping? ``${Math.round(bot.ping)}ms`` `));
+}
+});
+
 bot.on("message", message => {
     
     if (message.content.toLowerCase() === prefix + "davet") {
@@ -505,11 +513,6 @@ bot.on("message", message => {
 
         return message.channel.sendEmbed(embed)
     }
-    
-    if (message.content.toLowerCase() === prefix + "ping") {
-	    message.channel.send(`Bakıyorum..`)
-	    .then(nmsg => nmsg.edit(`Hmmm.. (``${Math.round(bot.ping)ms``)`));
-    }   
 	
     if (message.content.toLowerCase() === prefix + "botbilgi") {
         const embed = new Discord.RichEmbed()
@@ -550,11 +553,13 @@ bot.on("message", message => {
     
     if (message.content.toLowerCase() === prefix + "ekip") {
         const embed = new Discord.RichEmbed()
-  .setTitle("Bot Yetkilileri")
+  .setTitle("Notech™ Ekip")
   .setDescription('')
   .setColor("RANDOM")
-  .addField("Admin", `<@430011871555223553> \n<@341194704085319683>`)
-  .addField("Developer", `<@441164897175339010>`)
+  .addField("🎩 Admin", `<@430011871555223553> <:onay:441544015670804480> \n<@341194704085319683> <:onay:441544015670804480> \n`)
+  .addField("✨ Crazy Lady", `<@441164897175339010> <:onay:441544015670804480> \n`)
+  .addField("🎈 Divilgador", `Şu anda **Divilgador** bulunmamaktadır. \n`)
+  .addField("👁‍🗨 Coadjutor", `Şu anda **Coadjutor** bulunmamaktadır. \n`)
   .addField("Medya", "[YouTube](https://www.youtube.com/channel/UC-vmxOLvfLPUSzHA_WMIV4g) | [Instagram](https://www.instagram.com/talhanehirx) | [Web Site](https://notechbot.glitch.me/)")
   .setFooter('')
         
