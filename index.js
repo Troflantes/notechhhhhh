@@ -65,14 +65,14 @@ message.channel.sendEmbed(new Discord.RichEmbed()
 
 bot.on("message", message => {
     if (message.content.toLowerCase() === prefix + 'afk') {
-      message.reply(`Başarılı bir şekilde ``Away From Keyboard [AFK]`` oldun.`)
+      message.reply(`Başarılı bir şekilde Away From Keyboard [AFK] oldun.`)
       message.member.setNickname('[AFK] ' + message.author.username + '');
   }
 });
 
 bot.on("message", message => {
     if (message.content.toLowerCase() === prefix + 'gldm') {
-      message.reply(`Başarılı bir şekilde ``Away From Keyboard [AFK]`` durumundan çıktın.`)
+      message.reply(`Başarılı bir şekilde Away From Keyboard [AFK] durumundan çıktın.`)
       message.member.setNickname('' + message.author.username + '');
   }
 });
