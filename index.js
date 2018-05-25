@@ -12,15 +12,6 @@ bot.on("ready", () => {
     console.log("Bağlandım!")
 });
 
-bot.on("message", message => {
-if (message.content.toLowerCase() === prefix + "avatarım") {
-message.channel.sendEmbed(new Discord.RichEmbed()
-.setDescription(`Avatarınız:`)
-.setImage(`${message.author.avatarURL} `)
-.setColor("RANDOM"));
-   }
-});
-
 bot.on('guildCreate', guild => {
 	let channel = bot.channels.get("441620137313828864")
         const embed = new Discord.RichEmbed()
@@ -333,7 +324,17 @@ bot.on('message', message => {
     let numArray = args.map(n=> parseInt(n));
     let total = numArray.reduce( (p, c) => p/c);
     message.channel.sendMessage(`${total}`);
-  }
+  }	
+    if(command === "avatar") {
+    let member = message.mentions.members.first()
+    let embed = new Discord.RichEmbed()
+    .setImage(message.author.avatarURL)
+    if(!member) 
+    return message.channel.send(embed)
+    let second = new Discord.RichEmbed()
+    .setImage(member.user.avatarURL)
+    message.channel.send(second)
+    }
 });
 
 bot.on("message", msg => {
