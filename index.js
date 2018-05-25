@@ -117,7 +117,6 @@ message.channel.sendEmbed(new Discord.RichEmbed()
 			.setDescription(`${oldMsg.author} adlı kullanıcı <#${oldMsg.channel.id}> kanalına gönderdiği "${oldMsg.content}" mesajı "${newMsg.content}" olarak düzenledi.`)
 			.setFooter(`ID: ${oldMsg.id}`);
 		         trtr.sendEmbed(embed);
-		}
 	});
 
 bot.on("message", message => {
