@@ -164,53 +164,6 @@ bot.on('message', msg => {
     }
     });
 
-bot.on('message', msg => {
-const { Command } = require('discord.js-commando');
-module.exports = class DiscrimCommand extends Command {
-	constructor(bot) {
-		super(bot, {
-			name: 'discrim',
-			aliases: ['discriminator', 'search-discrim'],
-			group: 'eglence',
-			memberName: 'discrim',
-			description: 'Discrimleri aratır.',
-			
-			args: [
-				{
-					key: 'discrim',
-					prompt: 'Bir discrim yazınız.',
-					type: 'string',
-					default: '',
-					validate: discrim => {
-						if (/^[0-9]+$/g.test(discrim) && discrim.length === 4 && discrim != "0000") return true;
-						return 'Geçersiz discrim.';
-					}
-				}
-			]
-		});
-	}
-
-	run(msg, args) {
-		const discrim = args.discrim || msg.author.discriminator;
-        const users = this.bot.users.filter(user => user.discriminator === discrim).map(user => user.tag);
-        if (users < 1) {
-            let embed = {
-                color: 3447003,
-                description: `${discrim} bulunamadı.`,
-              };
-            return msg.channel.send({embed});
-        } else {
-            let embed = {
-                color: 3447003,
-                description: `${users.join('\n ')}`,
-              };
-            return msg.channel.send({embed});
-        }
-	}
-
-};
-
-
 bot.on("message", message => {
     if (message.content.toLowerCase() === prefix + 'gamepls') {
     if (message.author.id !== `${owner}`) {
