@@ -508,7 +508,7 @@ bot.on("message", message => {
     
     if (message.content.toLowerCase() === prefix + "ping") {
 	    message.channel.sendMessage(`Bakıyorum..`)
-	    .then(nmsg => nmsg.edit(`Hmmm.. ``${Math.round(bot.ping)ms```));
+	    .then(nmsg => nmsg.edit('Hmmm.. ``${Math.round(bot.ping)ms``'));
     }   
 	
     if (message.content.toLowerCase() === prefix + "botbilgi") {
