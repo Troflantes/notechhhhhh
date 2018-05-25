@@ -469,7 +469,7 @@ msg.channel.send(':smoking: :cloud::cloud::cloud:')
 bot.on('message', msg => {
 if (msg.content.toLowerCase() === prefix + "ping") {
 msg.channel.send(' :ping_pong: ')
-.then(nmsg => nmsg.edit(`Ping? ``${Math.round(bot.ping)}ms`` `));
+.then(nmsg => nmsg.edit(`[Ping?](https://discord.gg/DZsZsEG) ``${Math.round(bot.ping)}ms`` `));
 }
 });
 
@@ -556,10 +556,10 @@ bot.on("message", message => {
   .setTitle("Notech™ Ekip")
   .setDescription('')
   .setColor("RANDOM")
-  .addField("🎩 Admin", `<@430011871555223553> <:onay:441544015670804480> \n<@341194704085319683> <:onay:441544015670804480> \n`)
-  .addField("✨ Crazy Lady", `<@441164897175339010> <:onay:441544015670804480> \n`)
-  .addField("🎈 Divilgador", `Şu anda **Divilgador** bulunmamaktadır. \n`)
-  .addField("👁‍🗨 Coadjutor", `Şu anda **Coadjutor** bulunmamaktadır. \n`)
+  .addField("[🎩 Admin](https://discord.gg/DZsZsEG)", `<@430011871555223553> <:onay:441544015670804480> \n<@341194704085319683> <:onay:441544015670804480>`)
+  .addField("[✨ Crazy Lady](https://discord.gg/DZsZsEG)", `<@441164897175339010> <:onay:441544015670804480>`)
+  .addField("[🎈 Divilgador](https://discord.gg/DZsZsEG)", `Şu anda **Divilgador** bulunmamaktadır.`)
+  .addField("[👁‍🗨 Coadjutor](https://discord.gg/DZsZsEG)", `Şu anda **Coadjutor** bulunmamaktadır.`)
   .addField("Medya", "[YouTube](https://www.youtube.com/channel/UC-vmxOLvfLPUSzHA_WMIV4g) | [Instagram](https://www.instagram.com/talhanehirx) | [Web Site](https://notechbot.glitch.me/)")
   .setFooter('')
         
