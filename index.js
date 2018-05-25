@@ -507,30 +507,19 @@ bot.on("message", message => {
     }
     
     if (message.content.toLowerCase() === prefix + "ping") {
-        const embed = new Discord.RichEmbed()
-            .setColor("RANDOM")
-            .setTitle('Pong!')
-	    .addField('<:GWdbhThonk:441544602835484672> Latency', (new Date().getTime() - message.createdTimestamp) + ' milisaniye', true)
-            .addField('<:GWdbhThonk:441544602835484672> Websocket' , `${Math.round(bot.ping)} milisaniye`, false);
-          return message.channel.sendEmbed(embed)
+	    message.channel.sendMessage(`Bakıyorum..`)
+	    .then(nmsg => nmsg.edit("Hmmm.. ``${Math.round(bot.ping)ms``"));
     }   
 	
     if (message.content.toLowerCase() === prefix + "botbilgi") {
         const embed = new Discord.RichEmbed()
             .addField("Bot Sahibi", `<@${owner}>`, true)
-
             .addField("Version", "11.3.2", true)
-
             .addField("Toplam Sunucu Sayısı", bot.guilds.size, true)
-
             .addField("Toplam Kullanıcı Sayısı", bot.users.size, true)
-            
             .addField("Toplam Kanal Sayısı", bot.channels.size, true)
-
             .addField("Kitaplık Türü", "discord.py")
-        
             .setColor("RANDOM")
-        
         return message.channel.sendEmbed(embed)
     }
     if (message.content.toLowerCase() === prefix + "yardım") {
