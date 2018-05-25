@@ -107,7 +107,6 @@ message.channel.sendEmbed(new Discord.RichEmbed()
 				.setFooter(`ID: ${channel.id}`)
 		         	trtr.sendEmbed(embed);
 			}
-		}
 	});
 
 	bot.on('messageUpdate', async (oldMsg, newMsg) => {
