@@ -376,60 +376,16 @@ bot.on("message", message => {
         return message.channel.sendEmbed(embed)
     }
     
-    if (message.content.toLowerCase() === prefix + "ekisp") {
-        const embed = new Discord.RichEmbed()
-  .setTitle("Notech™ Ekip")
-  .setDescription('')
-  .setColor("RANDOM")
-  .addField("🎩 Admin", `<@430011871555223553> <:onay:441544015670804480> | <@341194704085319683> <:onay:441544015670804480> | <@441164897175339010> <:onay:441544015670804480>`)
-  .addField("✨ Crazy Lady", `Şu anda [**Crazy Lady**](https://discord.gg/DZsZsEG) bulunmamaktadır.`)
-  .addField("🎈 Divilgador", `Şu anda [**Divilgador**](https://discord.gg/DZsZsEG) bulunmamaktadır.`)
-  .addField("👁‍🗨 Coadjutor", `Şu anda [**Coadjutor**](https://discord.gg/DZsZsEG) bulunmamaktadır.`)
-  .addField("Medya", "[YouTube](https://www.youtube.com/channel/UC-vmxOLvfLPUSzHA_WMIV4g) | [Instagram](https://www.instagram.com/talhanehirx) | [Web Site](https://notechbot.glitch.me/)")
-  .setFooter('')
-        
-        return message.channel.sendEmbed(embed)
-    }
-	
     if (message.content.toLowerCase() === prefix + "ekip") {
         const embed = new Discord.RichEmbed()
   .setTitle("")
   .setDescription('')
   .setColor("RANDOM")
   .addField("🎩 Admin", `<@430011871555223553> <:onay:441544015670804480> \n<@341194704085319683> <:onay:441544015670804480> \n<@441164897175339010> <:onay:441544015670804480>`)
-  .setFooter('')
-        
-        return message.channel.sendEmbed(embed)
-    }
-	
-    if (message.content.toLowerCase() === prefix + "ekip") {
-        const embed = new Discord.RichEmbed()
-  .setTitle("")
-  .setDescription('')
-  .setColor("RANDOM")
   .addField("✨ Crazy Lady", `Şu anda [**Crazy Lady**](https://discord.gg/DZsZsEG) bulunmamaktadır.`)
-  .setFooter('')
-        
-        return message.channel.sendEmbed(embed)
-    }
-	
-    if (message.content.toLowerCase() === prefix + "ekip") {
-        const embed = new Discord.RichEmbed()
-  .setTitle("")
-  .setDescription('')
-  .setColor("RANDOM")
   .addField("🎈 Divilgador", `Şu anda [**Divilgador**](https://discord.gg/DZsZsEG) bulunmamaktadır.`)
-  .setFooter('')
-        
-        return message.channel.sendEmbed(embed)
-    }
-	
-    if (message.content.toLowerCase() === prefix + "ekip") {
-        const embed = new Discord.RichEmbed()
-  .setTitle("")
-  .setDescription('')
-  .setColor("RANDOM")
   .addField("👁‍🗨 Coadjutor", `Şu anda [**Coadjutor**](https://discord.gg/DZsZsEG) bulunmamaktadır.`)
+  .addField("Medya", "[YouTube](https://www.youtube.com/channel/UC-vmxOLvfLPUSzHA_WMIV4g) | [Instagram](https://www.instagram.com/talhanehirx) | [Web Site](https://notechbot.glitch.me/)")
   .setFooter('')
         
         return message.channel.sendEmbed(embed)
