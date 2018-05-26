@@ -9,6 +9,7 @@ bot.on("ready", () => {
     bot.user.setStatus('online');
     bot.channels.get("449660400502308875").send(`-------------------------------------- \n**Bot başarıyla başlatıldı!** \n**Latency:** ${bot.ping} \n**Zamanlama:** ${new Date().toLocaleString()} \n**Notech bot hazır.**`)
     bot.user.setGame(`${prefix}yardım ${prefix}davet ✨ `, "https://www.twitch.tv/scarew0");
+    console.log("giriş başarılı knk")
 });
 
 bot.on('guildCreate', guild => {
@@ -669,3 +670,5 @@ bot.on("message", message => {
 \`\`\` `)
    }
 });
+
+bot.login(process.env.BOT_TOKEN);
