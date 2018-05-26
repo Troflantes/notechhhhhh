@@ -64,19 +64,6 @@ message.channel.sendEmbed(new Discord.RichEmbed()
 });
 
 bot.on("message", message => {
-    if (message.content.toLowerCase() === prefix + 'gamesunucu') {
-    if (message.author.id !== `${owner}`) {
-      message.reply('sie');
-    } else {
-      message.channel.sendMessage(`Başarılı bir şekilde profilime sunucu sayımı koydum.`).then(msg => {
-      console.log(`Yeniden başlıyorum..`);
-      bot.user.setGame(`${bot.guilds.size} Sunucu 👀`, "https://www.twitch.tv/scarew0");
-    })
-   }
-  }
-});
-
-bot.on("message", message => {
 
     if(message.author.bot) return;
 
@@ -103,32 +90,6 @@ bot.on("message", message => {
 
 });
 
-bot.on("message", message => {
-    if (message.content.toLowerCase() === prefix + 'gameyeni') {
-    if (message.author.id !== `${owner}`) {
-      message.reply('sie');
-    } else {
-      message.channel.sendMessage(`Başarılı bir şekilde profilime yardım ve daveti koydum.`).then(msg => {
-      console.log(`Yeniden başlıyorum..`);
-      bot.user.setGame(`${prefix}yardım @Notech yardım ✨ `, "https://www.twitch.tv/scarew0");
-    })
-   }
-  }
-});
-
-bot.on("message", message => {
-    if (message.content.toLowerCase() === prefix + 'gameyenilik') {
-    if (message.author.id !== `${owner}`) {
-      message.reply('sie');
-    } else {
-      message.channel.sendMessage(`Başarılı bir şekilde profilime yeniliğimi koydum.`).then(msg => {
-      console.log(`Yeniden başlıyorum..`);
-      bot.user.setGame(`Yeni komutlar eklendi! görmek için: ${prefix}yardım ✨ `, "https://www.twitch.tv/scarew0");
-    })
-   }
-  }
-});
-
   bot.on('message', function (message) {
 	if (message.content.startsWith(prefix + 'sor')) {
 		const replies = ["Evet",
@@ -149,58 +110,6 @@ bot.on('message', msg => {
     });
 
 bot.on("message", message => {
-    if (message.content.toLowerCase() === prefix + 'gamepls') {
-    if (message.author.id !== `${owner}`) {
-      message.reply('sie');
-    } else {
-      message.channel.sendMessage(`Başarılı bir şekilde profilime yalvarma mesajını koydum.`).then(msg => {
-      console.log(`Yeniden başlıyorum..`);
-      bot.user.setGame(`Arkadaşlar gelişmemiz için lütfen botu paylaşır mısınız? `, "https://www.twitch.tv/scarew0");
-    })
-   }
-  }
-});
-
-bot.on("message", message => {
-    if (message.content.toLowerCase() === prefix + 'gametoplam') {
-    if (message.author.id !== `${owner}`) {
-      message.reply('sie');
-    } else {
-      message.channel.sendMessage(`Başarılı bir şekilde profilime bütün sayılarımı koydum.`).then(msg => {
-      console.log(`Yeniden başlıyorum..`);
-      bot.user.setGame(`${prefix}yardım ✨ ${bot.guilds.size} Sunucu ${bot.users.size} Kullanıcı `, "https://www.twitch.tv/scarew0");
-    })
-   }
-  }
-});
-
-bot.on("message", message => {
-    if (message.content.toLowerCase() === prefix + 'gamekanal') {
-    if (message.author.id !== `${owner}`) {
-      message.reply('sie');
-    } else {
-      message.channel.sendMessage(`Başarılı bir şekilde profilime kanal sayımı koydum.`).then(msg => {
-      console.log(`Yeniden başlıyorum..`);
-      bot.user.setGame(`${bot.channels.size} Kanal 📄`, "https://www.twitch.tv/scarew0");
-    })
-   }
-  }
-});
-
-bot.on("message", message => {
-    if (message.content.toLowerCase() === prefix + 'gamekullanıcı') {
-    if (message.author.id !== `${owner}`) {
-      message.reply('sie');
-    } else {
-      message.channel.sendMessage(`Başarılı bir şekilde profilime kullanıcı sayımı koydum.`).then(msg => {
-      console.log(`Yeniden başlıyorum..`);
-      bot.user.setGame(`${bot.users.size} Kullanıcı 💞`, "https://www.twitch.tv/scarew0");
-    })
-   }
-  }
-});
-
-bot.on("message", message => {
     if (message.content.toLowerCase() === prefix + 'kurulum') {
     if (message.author.id !== `${owner}`) {
       message.reply('Kurucumun izni olması lazım. Kurucum: <@430011871555223553> ');
@@ -208,32 +117,6 @@ bot.on("message", message => {
       message.channel.sendMessage(` :white_check_mark: Gerekli şeyleri başarılı bir şekilde kurdum.`).then(msg => {
       console.log(`Yeniden başlıyorum..`);
       message.guild.createChannel('notech-log');
-    })
-   }
-  }
-});
-
-bot.on("message", message => {
-    if (message.content.toLowerCase() === prefix + 'gamebakım') {
-    if (message.author.id !== `${owner}`) {
-      message.reply('sie');
-    } else {
-      message.channel.sendMessage(`Başarılı bir şekilde profilime bakım komudunu koydum.`).then(msg => {
-      console.log(`Yeniden başlıyorum..`);
-      bot.user.setGame(`BAKIMDAYIZ | İletişim: Scarew#0001 `, "https://www.twitch.tv/scarew0");
-    })
-   }
-  }
-});
-
-bot.on("message", message => {
-    if (message.content.toLowerCase() === prefix + 'gameyardım') {
-    if (message.author.id !== `${owner}`) {
-      message.reply('sie');
-    } else {
-      message.channel.sendMessage(`Başarılı bir şekilde profilime yardım komudunu koydum.`).then(msg => {
-      console.log(`Yeniden başlıyorum..`);
-      bot.user.setGame(`${prefix}yardım  ✨ `, "https://www.twitch.tv/scarew0");
     })
    }
   }
@@ -367,84 +250,6 @@ bot.on("message", message => {
     if (message.channel.bot) return;
 });
 
-bot.on("message", message => {
-    if (message.content.toLowerCase() === prefix + 'avatar 1') {
-    if (message.author.id !== `${owner}`) {
-      message.reply('sie');
-    } else {
-      message.channel.sendMessage(`Notech yazısını başarılı bir şekilde profilime koydum.`).then(msg => {
-      console.log(`Yeniden başlıyorum..`);
-      bot.user.setAvatar(`https://cdn.discordapp.com/attachments/438102365460234264/440961261581107210/NUTECH.png`);
-    })
-   }
-  }
-});
-
-bot.on("message", message => {
-    if (message.content.toLowerCase() === prefix + 'avatar 2') {
-    if (message.author.id !== `${owner}`) {
-      message.reply('sie');
-    } else {
-      message.channel.sendMessage(`Glitch efektini başarılı bir şekilde profilime koydum.`).then(msg => {
-      console.log(`Yeniden başlıyorum..`);
-      bot.user.setAvatar(`https://cdn.discordapp.com/attachments/438102365460234264/440878633524133901/notechh.JPG`);
-    })
-   }
-  }
-});
-
-bot.on("message", message => {
-    if (message.content.toLowerCase() === prefix + 'avatar 3') {
-    if (message.author.id !== `${owner}`) {
-      message.reply('sie');
-    } else {
-      message.channel.sendMessage(`Büyük yeşil yazı stilini başarılı bir şekilde profilime koydum.`).then(msg => {
-      console.log(`Yeniden başlıyorum..`);
-      bot.user.setAvatar(`https://cdn.discordapp.com/attachments/438102365460234264/441007116183011330/Adsz.png`);
-    })
-   }
-  }
-});
-
-bot.on("message", message => {
-    if (message.content.toLowerCase() === prefix + 'durum1') {
-    if (message.author.id !== `${owner}`) {
-      message.reply('sie');
-    } else {
-      message.channel.sendMessage(`Başarıyla çevrimiçi moduna geçtim.`).then(msg => {
-      console.log(`Yeniden başlıyorum..`);
-      bot.user.setStatus(`online`);
-    })
-   }
-  }
-});
-
-bot.on("message", message => {
-    if (message.content.toLowerCase() === prefix + 'durum2') {
-    if (message.author.id !== `${owner}`) {
-      message.reply('sie');
-    } else {
-      message.channel.sendMessage(`Başarıyla afk moduna geçtim.`).then(msg => {
-      console.log(`Yeniden başlıyorum..`);
-      bot.user.setStatus(`idle`);
-    })
-   }
-  }
-});
-
-bot.on("message", message => {
-    if (message.content.toLowerCase() === prefix + 'durum3') {
-    if (message.author.id !== `${owner}`) {
-      message.reply('sie');
-    } else {
-      message.channel.sendMessage(`Başarıyla rahatsız etmeyin moduna geçtim.`).then(msg => {
-      console.log(`Yeniden başlıyorum..`);
-      bot.user.setStatus(`dnd`);
-    })
-   }
-  }
-});
-
 bot.on('guildMemberAdd', member => {
   let guild = member.guild;
   let joinRole = guild.roles.find('name', '👥 Member');
@@ -489,7 +294,7 @@ msg.channel.send(':smoking: :cloud::cloud::cloud:')
 bot.on('message', msg => {
 if (msg.content.toLowerCase() === prefix + "ping") {
 msg.channel.send('Pong!')
-.then(nmsg => nmsg.edit(`:ping_pong: **${Math.round(bot.ping)}ms**`));
+.then(nmsg => nmsg.edit(`<:GWdbhThonk:441544602835484672> **${Math.round(bot.ping)}ms**`));
 }
 });
 
@@ -506,7 +311,7 @@ bot.on("message", message => {
     }
     
     if (message.content.toLowerCase() === prefix + 'yenile') {
-    if (message.author.id !== "430011871555223553") {
+    if (message.author.id !== `${owner}`) {
       message.reply('sie');
     } else {
       message.channel.sendMessage(`bak şu an yenileniyorum`).then(msg => {
@@ -576,8 +381,8 @@ bot.on("message", message => {
   .setTitle("Notech™ Ekip")
   .setDescription('')
   .setColor("RANDOM")
-  .addField("🎩 Admin", `<@430011871555223553> <:onay:441544015670804480> \n<@341194704085319683> <:onay:441544015670804480>`)
-  .addField("✨ Crazy Lady", `<@441164897175339010> <:onay:441544015670804480>`)
+  .addField("🎩 Admin", `<@430011871555223553> <:onay:441544015670804480> | <@341194704085319683> <:onay:441544015670804480> | <@441164897175339010> <:onay:441544015670804480>`)
+  .addField("✨ Crazy Lady", `Şu anda [**Crazy Lady**](https://discord.gg/DZsZsEG) bulunmamaktadır.`)
   .addField("🎈 Divilgador", `Şu anda [**Divilgador**](https://discord.gg/DZsZsEG) bulunmamaktadır.`)
   .addField("👁‍🗨 Coadjutor", `Şu anda [**Coadjutor**](https://discord.gg/DZsZsEG) bulunmamaktadır.`)
   .addField("Medya", "[YouTube](https://www.youtube.com/channel/UC-vmxOLvfLPUSzHA_WMIV4g) | [Instagram](https://www.instagram.com/talhanehirx) | [Web Site](https://notechbot.glitch.me/)")
@@ -613,7 +418,7 @@ bot.on("message", message => {
   .setTitle("")
   .setDescription('')
   .setColor("RANDOM")
-  .addField("Notech Kişisel Komutları", `**${prefix}syt** - Yazdığınız şikayeti sunucunun kurucusuna iletir. \n**${prefix}avatar** - Bot sizin veya etiketlediğiniz kişinin avatarını gösterir. \n**${prefix}gir** - Bot sesli kanala girer. \n**${prefix}sor** - Sorduğunuz soruya kısa cevaplar verir.  \n**${prefix}blok** - Yazdığınız mesajı blok olarak gönderir. \n**${prefix}yaz** - Yazdığınız mesajı bota yazdırır. \n**${prefix}çekiliş** - Sunucudan rastgele birisini seçer.`)
+  .addField("Notech Kişisel Komutları", `**${prefix}syt** - Yazdığınız şikayeti sunucunun kurucusuna iletir. \n**${prefix}avatar** - Bot sizin veya etiketlediğiniz kişinin avatarını gösterir. \n**${prefix}sor** - Sorduğunuz soruya kısa cevaplar verir.  \n**${prefix}blok** - Yazdığınız mesajı blok olarak gönderir. \n**${prefix}yaz** - Yazdığınız mesajı bota yazdırır. \n**${prefix}çekiliş** - Sunucudan rastgele birisini seçer.`)
   .setFooter('')
         
         return message.channel.sendEmbed(embed)
@@ -624,7 +429,7 @@ bot.on("message", message => {
   .setTitle("")
   .setDescription('')
   .setColor("RANDOM")
-  .addField("Notech Eğlence Komutları", `**${prefix}havadurumu** - Bot havadurumunu tahmin eder. \n**${prefix}espriyap** - Bot espri yapar. \n**${prefix}zekam** - Zeka puanınızı gösterir. \n**${prefix}matematik** - Matematik işlemi yapar. \n**${prefix}sigara** - Bot sigara içer. \n**${prefix}avatarım** - Avatarınızı gönderir. \n**${prefix}kurabiye** - Size kurabiye verir.`)
+  .addField("Notech Eğlence Komutları", `**${prefix}havadurumu** - Bot rastgele havadurumu emojisi atar. \n**${prefix}espriyap** - Bot espri yapar. \n**${prefix}zekam** - Zeka puanınızı gösterir. \n**${prefix}matematik** - Matematik işlemi yapar. \n**${prefix}sigara** - Bot sigara içer. \n**${prefix}kurabiye** - Size kurabiye verir.`)
   .setFooter('')
         
         return message.channel.sendEmbed(embed)
