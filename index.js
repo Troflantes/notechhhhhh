@@ -8,7 +8,6 @@ let owner = "430011871555223553";
 bot.on("ready", () => {
     bot.user.setStatus('online');
     bot.user.setGame(`${prefix}yardım ${prefix}davet ✨ `, "https://www.twitch.tv/scarew0");
-    bot.channels.get("441620574943445003").send(`-------------------------------------- \n**Bot başarıyla başlatıldı!**`)
 });
 
 bot.on('guildCreate', guild => {
@@ -647,54 +646,4 @@ bot.on("message", message => {
   .setColor("RANDOM")
   .addField("Notech Matematik Komutları", `**${prefix}topla** - Yazdığınız iki sayıyı toplar. \n**${prefix}çıkar** - Yazdığınız iki sayıyı çıkarır. \n**${prefix}çarp** - Yazdığınız iki sayıyı çarpar. \n**${prefix}böl** - Yazdığınız iki sayıyı böler.`)
   .setFooter(`Kullanım: ${prefix}topla 1 1`)
-        
-        return message.channel.sendEmbed(embed)
-    }
-
-    if (message.content === prefix + "kurabiye") {
-        message.channel.sendMessage(`Canım gel buraya sana kurabiye vereceğim! <@${message.author.id}>`)
-        message.react("🍪")
-    }
-    
-    if (message.content.toLowerCase() === prefix + "istatistik") {
-        message.channel.sendMessage(stripIndents`
-\`\`\`fix
-         Anlık İstatistik
-
-- ` + bot.guilds.size + ` Sunucu 👀
-
--`+ bot.channels.size + ` Kanal 📄
-
--`+ bot.users.size + ` Kullanıcı 💞
-\`\`\` `)
-   }
-});
-
-bot.on("message", message => {
-  const args = message.content.split(" ").slice(1);
-
-  if (message.content.startsWith(prefix + "eval")) {
-    if(message.author.id !== `${owner}`) return;
-    try {
-      const code = args.join(" ");
-      let evaled = eval(code);
-
-      if (typeof evaled !== "string")
-        evaled = require("util").inspect(evaled);
-
-      message.channel.send(clean(evaled), {code:"xl"});
-    } catch (err) {
-      message.channel.send(`\`HATA\` \`\`\`xl\n${clean(err)}\n\`\`\``);
-    }
-  }
-});
-
-const clean = text => {
-  if (typeof(text) === "string")
-    return text.replace(/`/g, "`" + String.fromCharCode(8203)).replace(/@/g, "@" + String.fromCharCode(8203));
-  else
-      return text;
-}
-
-bot.login(process.env.BOT_TOKEN);
-
+  
