@@ -385,7 +385,7 @@ bot.on("message", message => {
   .addField("✨ Crazy Lady", `Şu anda [**Crazy Lady**](https://discord.gg/DZsZsEG) bulunmamaktadır.`)
   .addField("🎈 Divilgador", `Şu anda [**Divilgador**](https://discord.gg/DZsZsEG) bulunmamaktadır.`)
   .addField("👁‍🗨 Coadjutor", `Şu anda [**Coadjutor**](https://discord.gg/DZsZsEG) bulunmamaktadır.`)
-  .addField("Medya", "[YouTube](https://www.youtube.com/channel/UC-vmxOLvfLPUSzHA_WMIV4g) | [Instagram](https://www.instagram.com/talhanehirx) | [Web Site](https://notechbot.glitch.me/)")
+  .addField("Medya", "[**YouTube**](https://www.youtube.com/channel/UC-vmxOLvfLPUSzHA_WMIV4g) **|** [**Instagram**](https://www.instagram.com/talhanehirx) | [**Web Site**](https://notechbot.glitch.me/)")
   .setFooter('')
         
         return message.channel.sendEmbed(embed)
