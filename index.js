@@ -382,7 +382,7 @@ bot.on("message", message => {
   .setDescription('')
   .setColor("RANDOM")
   .addField("🎩 Admin", `<@430011871555223553> <:onay:441544015670804480> \n<@341194704085319683> <:onay:441544015670804480> \n<@441164897175339010> <:onay:441544015670804480>`)
-  .addField("✨ Crazy Lady", `Şu anda [**Crazy Lady**](https://discord.gg/DZsZsEG) bulunmamaktadır.`)
+  .addField("✨ Crazy Lady", `<@408314838461317141> <:onay:441544015670804480>`)
   .addField("🎈 Divilgador", `Şu anda [**Divilgador**](https://discord.gg/DZsZsEG) bulunmamaktadır.`)
   .addField("👁‍🗨 Coadjutor", `Şu anda [**Coadjutor**](https://discord.gg/DZsZsEG) bulunmamaktadır.`)
   .addField("Medya", "[**YouTube**](https://www.youtube.com/channel/UC-vmxOLvfLPUSzHA_WMIV4g) **|** [**Instagram**](https://www.instagram.com/talhanehirx) | [**Web Site**](https://notechbot.glitch.me/)")
