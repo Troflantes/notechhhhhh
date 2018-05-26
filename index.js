@@ -302,8 +302,8 @@ bot.on('guildBanRemove', member => {
   channel.sendEmbed(embed); 
 });
 
-bot.on('messageDelete', member => {
-  const channel = member.guild.channels.find('name', 'modlog');
+bot.on('messageDelete', msg => {
+  const channel = bot.guild.channels.find('name', 'modlog');
   if (!channel) return;
   const embed = new Discord.RichEmbed()
   .setColor('0xff1a1a')
