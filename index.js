@@ -7,6 +7,7 @@ let owner = "430011871555223553";
 
 bot.on("ready", () => {
     bot.user.setStatus('online');
+    bot.channels.get("449660400502308875").send(`-------------------------------------- \n**Bot başarıyla başlatıldı!** \n**Latency:** ${bot.ping} \n**Zamanlama:** ${new Date().toLocaleString()} \n**Notech bot hazır.**`)
     bot.user.setGame(`${prefix}yardım ${prefix}davet ✨ `, "https://www.twitch.tv/scarew0");
 });
 
@@ -646,4 +647,25 @@ bot.on("message", message => {
   .setColor("RANDOM")
   .addField("Notech Matematik Komutları", `**${prefix}topla** - Yazdığınız iki sayıyı toplar. \n**${prefix}çıkar** - Yazdığınız iki sayıyı çıkarır. \n**${prefix}çarp** - Yazdığınız iki sayıyı çarpar. \n**${prefix}böl** - Yazdığınız iki sayıyı böler.`)
   .setFooter(`Kullanım: ${prefix}topla 1 1`)
+	
+	 return message.channel.sendEmbed(embed)
+    }
   
+    if (message.content === prefix + "kurabiye") {
+        message.channel.sendMessage(`Canım gel buraya sana kurabiye vereceğim! <@${message.author.id}>`)
+        message.react("🍪")
+    }
+    
+    if (message.content.toLowerCase() === prefix + "istatistik") {
+        message.channel.sendMessage(stripIndents`
+\`\`\`fix
+         Anlık İstatistik
+
+- ` + bot.guilds.size + ` Sunucu 👀
+
+-`+ bot.channels.size + ` Kanal 📄
+
+-`+ bot.users.size + ` Kullanıcı 💞
+\`\`\` `)
+   }
+});
