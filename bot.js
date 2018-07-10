@@ -2,12 +2,12 @@ const { stripIndents, oneLine } = require('common-tags');
 const Discord = require("discord.js");
 const bot = new Discord.Client();
 
-let prefix = "?";
-let owner = "430011871555223553";
+let prefix = "_";
+let owner = "461991104569671697";
 
 bot.on("ready", () => {
     bot.user.setStatus('online');
-    bot.channels.get("449660400502308875").send(`-------------------------------------- \n**Bot başarıyla başlatıldı!** \n**Latency:** ${bot.ping} \n**Zamanlama:** ${new Date().toLocaleString()} \n**Notech bot hazır.**`)
+    bot.channels.get("462809329532272673").send(`-------------------------------------- \n**Bot başarıyla başlatıldı!** \n**Latency:** ${bot.ping} \n**Zamanlama:** ${new Date().toLocaleString()} \n**Şehzade bot hazır.**`)
     bot.user.setGame(`${prefix}yardım ${prefix}davet ✨ `, "https://www.twitch.tv/scarew0");
     console.log("giriş başarılı knk")
 });
