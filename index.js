@@ -48,7 +48,7 @@ message.channel.sendEmbed(new Discord.RichEmbed()
 
 bot.on('guildCreate', async guild => {
 		const girismesaj = [
-		  '**Notech** sunucunuza başarıyla eklendi.',
+		  '**Şehzade** sunucunuza başarıyla eklendi.',
 		  `Botumuzun özelliklerini öğrenmek için ${prefix}yardım yazabilirsiniz.`,
 		]
 	  	guild.owner.send(girismesaj)
@@ -381,7 +381,7 @@ bot.on("message", message => {
   .setTitle("")
   .setDescription('')
   .setColor("RANDOM")
-  .addField("🎩 Admin", `<@430011871555223553> <:onay:441544015670804480> \n<@341194704085319683> <:onay:441544015670804480> \n<@441164897175339010> <:onay:441544015670804480>`)
+  .addField("🎩 Admin", `Admin Şuanda Yok`)
   .addField("✨ Manager", `<@408314838461317141> <:onay:441544015670804480>`)
   .addField("🎈 Divilgador", `Şu anda [**Divilgador**](https://discord.gg/DZsZsEG) bulunmamaktadır.`)
   .addField("⚔️ Moderatör", `Şu anda [**Moderatör**](https://discord.gg/DZsZsEG) bulunmamaktadır.`)
@@ -397,7 +397,7 @@ bot.on("message", message => {
   .setTitle("")
   .setDescription('')
   .setColor("RANDOM")
-  .addField("Komutlar", `[**Anakomutlar**](https://discord.gg/DZsZsEG) Aktif :white_check_mark: \n[**Eğlence**](https://discord.gg/DZsZsEG) Aktif :white_check_mark: \n[**Kişisel**](https://discord.gg/DZsZsEG) Aktif :white_check_mark: \n[**Moderasyon**](https://discord.gg/DZsZsEG) Disaktif :x:`)
+  .addField("Komutlar", `[**Anakomutlar**](https://discord.gg/DZsZsEG) Aktif :white_check_mark: \n[**Eğlence**](https://discord.gg/DZsZsEG) Aktif :white_check_mark: \n[**Kişisel**](https://discord.gg/DZsZsEG) Aktif :white_check_mark: \n[**Moderasyon**](https://discord.gg/DZsZsEG) Aktif :x:`)
   .setFooter('')
         
         return message.channel.sendEmbed(embed)
@@ -419,7 +419,7 @@ bot.on("message", message => {
   .setTitle("")
   .setDescription('')
   .setColor("RANDOM")
-  .addField("Notech Kişisel Komutları", `**${prefix}syt** - Yazdığınız şikayeti sunucunun kurucusuna iletir. \n**${prefix}avatar** - Bot sizin veya etiketlediğiniz kişinin avatarını gösterir. \n**${prefix}sor** - Sorduğunuz soruya kısa cevaplar verir.  \n**${prefix}blok** - Yazdığınız mesajı blok olarak gönderir. \n**${prefix}yaz** - Yazdığınız mesajı bota yazdırır. \n**${prefix}çekiliş** - Sunucudan rastgele birisini seçer.`)
+  .addField(" Kişisel Komutları", `**${prefix}syt** - Yazdığınız şikayeti sunucunun kurucusuna iletir. \n**${prefix}avatar** - Bot sizin veya etiketlediğiniz kişinin avatarını gösterir. \n**${prefix}sor** - Sorduğunuz soruya kısa cevaplar verir.  \n**${prefix}blok** - Yazdığınız mesajı blok olarak gönderir. \n**${prefix}yaz** - Yazdığınız mesajı bota yazdırır. \n**${prefix}çekiliş** - Sunucudan rastgele birisini seçer.`)
   .setFooter('')
         
         return message.channel.sendEmbed(embed)
@@ -430,7 +430,7 @@ bot.on("message", message => {
   .setTitle("")
   .setDescription('')
   .setColor("RANDOM")
-  .addField("Notech Eğlence Komutları", `**${prefix}havadurumu** - Bot rastgele havadurumu emojisi atar. \n**${prefix}espriyap** - Bot espri yapar. \n**${prefix}zekam** - Zeka puanınızı gösterir. \n**${prefix}matematik** - Matematik işlemi yapar. \n**${prefix}sigara** - Bot sigara içer. \n**${prefix}kurabiye** - Size kurabiye verir.`)
+  .addField(" Eğlence Komutları", `**${prefix}havadurumu** - Bot rastgele havadurumu emojisi atar. \n**${prefix}espriyap** - Bot espri yapar. \n**${prefix}zekam** - Zeka puanınızı gösterir. \n**${prefix}matematik** - Matematik işlemi yapar. \n**${prefix}sigara** - Bot sigara içer. \n**${prefix}kurabiye** - Size kurabiye verir.`)
   .setFooter('')
         
         return message.channel.sendEmbed(embed)
@@ -441,7 +441,7 @@ bot.on("message", message => {
   .setTitle("")
   .setDescription('')
   .setColor("RANDOM")
-  .addField("Notech Moderasyon Komutları", `**${prefix}kick** - Etiketlenen kişiyi sunucudan atar. [BAKIM] \n**${prefix}mute** - Etiketlenen kişiyi susturur. [BAKIM] \n**${prefix}ban** - Etiketlenen kişiyi sunucudan banlar. [BAKIM] \n**${prefix}temizle** - Bot belirttiğiniz kadar mesaj siler. [BAKIM] \n**${prefix}yenile** - Botu yeniden başlatır. \n**${prefix}ekip** - Botun ekibini gösterir.`)
+  .addField(" Moderasyon Komutları", `**${prefix}kick** - Etiketlenen kişiyi sunucudan atar. [BAKIM] \n**${prefix}mute** - Etiketlenen kişiyi susturur. [BAKIM] \n**${prefix}ban** - Etiketlenen kişiyi sunucudan banlar. [BAKIM] \n**${prefix}temizle** - Bot belirttiğiniz kadar mesaj siler. [BAKIM] \n**${prefix}yenile** - Botu yeniden başlatır. \n**${prefix}ekip** - Botun ekibini gösterir.`)
   .setFooter('')
         
         return message.channel.sendEmbed(embed)
@@ -452,7 +452,7 @@ bot.on("message", message => {
   .setTitle("")
   .setDescription('')
   .setColor("RANDOM")
-  .addField("Notech Matematik Komutları", `**${prefix}topla** - Yazdığınız iki sayıyı toplar. \n**${prefix}çıkar** - Yazdığınız iki sayıyı çıkarır. \n**${prefix}çarp** - Yazdığınız iki sayıyı çarpar. \n**${prefix}böl** - Yazdığınız iki sayıyı böler.`)
+  .addField(" Matematik Komutları", `**${prefix}topla** - Yazdığınız iki sayıyı toplar. \n**${prefix}çıkar** - Yazdığınız iki sayıyı çıkarır. \n**${prefix}çarp** - Yazdığınız iki sayıyı çarpar. \n**${prefix}böl** - Yazdığınız iki sayıyı böler.`)
   .setFooter(`Kullanım: ${prefix}topla 1 1`)
 	
 	 return message.channel.sendEmbed(embed)
