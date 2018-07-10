@@ -7,7 +7,7 @@ let owner = "461991104569671697";
 
 bot.on("ready", () => {
     bot.user.setStatus('online');
-    bot.channels.get("462809329532272673").send('\n**Bot başarıyla başlatıldı!** \n**Latency:** ${bot.ping} \n**Zamanlama:** ${new Date().toLocaleString()} \n**Şehzade bot hazır.**`)
+    bot.channels.get("462809329532272673").send(`\n**Bot başarıyla başlatıldı!** \n**Latency:** ${bot.ping} \n**Zamanlama:** ${new Date().toLocaleString()} \n**Şehzade bot hazır.**`)
     bot.user.setGame(`${prefix}yardım ${prefix}davet ✨ `, "https://www.twitch.tv/scarew0");
     console.log("giriş başarılı knk")
 });
