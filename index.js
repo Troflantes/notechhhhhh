@@ -64,6 +64,19 @@ message.channel.sendEmbed(new Discord.RichEmbed()
 });
 
 bot.on("message", message => {
+    if (message.content.toLowerCase() === prefix + 'bakım') {
+    if (message.author.id !== "461991104569671697") {
+      message.reply('sie');
+    } else {
+      message.channel.sendMessage(`Başarılı bir şekilde profilime bakım komudunu koydum.`).then(msg => {
+      console.log(`Yeniden başlıyorum..`);
+      bot.user.setGame(`BAKIMDAYIZ`, "https://www.twitch.tv/hzsagkol");
+    })
+   }
+  }
+});
+
+bot.on("message", message => {
 
     if(message.author.bot) return;
 
